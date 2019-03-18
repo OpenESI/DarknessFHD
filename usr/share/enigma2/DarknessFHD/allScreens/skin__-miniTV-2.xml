@@ -1,0 +1,7 @@
+<skin>
+  <screen name="pig">
+	  <widget source="session.VideoPicture" render="Pig" position="1268,75" size="598,360" zPosition="1" backgroundColor="transparent" />
+	  <ePixmap name="" pixmap="DarknessFHD/e1/f1_left.png" position="1248,75" size="19,360" zPosition="2" />
+	  <ePixmap name="" pixmap="DarknessFHD/e1/f1_right.png" position="1867,75" size="19,360" zPosition="2" />
+  </screen>
+</skin>

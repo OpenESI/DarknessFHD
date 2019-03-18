@@ -1,0 +1,575 @@
+<skin>
+  <!-- PLUGINS -->
+  <!-- Alternative SoftCam Manager -->
+  <screen name="AltCamManager" position="0,0" size="1920,1080" title="Alternative SoftCam Manager" flags="wfNoBorder" backgroundColor="transparent">
+	  <panel name="rgyb_source" />
+	  <widget name="status" position="1250,487" size="600,300" font="Regular; 22" halign="left" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+	  <widget source="list" render="Listbox" position="67,111" size="1100,661" scrollbarMode="showNever" transparent="1" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="50">
+		<convert type="TemplatedMultiContent">
+						{
+							"template": [MultiContentEntryText(pos=(65, 10), size=(480, 75), \
+									font=0, flags=RT_HALIGN_LEFT, text=0),
+								MultiContentEntryPixmapAlphaTest(pos=(5, 5), \
+									size=(51, 75), png=1),
+								MultiContentEntryText(pos=(5, 25), size=(51, 16), font=1, \
+									flags=RT_HALIGN_CENTER, text=2),],
+							"fonts": [gFont("Regular", 30), gFont("Regular", 15)],
+							"itemHeight": 50
+						}
+						</convert>
+	  </widget>
+	  <ePixmap name="" pixmap="DarknessFHD/e2/key.png" position="100,907" size="192,75" transparent="0" alphatest="blend" zPosition="2" />
+	  <panel name="ch" />
+	  <panel name="pig" />
+	  <eLabel name="" text="ALTERNATIF SOFTCAM MANAGER" position="230,47" size="690,50" font="Regular; 35" halign="center" foregroundColor="b8" transparent="1" />
+  </screen>
+  <screen name="ConfigEdit" position="0,0" size="1920,1080" title="SoftCam path configuration">
+    <panel name="rgyb_source" />
+    <panel name="ch" />
+    <panel name="pig" />
+    <panel name="config" />
+  </screen>
+  <!-- Dream-Explorer -->
+  <screen name="DreamExplorerII" position="0,0" size="1920,1080" title="Dream-Explorer" backgroundColor="transparent" flags="wfBorder" transparent="0">
+	  <panel name="rgyb_png" />
+	  <panel name="ch" />
+	  <panel name="pig" />
+	  <widget name="filelist" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,125" size="1100,650" foregroundColor="lightgrey" backgroundColor="tb" enableWrapAround="1" scrollbarMode="showNever" transparent="1" />
+	  <widget source="Title" render="Label" position="75,75" size="1100,40" noWrap="0" font="Regular; 30" transparent="1" foregroundColor="g3" backgroundColor="tb" />
+	  <eLabel name="" text="Delete" position="1515,850" size="300,40" backgroundColor="tb" halign="right" transparent="1" zPosition="5" font="Console3; 25" foregroundColor="lightgrey" />
+	  <eLabel name="" text="Rename" position="1515,896" size="300,40" backgroundColor="tb" halign="right" transparent="1" zPosition="5" font="Console3; 25" foregroundColor="lightgrey" />
+	  <eLabel name="" text="Move/Copy" position="1515,943" size="300,40" backgroundColor="tb" halign="right" transparent="1" zPosition="5" font="Console3; 25" foregroundColor="lightgrey" />
+	  <eLabel name="" text="Bookmarks" position="1515,990" size="300,40" backgroundColor="tb" halign="right" transparent="1" zPosition="5" font="Console3; 25" foregroundColor="lightgrey" />
+	  <ePixmap name="" pixmap="DarknessFHD/e2/fldr.png" position="100,892" size="300,300" transparent="0" alphatest="blend" />
+  </screen>
+  <screen name="vInputBox" position="0,0" size="1920,1080" flags="wfNoBorder" title="Input..." backgroundColor="transparent">
+    <panel name="rgyb_source" />
+    <panel name="mn2" />
+    <widget backgroundColor="tb" name="input" font="Regular;40" foregroundColor="white" itemHeight="45" position="75,75" size="1100,50" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <widget backgroundColor="tb" name="text" font="Regular;40" foregroundColor="white" position="75,255" size="1100,50" transparent="1" />
+  </screen>
+  <screen name="vEditor" position="0,0" size="1920,1080" flags="wfNoBorder" title="File-Explorer" backgroundColor="transparent">
+    <panel name="rgyb_source" />
+    <panel name="mn2" />
+    <widget source="Title" render="Label" position="75,75" size="1700,30" noWrap="0" font="Regular; 30" backgroundColor="tb" transparent="1" />
+    <widget name="filedata" position="75,120" size="1700,650" itemHeight="40" font="Regular; 30" scrollbarMode="showOnDemand" backgroundColor="tb" transparent="1" />
+  </screen>
+  <screen name="CPmaniger" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+	  <panel name="rgyb_png" />
+	  <panel name="mn2" />
+	  <ePixmap name="" pixmap="DarknessFHD/e2/fldr.png" position="100,881" size="300,300" transparent="0" alphatest="blend" />
+	  <widget backgroundColor="tb" name="File" font="Regular; 30" foregroundColor="orange" position="75,75" size="1775,205" transparent="1" />
+	  <widget backgroundColor="tb" name="CPto" font="Regular;32" foregroundColor="white" itemHeight="45" position="75,280" size="1775,495" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+	  <eLabel text="Move" position="1515,850" size="300,39" zPosition="8" font="Regular;30" halign="right" valign="center" backgroundColor="tb" foregroundColor="white" transparent="1" />
+	  <eLabel text="Copy" position="1515,943" size="300,39" zPosition="8" font="Regular;30" halign="right" valign="center" backgroundColor="tb" foregroundColor="white" transparent="1" />
+  </screen>
+  <screen name="SoftLinkScreen" position="0,0" size="1920,1080" flags="wfNoBorder" title="Make a softlink..." backgroundColor="transparent">
+	  <widget source="Title" render="Label" position="75,46" size="1100,50" valign="bottom" font="Regular;34" foregroundColor="white" backgroundColor="tb" transparent="1" />
+	  <widget name="File" position="75,105" size="1100,30" noWrap="0" font="Regular; 24" transparent="1" backgroundColor="tb" foregroundColor="white" />
+	  <widget name="SLto" position="75,142" itemHeight="30" font="Regular; 20" scrollbarMode="showOnDemand" size="1100,631" zPosition="4" backgroundColor="tb" foregroundColor="white" backgroundColorSelected="tb" foregroundColorSelected="b8" transparent="1" />
+	  <eLabel text="Set name" position="1515,850" size="300,40" zPosition="1" valign="center" font="Regular; 30" halign="right" backgroundColor="tb" foregroundColor="white" transparent="1" />
+	  <eLabel text="Make a softlink" position="1517,896" size="300,40" zPosition="1" valign="center" font="Regular; 30" halign="right" backgroundColor="tb" foregroundColor="white" transparent="1" />
+	  <panel name="rgyb_png" />
+	  <panel name="ch" />
+	  <panel name="pig" />
+  </screen>
+  <screen name="PictureExplorerII" position="0,0" size="1920,1080" flags="wfNoBorder" title="Picture-Explorer" backgroundColor="tb">
+    <widget name="Picture" position="0,0" size="1920,1080" zPosition="1" alphatest="blend" />
+    <widget name="State" font="Regular;20" halign="center" valign="center" position="0,0" size="1280,70" backgroundColor="tb" transparent="0" zPosition="9" />
+  </screen>
+  <screen name="MusicExplorer" position="center,50" zPosition="2" size="720,30" backgroundColor="tb" flags="wfNoBorder">
+    <widget font="Regular;24" halign="right" position="50,0" render="Label" size="100,30" source="session.CurrentService" valign="center" zPosition="1" backgroundColor="tb" foregroundColor="white" transparent="1">
+      <convert type="ServicePosition">Remaining</convert>
+    </widget>
+    <widget font="Regular;24" position="170,0" render="Label" size="650,30" source="session.CurrentService" valign="center" zPosition="1" backgroundColor="tb" foregroundColor="white" transparent="1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+  </screen>
+
+
+
+  <!-- CoverFind -->
+  <screen name="CoverFindConfigScreen" position="0,0" size="1920,1080" title=" " flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+    <panel name="config" />
+    <widget name="info" position="1263,502" size="600,250" font="Regular; 27" foregroundColor="y5" backgroundColor="tb" transparent="1" halign="center" />
+  </screen>
+  <screen name="CoverFindAll" position="0,0" size="1920,1080" title=" " flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+    <panel name="list" />
+    <widget name="cover" position="1482,490" size="262,319" alphatest="blend" />
+    <widget name="searchinfo" position="519,862" size="900,150" font="Regular; 30" foregroundColor="orange" backgroundColor="tb" halign="center" transparent="1" />
+  </screen>
+  <screen name="CoverFindFile" position="0,0" size="1920,1080" title=" " flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+    <widget name="filelist" position="75,75" size="1100,700" itemHeight="35" font="Regular; 26" enableWrapAround="1" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessFHD/e1/scrollbar.png" scrollbarMode="showOnDemand" backgroundColor="tb" transparent="1" />
+    <widget name="picture" position="1482,490" size="262,319" alphatest="blend" />
+    <widget name="media" position="75,902" size="1100,40" font="Regular; 27" foregroundColor="y5" backgroundColor="tb" halign="center" transparent="1" />
+  </screen>
+  <screen name="CoverFindScreen" position="0,0" size="1920,1080" title="Eventview" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="list" />
+    <widget name="searchinfo" position="1269,47" size="600,750" font="Regular; 27" foregroundColor="orange" backgroundColor="tb" transparent="1" />
+  </screen>
+  <!-- YouTube-->
+  <screen name="YouTubeMain" position="0,0" size="1920,1080" title=" " flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+    <widget name="text" position="1272,462" size="600,300" halign="center" font="Regular; 30" foregroundColor="y5" transparent="1" />
+    <widget source="list" render="Listbox" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 26" position="75,75" size="1100,700" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessFHD/e1/scrollbar.png" transparent="1">
+      <convert type="TemplatedMultiContent">
+							{"template": [
+								MultiContentEntryPixmapAlphaTest(pos=(0,0), size=(100,70), png=2), # Thumbnail
+								MultiContentEntryText(pos=(200,0), size=(700,30), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=3,color = 0x00ffffff, color_sel = 0x00d0ff1f), # Title
+								MultiContentEntryText(pos=(500, 45), size=(300,20), font=1, flags=RT_HALIGN_RIGHT, text=4,color = 0x00ffffff, color_sel = 0x0000baff), # Views
+								MultiContentEntryText(pos=(200,45), size=(300,20), font=1, flags=RT_HALIGN_LEFT, text=5,color = 0x00ffffff, color_sel = 0x0000baff), # Duration
+								],
+							"fonts": [gFont("Regular",25), gFont("Regular",20)],
+							"itemHeight": 70}
+						</convert>
+    </widget>
+    <widget name="thumbnail" position="112,103" size="100,70" />
+    <ePixmap name="" pixmap="DarknessFHD/e2/youtube.png" position="100,888" size="518,300" transparent="0" alphatest="blend" />
+  </screen>
+  <screen name="YouTubeSearch" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+    <widget name="config" position="75,54" size="1100,102" zPosition="2" scrollbarMode="showNever" itemHeight="75" font="Regular; 32" />
+    <widget source="list" render="Listbox" selectionPixmap="DarknessFHD/e1/sel100.png" position="75,175" size="1100,600" font="Regular; 29" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessFHD/e1/scrollbar.png" backgroundColor="tb" transparent="1">
+      <convert type="TemplatedMultiContent">
+							{"template": [MultiContentEntryText(pos=(15,1), size=(1080,75), font=0, flags=RT_HALIGN_LEFT, text=0)],
+							"fonts": [gFont("Regular",30)],
+							"itemHeight": 50}
+						</convert>
+    </widget>
+    <ePixmap name="" pixmap="DarknessFHD/e2/syoutube.png" position="100,888" size="518,300" transparent="0" alphatest="blend" />
+  </screen>
+  <screen name="YouTubeInfo" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <widget name="title" position="75,65" size="1100,100" zPosition="2" font="Regular; 30" foregroundColor="y5" transparent="1" />
+    <widget name="pic" position="1283,51" size="586,333" transparent="1" alphatest="on" />
+    <widget name="description" position="75,174" size="1100,600" font="Regular;27" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessFHD/e1/scrollbar.png" backgroundColor="tb" transparent="1" />
+    <widget name="views" position="1275,510" size="600,30" font="Regular; 26" foregroundColor="green" />
+    <widget name="duration" position="1275,566" size="600,30" font="Regular; 26" />
+    <widget name="likes" position="1275,620" size="600,30" font="Regular; 26" foregroundColor="blue" />
+    <widget name="dislikes" position="1275,673" size="600,30" font="Regular; 26" />
+    <widget name="published" position="1275,730" size="600,30" font="Regular; 24" foregroundColor="y5" />
+  </screen>
+  <screen name="YouTubeDownloadList" position="0,0" size="1920,1080" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+    <widget source="list" selectionPixmap="DarknessFHD/e1/sel100.png" render="Listbox" position="75,75" size="1100,700" font="Regular; 29" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessFHD/e1/scrollbar.png" backgroundColor="tb" transparent="1">
+      <convert type="TemplatedMultiContent">
+							{"template": [
+								MultiContentEntryText(pos=(15,1), size=(465,33), font=0, flags=RT_HALIGN_LEFT, text=1), # Title
+								font=0, flags=RT_HALIGN_RIGHT, text=2), # State
+								MultiContentEntryProgress(pos=(585,6), size=(150,33), percent=-3), # Progress
+								MultiContentEntryText(pos=(700,1), size=(120,33), 
+								font=0, flags=RT_HALIGN_LEFT, text=4), # Percentage
+								],
+							"fonts": [gFont("Regular",30)],
+							"itemHeight": 70}
+						</convert>
+    </widget>
+    <ePixmap name="" pixmap="DarknessFHD/e2/dwnyoutube.png" position="100,888" size="518,300" transparent="0" alphatest="blend" />
+  </screen>
+  <!-- CacheFlush-->
+  <screen name="CacheFlushSetupMenu" position="0,0" size="1920,1080" title="CacheFlush" backgroundColor="transparent" transparent="0">
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+    <widget name="config" font="Regular; 40" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="70" position="75,75" size="1100,600" zPosition="1" transparent="1" backgroundColor="tb" fieldMargins="25" nonplayableMargins="25" scrollbarMode="showOnDemand" />
+    <widget name="min_free_kb" font="Regular; 30" position="75,753" size="1100,40" zPosition="2" valign="center" backgroundColor="tb" transparent="1" foregroundColor="orange" />
+    <widget name="memory" position="75,704" zPosition="2" size="1100,40" valign="center" halign="left" font="Regular; 30" transparent="1" foregroundColor="y5" />
+    <widget name="slide" foregroundColor="b8" position="75,675" zPosition="2" borderWidth="1" size="1100,20" backgroundColor="tb" render="Progress" borderColor="blue" />
+    <ePixmap name="" pixmap="DarknessFHD/e2/ram.png" position="100,918" size="200,100" transparent="0" alphatest="blend" />
+  </screen>
+
+  <!-- MSNWeatherPlugin -->
+  <screen name="MSNWeatherPlugin" position="0,0" size="1920,1080" title="Weather Plugin">
+    <panel name="ch" />
+    <panel name="pig" />
+    <eLabel name="" text="Weather Plugin" position="73,870" size="1100,140" font="Console; 100" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
+    <widget font="LCD; 128" render="Label" position="258,200" size="418,128" source="session.MSNWeather" transparent="1" zPosition="2" halign="left" foregroundColor="b8" backgroundColor="tb">
+      <convert type="MSNWeather">temperature_current</convert>
+    </widget>
+    <widget render="DARKAnimatedWeatherPixmap" alphatest="blend" position="75,215" size="128,128" source="session.MSNWeather" transparent="1" zPosition="2">
+      <convert type="MSNWeather">weathericon,current,/media/hdd/DARKAnimatedWeatherPixmap/</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 45" render="Label" position="75,65" size="1100,60" source="session.MSNWeather" zPosition="1" halign="left" transparent="1" foregroundColor="orange">
+      <convert type="MSNWeather">city</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 30" foregroundColor="white" render="Label" position="75,125" size="500,40" source="session.MSNWeather" zPosition="2" halign="left" transparent="1" valign="center">
+      <convert type="MSNWeather">temperature_text,current</convert>
+    </widget>
+    <ePixmap name="" pixmap="DarknessFHD/weathericon/temp2.png" position="314,448" size="28,70" transparent="0" alphatest="blend" />
+    <ePixmap name="" pixmap="DarknessFHD/weathericon/temp2.png" position="624,448" size="28,70" transparent="0" alphatest="blend" />
+    <ePixmap name="" pixmap="DarknessFHD/weathericon/temp2.png" position="934,448" size="28,70" transparent="0" alphatest="blend" />
+    <ePixmap name="" pixmap="DarknessFHD/weathericon/umbrella.png" position="1099,76" size="50,50" transparent="0" alphatest="blend" />
+    <ePixmap name="" pixmap="DarknessFHD/weathericon/wind.png" position="685,200" size="60,60" transparent="0" alphatest="blend" />
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 40" render="Label" position="763,200" size="450,60" source="session.MSNWeather" zPosition="5" halign="left" transparent="1" foregroundColor="lightgrey2">
+      <convert type="MSNWeather">winddisplay</convert>
+    </widget>
+    <ePixmap name="" pixmap="DarknessFHD/weathericon/humi.png" position="685,265" size="40,55" transparent="0" alphatest="blend" />
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 40" render="Label" position="763,275" size="150,50" source="session.MSNWeather" zPosition="8" halign="left" transparent="1" foregroundColor="lightgrey2">
+      <convert type="MSNWeather">humidity</convert>
+    </widget>
+    <widget alphatest="blend" render="MSNWeatherPixmap" position="75,440" size="80,80" source="session.MSNWeather" transparent="1" zPosition="60">
+      <convert type="MSNWeather">weathericon,day1,/usr/share/enigma2/DarknessFHD/weathericon/,png</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Console; 30" render="Label" position="75,397" size="180,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" foregroundColor="un2fb20a">
+      <convert type="MSNWeather">weekshortday,day1</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 30" render="Label" position="155,440" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" valign="center" foregroundColor="orange">
+      <convert type="MSNWeather">temperature_high,day1</convert>
+    </widget>
+    <widget backgroundColor="tb" font="Regular; 30" render="Label" position="155,480" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" noWrap="1" foregroundColor="b8">
+      <convert type="MSNWeather">temperature_low,day1</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 22" foregroundColor="white" render="Label" position="42,527" size="250,40" source="session.MSNWeather" zPosition="2" halign="center" transparent="1" valign="center">
+      <convert type="MSNWeather">temperature_text,day1</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Console; 30" render="Label" position="389,397" size="180,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" foregroundColor="un2fb20a">
+      <convert type="MSNWeather">weekshortday,day2</convert>
+    </widget>
+    <widget alphatest="blend" render="MSNWeatherPixmap" position="390,440" size="80,80" source="session.MSNWeather" transparent="1" zPosition="60">
+      <convert type="MSNWeather">weathericon,day2,/usr/share/enigma2/DarknessFHD/weathericon/,png</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 30" render="Label" position="470,440" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" valign="center" foregroundColor="orange">
+      <convert type="MSNWeather">temperature_high,day2</convert>
+    </widget>
+    <widget backgroundColor="tb" font="Regular; 30" render="Label" position="470,480" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" noWrap="1" foregroundColor="b8">
+      <convert type="MSNWeather">temperature_low,day2</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 22" foregroundColor="white" render="Label" position="354,527" size="250,40" source="session.MSNWeather" zPosition="2" halign="center" transparent="1" valign="center">
+      <convert type="MSNWeather">temperature_text,day2</convert>
+    </widget>
+    <widget alphatest="blend" render="MSNWeatherPixmap" position="705,440" size="80,80" source="session.MSNWeather" transparent="1" zPosition="60">
+      <convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/DarknessFHD/weathericon/,png</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Console; 30" render="Label" position="705,397" size="180,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" foregroundColor="un2fb20a">
+      <convert type="MSNWeather">weekshortday,day3</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 30" render="Label" position="785,440" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" valign="center" foregroundColor="orange">
+      <convert type="MSNWeather">temperature_high,day3</convert>
+    </widget>
+    <widget backgroundColor="tb" font="Regular; 30" render="Label" position="785,480" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" noWrap="1" foregroundColor="b8">
+      <convert type="MSNWeather">temperature_low,day3</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 22" foregroundColor="white" render="Label" position="675,527" size="250,40" source="session.MSNWeather" zPosition="2" halign="center" transparent="1" valign="center">
+      <convert type="MSNWeather">temperature_text,day3</convert>
+    </widget>
+    <widget alphatest="blend" render="MSNWeatherPixmap" position="1010,440" size="80,80" source="session.MSNWeather" transparent="1" zPosition="30">
+      <convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/DarknessFHD/weathericon/,png</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Console; 30" render="Label" position="1010,397" size="180,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" foregroundColor="un2fb20a">
+      <convert type="MSNWeather">weekshortday,day4</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 30" render="Label" position="1090,440" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" valign="center" foregroundColor="orange">
+      <convert type="MSNWeather">temperature_high,day4</convert>
+    </widget>
+    <widget backgroundColor="tb" font="Regular; 30" render="Label" position="1090,480" size="100,40" source="session.MSNWeather" zPosition="30" halign="center" transparent="1" noWrap="1" foregroundColor="b8">
+      <convert type="MSNWeather">temperature_low,day4</convert>
+    </widget>
+    <widget noWrap="1" backgroundColor="tb" font="Regular; 22" foregroundColor="white" render="Label" position="975,527" size="250,40" source="session.MSNWeather" zPosition="2" halign="center" transparent="1" valign="center">
+      <convert type="MSNWeather">temperature_text,day4</convert>
+    </widget>
+    <ePixmap name="" pixmap="DarknessFHD/e2/weather.png" position="1703,890" size="100,100" transparent="0" alphatest="blend" />
+  </screen>
+  <screen name="MSNWeatherPluginEntriesListConfigScreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="tb">
+    <widget name="entrylist" position="75,75" size="1100,700" zPosition="3" itemHeight="50" font="Regular;35" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="tb" transparent="1" />
+    <panel name="ch" />
+    <panel name="pig" />
+    <panel name="rgyb_source" />
+  </screen>
+  <screen name="MSNWeatherPluginEntryConfigScreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="tb">
+    <panel name="config" />
+    <panel name="ch" />
+    <panel name="pig" />
+    <panel name="rgyb_source" />
+  </screen>
+  <screen name="MSNWeatherPluginSearch" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="tb">
+    <widget name="entrylist" position="75,75" size="1100,700" zPosition="3" itemHeight="85" font="Regular;36" scrollbarMode="showOnDemand" foregroundColor="white" backgroundColor="tb" transparent="1" />
+    <panel name="ch" />
+    <panel name="pig" />
+    <panel name="rgyb_source" />
+  </screen>
+
+
+
+  <!-- NumberZapExt-->
+  <screen name="NumberZapExt" position="610,455" size="700,170" title="Channel" flags="wfNoBorder" transparent="0" backgroundColor="tb">
+    <widget name="chPicon" position="298,0" size="400,170" alphatest="on" backgroundColor="tb" />
+    <widget name="chNum" position="10,20" size="280,130" halign="center" font="LCD; 88" transparent="1" backgroundColor="tb" />
+  </screen>
+
+  <!-- CoolTVGuide -->
+  <screen name="CoolChannelGuide" position="0,0" size="1920,1080" title="Cool Channel Guide" backgroundColor="transparent" flags="wfNoBorder">
+    <panel name="rgyb_name" />
+    <panel name="ch" />
+    <panel name="pig" />
+    <panel name="cool_info" />
+    <widget name="list" position="75,75" size="1100,700" itemHeight="70" zPosition="25" CoolFont="Regular;30" CoolServiceFont="Regular;30" CoolEventFont="Console2;25" CoolPico="40" CoolPicoPos="5" CoolPicoHPos="15" CoolServiceSize="650" CoolServicePos="10" CoolServiceHPos="4" CoolServiceColor="lightgrey" CoolEventPos="10" CoolEventHPos="35" CoolEventColor="#fff08c" CoolEventSize="750" CoolBarPos="995" CoolBarHPos="44" CoolBarSize="100" CoolBarHigh="15" CoolBarColor="#3B98C9" CoolTimePos="350" CoolTimeHPos="9" CoolTimeSize="150" CoolDurationPos="995" CoolDurationSize="100" CoolDurationColor="#b5f266" CoolRecAlarmCol="#e0a91d" CoolRecColor="red" CoolTunerCol="gr2" CoolCurrentCol="#c4ff00" CoolCurrentColSel="#ffffff" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+    <widget source="Event" render="Label" position="1211,564" size="150,40" font="Regular; 30" foregroundColor="white" backgroundColor="tb" halign="right" transparent="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText" />
+    </widget>
+    <widget source="Event" render="Label" position="1776,564" size="150,40" font="Regular; 30" foregroundColor="white" backgroundColor="tb" halign="left" transparent="1">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget source="Event" render="Label" position="1268,625" size="600,40" font="Console; 30" foregroundColor="white" backgroundColor="tb" transparent="1" halign="center">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="Event" render="Progress" position="1369,576" size="400,14" foregroundColor="blue" backgroundColor="gr" borderWidth="1" borderColor="blue" zPosition="2" transparent="1">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget source="Service" render="CoolNextEvent" position="1268,704" size="600,70" font="Regular;30" backgroundColor="tb" foregroundColor="white" transparent="1">
+    </widget>
+    <widget source="Title" render="Label" position="1268,500" size="600,40" zPosition="3" font="Console; 30" foregroundColor="b7" backgroundColor="tb" halign="center" transparent="1" />
+  </screen>
+  <screen name="CoolEasyGuide" position="0,0" size="1920,1080" title="Cool Easy Guide" backgroundColor="transparent" flags="wfNoBorder">
+    <panel name="rgyb_name" />
+    <panel name="mn2" />
+    <panel name="cool_info" />
+    <widget name="list" position="75,75" size="1765,710" itemHeight="50" zPosition="30" CoolFont="Regular;30" CoolServiceFont="Regular;30" CoolEventFont="Regular;30" CoolPicoPos="5" CoolPico="40" CoolPicoHPos="5" CoolServicePos="10" CoolServiceHPos="7" CoolServiceColor="#C1BDFF" CoolServiceSize="300" CoolBarPos="400" CoolBarHPos="15" CoolBarSize="120" CoolBarHigh="25" CoolBarColor="#5c47ff" CoolEventPos="540" CoolEventHPos="7" CoolEventSize="900" CoolEventColor="#FFFFFF" CoolCurrentCol="white" CoolDurationPos="1600" CoolDurationSize="105" CoolRecAlarmCol="orange" CoolRecColor="red" CoolTunerCol="#606060" foregroundColor="white" backgroundColor="tb" transparent="1" />
+  </screen>
+  <screen name="CoolMultiGuide" position="0,0" size="1920,1080" backgroundColor="transparent" title="Cool Multi Guide" flags="wfNoBorder">
+    <panel name="rgyb_name" />
+    <panel name="mn2" />
+    <panel name="cool_info" />
+    <widget source="Event" render="Label" position="415,60" size="100,40" font="Console; 26" foregroundColor="y3" backgroundColor="tb" halign="right" transparent="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText" />
+    </widget>
+    <widget source="Event" render="Label" position="523,60" size="100,40" font="Console; 26" foregroundColor="y3" backgroundColor="tb" halign="left" transparent="1">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget source="Event" render="Label" position="630,60" size="1210,40" font="Console; 26" foregroundColor="g3" backgroundColor="tb" transparent="1" halign="left">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget name="timeline_text" position="75,117" size="1770,40" foregroundColor="g3" backgroundColor="tb" transparent="1" font="Console; 18" />
+    <widget name="list" position="75,179" size="1770,591" CoolBorderColR="#000000" CoolBorderColL="#000000" scrollbarMode="showNever" transparent="1" />
+    <widget name="timeline_now" position="75,179" zPosition="2" size="30,591" pixmap="/usr/share/enigma2/DarknessFHD/epg/timeline-now.png" alphatest="blend" />
+    <widget source="Title" render="Label" position="75,61" size="330,40" zPosition="3" font="Console; 30" foregroundColor="b7" backgroundColor="tb" halign="left" transparent="1" />
+  </screen>
+  <screen name="CoolNiceGuide" position="0,0" size="1920,1080" backgroundColor="transparent" title="Cool Nice Guide" flags="wfNoBorder">
+    <panel name="rgyb_name" />
+    <panel name="mn2" />
+    <panel name="cool_info" />
+    <widget source="Event" render="Label" position="415,75" size="150,40" font="Console; 30" foregroundColor="y3" backgroundColor="tb" halign="right" transparent="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText" />
+    </widget>
+    <widget source="Event" render="Label" position="573,75" size="150,40" font="Console; 30" foregroundColor="y3" backgroundColor="tb" halign="left" transparent="1">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget source="Event" render="Label" position="730,75" size="1100,40" font="Console; 30" foregroundColor="g3" backgroundColor="tb" transparent="1" halign="left">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget name="list" position="75,142" size="1767,618" itemHeight="50" zPosition="30" CoolFont="Regular;30" CoolServiceFont="Regular;30" CoolEventFont="Regular;25" CoolServiceSize="245" CoolEventSize="645" CoolServicePos="5" CoolServiceHPos="2" CoolEventPos="430" CoolEventHPos="2" CoolBarPos="260" CoolBarHPos="5" CoolBarSize="100" CoolBarHigh="12" CoolTimePos="265" CoolTimeHPos="2" CoolTimeSize="150" CoolDurationPos="1000" CoolDurationSize="100" CoolServiceColor="#acf02d" CoolBarColor="#3B98C9" CoolEventColor="#FFFFFF" CoolBackColorSel="#000000" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolTunerCol="#606060" foregroundColor="white" backgroundColor="tb" transparent="1" />
+    <widget source="Title" render="Label" position="75,75" size="330,40" zPosition="3" font="Console; 30" foregroundColor="b7" backgroundColor="tb" halign="left" transparent="1" />
+  </screen>
+  <screen name="CoolSearch" position="0,0" size="1920,1080" title="Cool Search" backgroundColor="tb" flags="wfNoBorder">
+    <panel name="rgyb_name" />
+    <panel name="mn2" />
+    <panel name="cool_info" />
+    <widget source="Title" render="Label" position="75,75" size="532,40" font="Console;30" noWrap="1" valign="center" halign="left" foregroundColor="b7" backgroundColor="tb" transparent="1" />
+    <widget name="list" position="67,137" size="1770,636" itemHeight="50" zPosition="3" CoolFont="Regular;30" CoolServiceFont="Regular;30" CoolEventFont="Regular;30" CoolDayPos="0" CoolDayHPos="10" CoolDaySize="100" CoolDayColor="#aaa8f0" CoolDatePos="120" CoolDateHPos="10" CoolDateSize="100" CoolDateColor="#87dffa" CoolTimePos="240" CoolTimeHPos="10" CoolTimeSize="100" CoolTimeColor="#85c6ff" CoolServicePos="350" CoolServiceHPos="10" CoolServiceSize="500" CoolServiceColor="g3" CoolEventPos="850" CoolEventHPos="10" CoolEventSize="850" CoolEventColor="#d1d1d1" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" backgroundColor="tb" transparent="1" />
+    <widget source="Event" render="Label" position="738,77" size="1100,40" font="Console; 30" foregroundColor="unffc000" backgroundColor="tb" transparent="1" halign="right">
+      <convert type="EventName">Name</convert>
+    </widget>
+  </screen>
+  <screen name="CoolSingleGuide" position="0,0" size="1920,1080" title="Cool Single Guide" backgroundColor="transparent" flags="wfNoBorder">
+    <panel name="rgyb_name" />
+    <panel name="ch" />
+    <panel name="pig" />
+    <panel name="cool_info" />
+    <widget source="Title" render="Label" position="1260,505" size="600,45" font="Console;30" noWrap="1" valign="center" halign="left" foregroundColor="b7" backgroundColor="tb" transparent="1" />
+    <widget name="list" position="75,75" size="1100,700" itemHeight="50" zPosition="25" CoolFont="Regular;30" CoolEventFont="Regular;30" CoolDayPos="0" CoolDaySize="100" CoolDayColor="#bae643" CoolDayHPos="8" CoolTimePos="120" CoolTimeSize="100" CoolTimeColor="#43e648" CoolTimeHPos="8" CoolEventPos="240" CoolEventColor="#FFFFFF" CoolEventHPos="8" CoolEventSize="850" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" foregroundColor="white" backgroundColor="tb" transparent="1" />
+    <widget source="Service" render="Label" position="1260,675" size="600,40" zPosition="3" font="Console; 30" halign="left" foregroundColor="white" backgroundColor="tb" transparent="1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget source="Event" render="Label" position="1260,600" size="150,40" font="Console; 30" foregroundColor="g3" halign="center" backgroundColor="tb" transparent="1">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <widget source="Event" render="Label" position="1400,600" size="150,40" font="Console; 30" foregroundColor="white" backgroundColor="tb" halign="right" transparent="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText" />
+    </widget>
+    <widget source="Event" render="Label" position="1550,600" size="150,40" font="Console; 30" foregroundColor="white" backgroundColor="tb" halign="left" transparent="1">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget source="Event" render="Label" position="1260,733" size="600,40" font="Console; 30" foregroundColor="unffc435" backgroundColor="tb" shadowColor="#444444" halign="left" transparent="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+  </screen>
+  <screen name="CoolTinyGuide" position="0,0" size="1920,1080" backgroundColor="transparent" title="Cool Tiny Guide" flags="wfNoBorder">
+    <panel name="rgyb_name" />
+    <panel name="mn2" />
+    <panel name="cool_info" />
+    <widget name="timeline_text" position="75,136" size="1765,40" foregroundColor="unfff000" backgroundColor="tb" transparent="1" font="Regular; 30" />
+    <widget name="list" position="75,191" size="1765,570" scrollbarMode="showNever" transparent="1" />
+    <widget name="timeline_now" position="75,191" zPosition="2" size="30,570" pixmap="/usr/share/enigma2/DarknessFHD/epg/timeline-now.png" alphatest="blend" />
+    <widget source="Event" render="Label" position="582,75" size="150,40" font="Console; 30" foregroundColor="y3" backgroundColor="tb" halign="right" transparent="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText" />
+    </widget>
+    <widget source="Event" render="Label" position="736,75" size="150,40" font="Console; 30" foregroundColor="y3" backgroundColor="tb" halign="left" transparent="1">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget source="Event" render="Label" position="982,75" size="850,40" font="Console; 30" foregroundColor="g3" backgroundColor="tb" transparent="1" halign="right">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="Title" render="Label" position="75,75" size="500,40" zPosition="3" font="Console; 30" foregroundColor="b7" backgroundColor="tb" halign="left" transparent="1" />
+  </screen>
+  <screen name="CoolInfoGuide" position="0,0" size="1920,1080" backgroundColor="transparent" title="Cool Info Guide" flags="wfNoBorder">
+    <panel name="rgyb_name" />
+    <panel name="mn2" />
+    <panel name="pig" />
+    <widget source="Title" render="Label" position="75,61" size="600,45" font="Console;30" noWrap="1" valign="center" halign="left" foregroundColor="b7" backgroundColor="tb" transparent="1" />
+    <widget source="Service" render="Label" position="75,104" size="600,40" zPosition="3" font="Console; 30" foregroundColor="unff6600" backgroundColor="tb" transparent="1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget source="Event" render="Label" position="744,66" size="150,40" font="Regular; 30" foregroundColor="un3b98c9" backgroundColor="tb" halign="right" transparent="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText" />
+    </widget>
+    <widget source="Event" render="Label" position="897,66" size="150,40" font="Regular; 30" foregroundColor="un3b98c9" backgroundColor="tb" halign="left" transparent="1">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Format:- %H:%M</convert>
+    </widget>
+    <widget source="Event" render="Label" position="1050,66" size="200,40" font="Regular; 30" foregroundColor="white" halign="left" backgroundColor="tb" transparent="1">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <eLabel text="Similar broadcasts:" position="685,120" size="550,40" font="Regular; 30" foregroundColor="white" backgroundColor="tb" transparent="1" halign="left" />
+    <widget name="CoolSimilar" position="685,155" size="554,200" font="Regular;22" foregroundColor="white" backgroundColor="tb" transparent="1" />
+    <widget name="CoolShort" position="75,155" size="584,200" font="Regular; 25" foregroundColor="unffc435" backgroundColor="tb" transparent="1" />
+    <widget name="CoolEvent" position="75,370" size="1160,45" itemHeight="40" zPosition="5" CoolFont="Regular;30" CoolDayPos="0" CoolDaySize="60" CoolDayColor="#acf02d" CoolEventPos="350" CoolEventColor="#acf02d" CoolEventSize="600" CoolDurationPos="1000" CoolDurationSize="120" CoolDurationColor="#3B98C9" CoolTimeSize="220" CoolTimePos="90" CoolTimeColor="#3B98C9" CoolTunerCol="#606060" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" foregroundColor="white" backgroundColor="tb" transparent="1" />
+    <widget name="CoolDescription" position="75,479" size="1759,304" font="Regular; 30" foregroundColor="white" backgroundColor="tb" transparent="1" />
+  </screen>
+  <screen name="CoolTVGuide" position="0,0" size="1920,1080" zPosition="1" title="Cool TV Guide" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="rgyb_name" />
+    <panel name="mn2" />
+    <widget name="list" position="75,75" size="1765,724" backgroundColor="tb" scrollbarMode="showNever" enableWrapAround="1" zPosition="0" transparent="1" CoolFont="Regular;30" CoolPiconFontCol="b7" CoolPiconBackCol="#4e5d6b" CoolNoPiconBackCol="#4e5d6b" CoolCurrentCol="blue" CoolCurrentColSel="white" CoolFontCol="white" CoolFontColSel="tb" CoolBackColor="white" CoolBackColorSel="#00005090" CoolNowCol="white" CoolNowColSel="white" CoolNowFontCol="white" CoolNowFontColSel="b8" CoolTunerCol="b7" CoolTunerBackCol="#4e5d6b" coolbordercolL="white" coolbordercolR="white" CoolBorderColL="white" CoolBorderColR="white" CoolRecCol="red" CoolRecColSel="orange" CoolRecAlarmCol="red" />
+    <widget source="Title" render="Label" position="1333,980" size="532,45" font="Console;30" noWrap="1" valign="center" halign="right" foregroundColor="b7" backgroundColor="tb" transparent="1" />
+    <widget name="timeline_now" position="75,75" zPosition="2" size="24,724" pixmap="/usr/share/enigma2/DarknessFHD/epg/timeline-now_cool.png" alphatest="blend" />
+  </screen>
+  <screen name="CoolTVGuideSetup" position="0,0" size="1920,1080" backgroundColor="transparent" title="Cool TV Guide Setup" flags="wfNoBorder">
+    <panel name="rgyb_name" />
+    <panel name="ch" />
+    <panel name="pig" />
+    <widget source="Title" render="Label" position="1273,507" size="600,45" font="Console;30" noWrap="1" valign="center" halign="left" foregroundColor="b7" backgroundColor="tb" transparent="1" />
+    <widget name="CoolText1" position="1272,574" size="600,40" font="Console; 30" foregroundColor="g3" backgroundColor="tb" halign="center" transparent="1" />
+    <widget name="CoolText2" position="1273,636" size="600,40" font="Console; 30" foregroundColor="g3" backgroundColor="tb" halign="center" transparent="1" />
+    <widget name="config" position="75,75" size="1100,700" enableWrapAround="1" transparent="1" font="Regular; 30" render="Listbox" itemHeight="50" />
+    <ePixmap name="" pixmap="DarknessFHD/e2/stp.png" position="1683,889" size="300,300" transparent="0" alphatest="blend" />
+  </screen>
+  <!-- MerlinMusicPlayer -->
+  <screen name="iDreamAddToDatabase" position="0,0" size="1920,1080" title="Add music files to iDream database">
+    <widget name="output" position="75,75" size="1100,700" valign="center" halign="center" font="Regular;30" itemHeight="40" backgroundColor="tb" transparent="1" />
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+  </screen>
+  <screen name="MerlinMusicPlayerScreenSaver" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="tb" title="MerlinMusicPlayerScreenSaver">
+    <widget name="coverArt" pixmap="/usr/share/enigma2/DarknessFHD/merlin/no_coverArt.png" position="81,130" size="238,238" transparent="1" alphatest="blend" />
+    <widget name="display" position="75,75" size="1100,40" zPosition="1" transparent="1" font="Regular;30" foregroundColor="unfcc000" />
+  </screen>
+  <screen name="MerlinMusicPlayerTV" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080" title="MerlinMusicPlayerTV">
+    <widget backgroundColor="transparent" name="video" position="0,0" size="1920,1080" zPosition="1" />
+    <widget name="coverArt" pixmap="/usr/share/enigma2/DarknessFHD/merlin/no_coverArt.png" position="1280,555" size="64,64" transparent="1" alphatest="blend" zPosition="2" />
+    <widget name="display" position="100,100" size="800,40" zPosition="2" backgroundColor="tb" font="Regular;30" foregroundColor="unfcc000" />
+  </screen>
+  <screen name="MerlinMusicPlayerScreen" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" title="iDream">
+	  <panel name="ch" />
+	  <eLabel font="Console; 30" foregroundColor="unc3c3c9" backgroundColor="tb" halign="left" position="90,670" size="140,40" text="Genre  ;" valign="center" zPosition="2" transparent="1" />
+	  <eLabel font="Console; 30" foregroundColor="unc3c3c9" backgroundColor="tb" halign="left" position="90,520" size="130,40" text="Album ;" valign="center" zPosition="2" transparent="1" />
+	  <eLabel font="Console; 30" foregroundColor="unc3c3c9" backgroundColor="tb" halign="left" position="90,450" size="130,40" text="Now    ;" valign="center" zPosition="2" transparent="1" />
+	  <eLabel font="Console; 30" foregroundColor="unc3c3c9" backgroundColor="tb" halign="left" position="90,595" size="130,40" text="Artist   ;" valign="center" zPosition="2" transparent="1" />
+	  <eLabel font="Console; 30" foregroundColor="unc3c3c9" backgroundColor="tb" halign="left" position="90,740" size="140,40" text="Next     ;" valign="center" zPosition="2" transparent="1" />
+	  <ePixmap position="1315,130" size="480,270" pixmap="DarknessFHD/merlin/mm.png" alphatest="blend" zPosition="2" transparent="1" />
+	  <eLabel backgroundColor="tb" font="Console; 80" foregroundColor="lightgrey3" halign="center" position="75,857" size="1100,150" text="MERLIN  MUSIC  PLAYER" valign="center" zPosition="2" transparent="1" />
+	  <widget name="coverArt" pixmap="/usr/share/enigma2/DarknessFHD/merlin/no_coverArt.png" position="512,115" size="238,238" transparent="1" alphatest="blend" />
+	  <ePixmap alphatest="blend" pixmap="/usr/share/enigma2/DarknessFHD/merlin/dvr.png" position="1325,726" size="500,50" transparent="1" zPosition="1" />
+	  <widget name="title" position="210,455" size="1000,40" zPosition="1" transparent="1" font="Console; 30" foregroundColor="b7" backgroundColor="tb" />
+	  <widget name="album" position="210,525" size="1000,40" zPosition="1" transparent="1" font="Console;30" foregroundColor="un999999" backgroundColor="tb" />
+	  <widget name="artist" position="210,600" size="1000,40" zPosition="1" transparent="1" font="Console;30" foregroundColor="un999999" backgroundColor="tb" />
+	  <widget name="genre" position="210,675" size="1000,40" zPosition="1" transparent="1" font="Console;30" foregroundColor="un999999" backgroundColor="tb" />
+	  <widget name="nextTitle" position="210,745" size="1000,40" zPosition="5" transparent="1" font="Console; 30" halign="left" foregroundColor="unf0f0f0" backgroundColor="tb" />
+		<ePixmap name="" pixmap="DarknessFHD/e1/chprgrsb.png" position="1355,510" size="425,10" zPosition="3" transparent="1" alphatest="blend" />
+	  <widget source="session.CurrentService" render="Progress" position="1355,510" size="425,10" pixmap="DarknessFHD/e1/chprgrs.png" backgroundColor="tb" borderWidth="1" borderColor="blue" transparent="1">
+		<convert type="ServicePosition">Position</convert>
+	  </widget>
+	  <widget source="session.CurrentService" render="Label" position="1625,535" size="158,40" zPosition="1" font="Console;30" halign="right" foregroundColor="un999999" backgroundColor="tb" transparent="1">
+		<convert type="ServicePosition">Length,ShowHours</convert>
+	  </widget>
+	  <widget source="session.CurrentService" render="Label" position="1355,535" size="198,40" zPosition="1" font="Console; 30" halign="left" foregroundColor="g3" backgroundColor="tb" transparent="1">
+		<convert type="ServicePosition">Position,ShowHours</convert>
+	  </widget>
+	  <widget name="shuffle" pixmaps="/usr/share/enigma2/DarknessFHD/merlin/placeholder1.png,/usr/share/enigma2/DarknessFHD/merlin/dvr_shuf.png" position="1677,625" size="100,50" transparent="1" alphatest="on" />
+	  <widget name="repeat" pixmaps="/usr/share/enigma2/DarknessFHD/merlin/placeholder1.png,/usr/share/enigma2/DarknessFHD/merlin/dvr_rep.png" position="1355,625" size="100,50" transparent="1" alphatest="on" />
+	  <widget name="dvrStatus" pixmaps="/usr/share/enigma2/DarknessFHD/merlin/dvr_pl.png,/usr/share/enigma2/DarknessFHD/merlin/dvr_pau.png" position="1325,726" size="500,50" transparent="1" alphatest="on" />
+  </screen>
+  <screen name="MerlinMusicPlayerSongList" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" title="Songlist">
+    <panel name="ch" />
+    <panel name="pig" />
+    <eLabel backgroundColor="tb" font="Console; 80" foregroundColor="unc3c3c9" halign="center" position="75,859" size="1100,150" text="MERLIN  MUSIC  PLAYER" valign="center" zPosition="2" transparent="1" />
+    <widget name="headertext" position="75,75" zPosition="1" size="1100,40" font="Regular; 30" transparent="1" foregroundColor="unfcc000" backgroundColor="tb" />
+    <widget name="list" position="75,134" zPosition="2" size="1100,650" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="10" scrollbarSliderForegroundColor="ss" scrollbarBackgroundPicture="DarknessFHD/e1/scrollbar.png" transparent="1" backgroundColor="tb" />
+  </screen>
+  <screen name="MerlinMusicPlayerLyrics" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" title="Merlin Music Player Lyrics">
+    <panel name="ch" />
+    <panel name="pig" />
+    <eLabel backgroundColor="tb" font="Console; 80" foregroundColor="unc3c3c9" halign="center" position="75,857" size="1100,150" text="MERLIN  MUSIC  PLAYER" valign="center" zPosition="2" transparent="1" />
+    <widget name="headertext" position="75,75" zPosition="1" size="1100,40" font="Regular; 30" transparent="1" backgroundColor="tb" />
+    <widget name="resulttext" position="75,129" zPosition="1" size="1100,40" font="Regular; 30" transparent="1" backgroundColor="tb" />
+    <widget name="lyric_text" position="75,189" zPosition="2" size="1100,600" font="Regular; 25" transparent="1" backgroundColor="tb" />
+  </screen>
+  <screen name="iDreamMerlin" position="0,0" size="1920,1080" flags="wfNoBorder" bbackgroundColor="transparent" title="iDream">
+    <panel name="rgyb_source" />
+    <panel name="ch" />
+    <panel name="pig" />
+    <widget name="headertext" position="75,75" zPosition="1" size="1100,40" font="Regular;20" transparent="1" backgroundColor="tb" />
+    <widget name="list" position="75,152" zPosition="2" size="1100,630" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="10" scrollbarSliderForegroundColor="ss" scrollbarBackgroundPicture="DarknessFHD/e1/scrollbar.png" transparent="1" backgroundColor="tb" />
+  </screen>
+  <screen name="SelectPath" position="0,0" size="1920,1080" title="Select path">
+    <panel name="ch" />
+    <panel name="pig" />
+    <panel name="rgyb_source" />
+    <widget name="target" position="75,90" size="1100,40" valign="center" font="Regular; 30" transparent="1" />
+    <widget name="filelist" position="75,150" zPosition="1" size="1100,630" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="10" scrollbarSliderForegroundColor="ss" scrollbarBackgroundPicture="DarknessFHD/e1/scrollbar.png" transparent="1" />
+  </screen>
+  <screen name="MerlinMusicPlayerSetup" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" title="Merlin Music Player Setup">
+    <panel name="ch" />
+    <panel name="pig" />
+    <panel name="rgyb_source" />
+    <panel name="config" />
+  </screen>
+  <screen name="MerlinMusicPlayerFileList" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="tb" title="iDream">
+    <panel name="ch" />
+    <panel name="pig" />
+    <eLabel backgroundColor="tb" font="Console; 80" foregroundColor="unc3c3c9" halign="center" position="75,857" size="1100,150" text="MERLIN  MUSIC  PLAYER" valign="center" zPosition="2" transparent="1" />
+    <widget name="headertext" position="75,90" zPosition="1" size="1100,40" font="Regular; 30" transparent="1" foregroundColor="unfcc000" backgroundColor="tb" />
+    <widget name="list" position="75,150" zPosition="2" size="1100,630" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="10" scrollbarSliderForegroundColor="ss" scrollbarBackgroundPicture="DarknessFHD/e1/scrollbar.png" transparent="1" backgroundColor="tb" />
+  </screen>
+
+
+</skin>
