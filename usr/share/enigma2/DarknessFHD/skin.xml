@@ -3311,7 +3311,7 @@ self.instance.resize(eSize(*wsize))
     <panel name="pig" />
     <eLabel text="skin by digiteng(2018-...)" position="240,210" size="720,55" font="Regular; 45" halign="center" foregroundColor="gr2" transparent="1" />
     <eLabel text="https://github.com/digiteng/" position="240,825" size="720,55" font="Regular; 45" halign="center" transparent="1" foregroundColor="gr2" />
-    <eLabel text="for openATV..." position="240,530" size="720,55" font="Regular; 45" halign="center" foregroundColor="gr2" transparent="1" />
+    <eLabel text="for openESI..." position="240,530" size="720,55" font="Regular; 45" halign="center" foregroundColor="gr2" transparent="1" />
   </screen>
   <screen name="WeatherLocationChoiceList" position="0,0" size="1920,1080" title="Location list">
     <widget name="choicelist" position="75,75" size="1100,700" scrollbarMode="showOnDemand" scrollbarWidth="6" backgroundColor="tb" transparent="1" />
