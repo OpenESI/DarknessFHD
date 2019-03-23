@@ -13,7 +13,7 @@ class DARKVolume(Renderer):
     def changed(self, what):
         if not self.suspended:
             value = str(eDVBVolumecontrol.getInstance().getVolume())
-            self.instance.setPixmapFromFile('/usr/share/enigma2/DarknessFHD/volume/' + value + '.png')
+            self.instance.setPixmapFromFile('/usr/share/enigma2/DarknessHD/volume/' + value + '.png')
 
     def pollme(self):
         self.changed(None)
