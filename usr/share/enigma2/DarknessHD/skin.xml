@@ -655,7 +655,7 @@
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="menu" render="Pixmap" pixmap="DarknessHD/e2/i.png" alphatest="on" transparent="1" position="1010,400" size="80,80">
-      <convert type="MenuEntryCompare">Infopanel</convert>
+      <convert type="MenuEntryCompare">Esipanel</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="menu" render="Pixmap" pixmap="DarknessHD/e2/clk.png" alphatest="on" transparent="1" position="1010,400" size="80,80">
@@ -3690,7 +3690,7 @@ self.instance.resize(eSize(*wsize))
     <panel name="pig" />
     <panel name="config" />
   </screen>
-  <!-- Infopanel -->
+  <!-- ESIpanel -->
   <screen name="HddMount" position="0,0" size="1280,720" title="HddMount" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="list" render="Listbox" position="50,123" size="733,400" scrollbarMode="showOnDemand" font="Regular;16" transparent="1">
       <convert type="TemplatedMultiContent">
@@ -3709,7 +3709,7 @@ self.instance.resize(eSize(*wsize))
     <panel name="rgyb_source" />
     <panel name="pig" />
   </screen>
-  <screen name="Infopanel" position="0,0" size="1280,720" title="Info Panel" backgroundColor="transparent" flags="wfNoBorder">
+  <screen name="Esipanel" position="0,0" size="1280,720" title="Info Panel" backgroundColor="transparent" flags="wfNoBorder">
     <panel name="ch" />
     <panel name="pig" />
     <ePixmap name="" pixmap="DarknessHD/e2/info.png" position="1010,402" size="345,200" transparent="0" alphatest="blend" />
