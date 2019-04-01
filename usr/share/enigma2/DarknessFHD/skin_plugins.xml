@@ -1,5 +1,75 @@
 <skin>
   <!-- PLUGINS -->
+  
+<!-- lululla edit start -->
+
+<!-- ImageBackup -->
+  <screen name="ImageBackup" position="fill" zPosition="2" flags="wfNoBorder" title="Image Backup">
+	<panel name="rgyb_png" />
+    <panel name="rgyb_source" />      
+	<panel name="ch" />
+	<panel name="pig" />
+    <widget name="info-hdd" position="67,110" zPosition="1" size="1092,162" font="Regular;34" halign="left" valign="top" transparent="1" />
+    <widget name="info-multi" position="60,320" zPosition="1" size="1097,120" font="Regular;34" halign="left" valign="top" transparent="1" />
+    <widget name="info-usb" position="61,450" zPosition="1" size="1101,332" font="Regular;34" halign="left" valign="top" transparent="1" />
+</screen>   
+
+<!-- EPG Import -->
+  <screen name="EPGSelectEPGSourcesScreen" position="fill" zPosition="2" flags="wfNoBorder" title="Select EPG sources">
+	<panel name="rgyb_png" />
+    <panel name="rgyb_name" />      
+	<panel name="ch" />
+	<panel name="pig" />
+    <widget name="list" itemHeight="50" foregroundColor="lightgrey" backgroundColor="tb" scrollbarMode="showOnDemand" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" position="75,75" size="1100,700" zPosition="2" transparent="1" />
+  </screen>
+
+  <screen name="EPGImportFilterScreen" position="fill" title="EPGImport Filter" flags="wfNoBorder">
+	<panel name="rgyb_png" />
+    <panel name="rgyb_name" />	
+    <panel name="ch" />
+	<panel name="pig" />
+    <widget name="list" itemHeight="50" foregroundColor="lightgrey" backgroundColor="tb" scrollbarMode="showOnDemand" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" position="75,75" size="1100,700" zPosition="2" transparent="1" />
+    <widget name="statusbar" position="89,945" halign="left" size="1038,85" font="Regular;34" />
+    <widget name="status" position="93,848" size="1032,85" halign="center" font="Regular;34" />
+   </screen>
+
+<!-- EPG Import Configuration -->
+  <screen name="EPGImportConfig" position="fill" title="EPG Import Configuration" flags="wfNoBorder">
+	<panel name="rgyb_png" />
+    <panel name="rgyb_name" />    
+	<panel name="ch" />
+	<panel name="pig" />
+    <panel name="config" />
+    <widget name="statusbar" position="89,945" halign="left" size="1038,85" font="Regular;34" />
+    <widget name="status" position="93,848" size="1032,85" halign="center" font="Regular;34" />
+  </screen>
+  
+  <!-- EPG Import Profile -->
+  <screen name="EPGImportProfile" position="fill" title="EPG Import Profile" flags="wfNoBorder">
+	<panel name="rgyb_png" />
+    <panel name="rgyb_name" />
+	<panel name="ch" />
+	<panel name="pig" />
+    <panel name="config" />
+  </screen>
+  
+  <!-- EPG Import Sources -->
+  <screen name="EPGImportSources" position="fill" title="EPG Import Sources" flags="wfNoBorder">
+	<panel name="rgyb_png" />
+    <panel name="rgyb_name" />
+	<panel name="ch" />
+	<panel name="pig" />
+    <widget name="list" itemHeight="50" foregroundColor="lightgrey" backgroundColor="tb" scrollbarMode="showOnDemand" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" position="75,75" size="1100,700" zPosition="2" transparent="1" />
+  </screen>
+  
+  <!-- EPG Import Log -->
+  <screen name="EPGImportLog" position="fill" title="EPG Import Log" flags="wfNoBorder">
+	<panel name="pig" />
+    <widget name="list" itemHeight="50" foregroundColor="lightgrey" backgroundColor="tb" scrollbarMode="showOnDemand" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" position="75,75" size="1100,700" zPosition="2" transparent="1" />
+  </screen>
+
+<!-- lululla edit end -->
+  
   <!-- Alternative SoftCam Manager -->
   <screen name="AltCamManager" position="0,0" size="1920,1080" title="Alternative SoftCam Manager" flags="wfNoBorder" backgroundColor="transparent">
 	  <panel name="rgyb_source" />
