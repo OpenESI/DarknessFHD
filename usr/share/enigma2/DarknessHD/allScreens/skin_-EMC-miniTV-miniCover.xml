@@ -3,7 +3,7 @@
 	  <panel name="ch" />
 	  <panel name="rgyb_name" />
 	  <panel name="pig" />
-	  <widget name="list" position="50,50" size="733,466" itemHeight="46" backgroundColorSelected="bs" CoolIconPos="10" CoolIconHPos="0" CoolIconSize="40,40" CoolPiconPos="670" CoolPiconHPos="0" CoolPiconWidth="80" CoolPiconHeight="40" CoolMoviePiconPos="60" CoolMoviePiconSize="600" CoolFont="Regular;25" CoolSelectFont="Regular;30" CoolDateFont="Regular;25" CoolDatePos="850" CoolDateHPos="5" CoolDateWidth="250" CoolProgressPos="800" CoolBarPos="10" CoolBarHPos="45" CoolBarSize="1080,10" CoolBarSizeSa="1080,10" CoolMoviePos="60" CoolMovieHPos="5" CoolMovieSize="600" CoolFolderSize="600" CoolTitleColor="0" CoolDateColor="0" CoolHighlightColor="0" DefaultColor="white" UnwatchedColor="gr" WatchingColor="#00ffe271" FinishedColor="#009efeaa" RecordingColor="red" BackColorSel="white" FrontColorSel="white" backgroundColor="tb" foregroundColor="white" enableWrapAround="1" fieldMargins="16" nonplayableMargins="16" scrollbarMode="showOnDemand" transparent="1" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessFHD/e1/scrollbar.png" />
+	  <widget name="list" position="50,50" size="733,466" itemHeight="46" backgroundColorSelected="bs" CoolIconPos="10" CoolIconHPos="0" CoolIconSize="40,40" CoolPiconPos="670" CoolPiconHPos="0" CoolPiconWidth="80" CoolPiconHeight="40" CoolMoviePiconPos="60" CoolMoviePiconSize="600" CoolFont="Regular;25" CoolSelectFont="Regular;30" CoolDateFont="Regular;25" CoolDatePos="850" CoolDateHPos="5" CoolDateWidth="250" CoolProgressPos="800" CoolBarPos="10" CoolBarHPos="45" CoolBarSize="1080,10" CoolBarSizeSa="1080,10" CoolMoviePos="60" CoolMovieHPos="5" CoolMovieSize="600" CoolFolderSize="600" CoolTitleColor="0" CoolDateColor="0" CoolHighlightColor="0" DefaultColor="white" UnwatchedColor="gr" WatchingColor="#00ffe271" FinishedColor="#009efeaa" RecordingColor="red" BackColorSel="white" FrontColorSel="white" backgroundColor="tb" foregroundColor="white" enableWrapAround="1" fieldMargins="16" nonplayableMargins="16" scrollbarMode="showOnDemand" transparent="1" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessHD/e1/scrollbar.png" />
 	  <widget source="Service" render="Label" position="643,660" size="166,26" font="Regular; 20" backgroundColor="tb2" halign="right" transparent="1" zPosition="1" foregroundColor="green">
 		<convert type="ServiceTime">StartTime</convert>
 		<convert type="ClockToText">Format:%d.%m.%Y</convert>
@@ -32,6 +32,6 @@
 		<convert type="MovieReference" />
 	  </widget>
 	  <widget name="Cover" position="1096,333" size="123,185" zPosition="2" alphatest="blend" transparent="1" />
-	  <ePixmap position="872,418" size="133,133" zPosition="1" pixmap="DarknessFHD/e2/film2.png" alphatest="blend" transparent="1" />
+	  <ePixmap position="872,418" size="133,133" zPosition="1" pixmap="DarknessHD/e2/film2.png" alphatest="blend" transparent="1" />
   </screen>
 </skin>
