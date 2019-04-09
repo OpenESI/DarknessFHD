@@ -1195,13 +1195,15 @@
   </screen>
   <!-- SETUP -->
 <!-- Volume -->
-<screen name="Volume" position="40,130" zPosition="1" size="28,360" title="ESI Volume" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap pixmap="DarknessHD/volume.png" position="0,0" size="28,360" transparent="1" />
-    <widget name="Volume" pixmap="DarknessHD/vol.png" position="5,18" zPosition="1" orientation="orBottomToTop" size="18,309" transparent="1" />
+<screen name="UnhandledKey" position="611,130" size="90,73" title="UnhandledKey" zPosition="100" flags="wfNoBorder" backgroundColor="transpBlack">
+    <widget alphatest="off" name="UnhandledKeyPixmap" pixmap="DarknessHD/volume/unhandled.png" position="0,0" size="90,73" transparent="0" />
   </screen>
-<!--  Mute -->
-  <screen name="Mute" position="40,100" zPosition="10" size="45,60" title="ESI Mute" backgroundColor="transparent" flags="wfNoBorder">
-    <ePixmap position="0,0" size="45,60" pixmap="DarknessHD/mute.png" transparent="1" />
+  <screen name="Volume" position="492,91" zPosition="1" size="296,46" title="Volume" flags="wfNoBorder" transparent="0" backgroundColor="transparent">
+    <ePixmap name="bPPodloga" position="0,0" size="296,46" pixmap="DarknessHD/volume/volume_back.png" zPosition="-3" transparent="0" alphatest="off" />
+    <widget name="Volume" pixmap="DarknessHD/volume/volume.png" position="57,16" zPosition="2" size="230,12" transparent="1" alphatest="blend" />
+  </screen>
+  <screen name="Mute" position="90,20" size="90,73" title="Mute" backgroundColor="transparent" zPosition="10" flags="wfNoBorder" transparent="0">
+    <ePixmap pixmap="DarknessHD/volume/mute.png" position="0,0" size="90,73" zPosition="-5" alphatest="off" />
   </screen>
   <screen name="Setup" position="0,0" size="1280,720" title="Setup" backgroundColor="transparent" flags="wfNoBorder">
     <panel name="rgyb_source" />
