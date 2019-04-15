@@ -443,12 +443,12 @@
 
 <!-- edit lululla -->
 
-<widget source="session.Event_Now" render="Label" position="244,595" size="68,26" borderWidth="1" backgroundColor="black" transparent="1" zPosition="2" foregroundColor="amavi" font="Regular; 19" halign="left" valign="center">
+<widget source="session.Event_Now" render="Label" position="244,595" size="68,26" borderWidth="1" backgroundColor="black" transparent="1" zPosition="2" foregroundColor="b8" font="Regular; 19" halign="left" valign="center">
   <convert type="EventTime">StartTime</convert>
   <convert type="ClockToText">Format:%H:%M</convert>
 </widget>
 
-<widget source="session.Event_Next" render="Label" position="245,633" size="68,26" borderWidth="1" backgroundColor="black" transparent="1" zPosition="2" foregroundColor="amavi" font="Regular; 18" halign="left" valign="center">
+<widget source="session.Event_Next" render="Label" position="245,633" size="68,26" borderWidth="1" backgroundColor="black" transparent="1" zPosition="2" foregroundColor="b8" font="Regular; 18" halign="left" valign="center">
   <convert type="EventTime">StartTime</convert>
   <convert type="ClockToText">Default;Proportional</convert>
 </widget>
@@ -1195,16 +1195,15 @@
   </screen>
   <!-- SETUP -->
 <!-- Volume -->
-<screen name="UnhandledKey" position="611,130" size="90,73" title="UnhandledKey" zPosition="100" flags="wfNoBorder" backgroundColor="transpBlack">
-    <widget alphatest="off" name="UnhandledKeyPixmap" pixmap="DarknessHD/volume/unhandled.png" position="0,0" size="90,73" transparent="0" />
+<screen name="Volume" position="26,86" zPosition="1" size="18,240" title="ESI Volume" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="DarknessHD/volume.png" position="0,0" size="18,240" transparent="1" />
+    <widget name="Volume" pixmap="DarknessHD/vol.png" position="3,12" zPosition="1" orientation="orBottomToTop" size="12,206" transparent="1" />
   </screen>
-  <screen name="Volume" position="492,91" zPosition="1" size="296,46" title="Volume" flags="wfNoBorder" transparent="0" backgroundColor="transparent">
-    <ePixmap name="bPPodloga" position="0,0" size="296,46" pixmap="DarknessHD/volume/volume_back.png" zPosition="-3" transparent="0" alphatest="off" />
-    <widget name="Volume" pixmap="DarknessHD/volume/volume.png" position="57,16" zPosition="2" size="230,12" transparent="1" alphatest="blend" />
-  </screen>
-  <screen name="Mute" position="90,20" size="90,73" title="Mute" backgroundColor="transparent" zPosition="10" flags="wfNoBorder" transparent="0">
-    <ePixmap pixmap="DarknessHD/volume/mute.png" position="0,0" size="90,73" zPosition="-5" alphatest="off" />
-  </screen>
+<!--  Mute -->
+  <screen name="Mute" position="26,66" zPosition="10" size="30,40" title="ESI Mute" backgroundColor="transparent" flags="wfNoBorder">
+  <ePixmap position="0,0" size="30,40" pixmap="DarknessHD/mute.png" transparent="1" />
+</screen>
+
   <screen name="Setup" position="0,0" size="1280,720" title="Setup" backgroundColor="transparent" flags="wfNoBorder">
     <panel name="rgyb_source" />
     <panel name="ch" />
@@ -2797,14 +2796,49 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ch" />
     <panel name="pig" />
   </screen>
+  
+<!-- lululla edit -->
+<!--
+  
   <screen name="Dish" position="33,33" size="100,180" zPosition="-1" backgroundColor="transparent" flags="wfNoBorder">
     <widget name="Dishpixmap" position="0,16" size="100,100" zPosition="-1" pixmap="DarknessHD/icons/dish.png" transparent="1" alphatest="blend" />
   </screen>
+ 
+  
   <screen name="Dishpip" position="33,33" size="100,180" title="DishPiP" zPosition="1" backgroundColor="transparent" flags="wfNoBorder">
     <widget source="Dishpixmap" render="Pixmap" pixmap="DarknessHD/icons/dish.png" zPosition="-1" position="8,10" size="86,106" alphatest="on">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
   </screen>
+-->   
+  
+  <screen name="Dish" position="33,33" size="133,200" zPosition="-1" backgroundColor="transparent" flags="wfNoBorder">
+    <widget name="Dishpixmap" position="0,16" size="100,100" zPosition="-1" pixmap="DarknessHD/icons/dish.png" transparent="1" alphatest="blend" />
+    <widget name="turnTime" position="44,4" size="80,20" zPosition="1" font="Regular;17" halign="right" borderWidth="1" transparent="1" />
+    <widget name="From" position="4,164" size="44,18" zPosition="1" font="Regular;16" halign="left" borderWidth="1" transparent="1" />
+    <widget name="posFrom" position="56,163" size="70,21" zPosition="1" font="Regular;18" halign="left" borderWidth="1" transparent="1" />
+    <widget name="Goto" position="4,184" size="44,18" zPosition="1" font="Regular;16" halign="left" borderWidth="1" transparent="1" />
+    <widget name="posGoto" position="56,183" size="70,21" zPosition="1" font="Regular;18" halign="left" borderWidth="1" transparent="1" />
+    <widget name="tunerName" position="3,144" size="100,13" zPosition="1" font="Regular;12" halign="left" borderWidth="1" transparent="1" />
+    <widget name="turnSpeed" position="74,98" size="50,16" zPosition="1" font="Regular;14" halign="right" borderWidth="1" transparent="1" />
+  </screen>
+  
+  <screen name="Dishpip" position="33,33" size="100,180" title="DishPiP" zPosition="1" backgroundColor="transparent" flags="wfNoBorder">
+    <widget source="Dishpixmap" render="Pixmap" pixmap="DarknessHD/icons/dish.png" zPosition="-1" position="8,10" size="86,106" alphatest="on">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
+
+    <eLabel text="PiP" position="18,26" size="26,16" font="Regular;12" foregroundColor="#909090" backgroundColor="#909090" transparent="1" zPosition="1" />
+    <widget name="turnTime" position="30,3" size="53,14" zPosition="1" font="Regular;13" halign="right" borderWidth="1" transparent="1" />
+    <widget name="From" position="3,109" size="30,13" zPosition="1" font="Regular;12" halign="left" borderWidth="1" transparent="1" />
+    <widget name="posFrom" position="36,106" size="46,16" zPosition="1" font="Regular;14" halign="right" borderWidth="1" transparent="1" />
+    <widget name="Goto" position="3,122" size="30,13" zPosition="1" font="Regular;12" halign="left" borderWidth="1" transparent="1" />
+    <widget name="posGoto" position="36,120" size="46,16" zPosition="1" font="Regular;14" halign="right" borderWidth="1" transparent="1" />
+    <widget name="tunerName" position="1,96" size="66,10" zPosition="1" font="Regular;8" halign="left" borderWidth="1" transparent="1" />
+    <widget name="turnSpeed" position="50,65" size="33,10" zPosition="1" font="Regular;9" halign="right" borderWidth="1" transparent="1" />
+  </screen>
+<!-- lululla edit -->  
+  
   <screen name="ChapterZap" position="center,center" size="266,80" title="Chapter">
     <eLabel name="a" position="6,9" size="146,66" zPosition="-10" />
     <eLabel name="b" position="154,12" size="106,60" zPosition="-10" />
