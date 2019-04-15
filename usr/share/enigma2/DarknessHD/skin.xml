@@ -590,7 +590,7 @@
     <widget name="list" position="50,50" size="733,466" scrollbarMode="showOnDemand" transparent="1" zPosition="1" itemHeight="40" serviceItemHeight="26" 
 	serviceNumberFont="Regular;20" serviceNameFont="Regular;21" serviceInfoFont="Console2;18" 
 	colorServiceRecording="red" foregroundColorServiceNotAvail="gr" foregroundColor="fc" foregroundColorSelected="fcs" 
-	colorServiceDescription="csd" colorServiceDescriptionSelected="csds" 
+	colorServiceDescription="cepbs" colorServiceDescriptionSelected="yellow" 
 	colorEventProgressbar="cep" colorEventProgressbarSelected="ceps" progressBarWidth="53" progressbarHeight="6" 
 	colorEventProgressbarBorder="cepb" colorEventProgressbarBorderSelected="cepbs" progressbarBorderWidth="1" 
 	progressPercentWidth="90" scrollbarSliderBorderColor="#009b9b9b" scrollbarSliderForegroundColor="#0072c4ff" 
