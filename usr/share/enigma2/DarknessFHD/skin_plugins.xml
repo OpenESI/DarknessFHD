@@ -2,6 +2,176 @@
   <!-- PLUGINS -->
   
 <!-- lululla edit start -->
+<!-- mod openesi -->
+
+
+<screen name="MultiBootStartupOPT" position="0,0" size="1920,1080" title="MultiBoot STARTUP Selector" flags="wfNoBorder" backgroundColor="transparent">
+  <panel name="ch" />
+  <panel name="rgyb_source" />
+  <panel name="pig" />
+  <widget source="Title" render="Label" position="75,900" size="1100,100" zPosition="-1" halign="center" font="Regular; 50" backgroundColor="tb" transparent="1" valign="center" />
+  <eLabel position="200,360" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Currently used software" foregroundColor="fresh" />
+    <eLabel position="200,455" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Selecting Image Using the 'Left_Right' keys " foregroundColor="fresh" />
+    <eLabel position="200,405" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Activation of the PIP function with the 'Top_ Bottom' keys" foregroundColor="fresh" />
+  <widget source="config" render="Label" position="75,182" size="1100,600" halign="center" font="Regular; 34" backgroundColor="black" foregroundColor="white" />
+  <widget source="options" render="Label" position="106,50" size="895,69" halign="center" font="Regular; 24" backgroundColor="black" foregroundColor="white" />
+  <widget name="description" position="106,122" size="895,69" font="Regular; 19" foregroundColor="white" halign="center" backgroundColor="black" valign="center" />
+  <ePixmap position="1445,538" size="320,190" zPosition="2" pixmap="DarknessFHD/picon_default.png" alphatest="blend" />
+</screen>
+
+<screen name="MultiBootStartup" position="0,0" size="1920,1080" title="MultiBoot STARTUP Selector" flags="wfNoBorder" backgroundColor="transparent">
+  <panel name="ch" />
+  <panel name="rgyb_source" />
+  <panel name="pig" />
+  <widget source="Title" render="Label" position="75,900" size="1100,100" zPosition="-1" halign="center" font="Regular; 50" backgroundColor="tb" transparent="1" valign="center" />
+  <eLabel position="200,360" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Currently used software" foregroundColor="fresh" />
+    <eLabel position="200,455" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Selecting Image Using the 'Left_Right' keys " foregroundColor="fresh" />
+    <eLabel position="200,405" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Activation of the PIP function with the 'Top_ Bottom' keys" foregroundColor="fresh" />
+
+  <widget source="config" render="Label" position="75,182" size="1100,600" halign="center" font="Regular; 34" backgroundColor="black" foregroundColor="white" />
+  <widget source="options" render="Label" position="106,50" size="895,69" halign="center" font="Regular; 24" backgroundColor="black" foregroundColor="white" />
+  <widget name="description" position="106,122" size="895,69" font="Regular; 19" foregroundColor="white" halign="center" backgroundColor="black" valign="center" />
+  <ePixmap position="1445,538" size="320,190" zPosition="2" pixmap="DarknessFHD/picon_default.png" alphatest="blend" />
+</screen>
+
+<screen name="MultiBootStartupDS" position="0,0" size="1920,1080" title="MultiBoot STARTUP Selector" flags="wfNoBorder" backgroundColor="transparent">
+  <panel name="ch" />
+  <panel name="rgyb_source" />
+  <panel name="pig" />
+  <widget source="Title" render="Label" position="75,900" size="1100,100" zPosition="-1" halign="center" font="Regular; 50" backgroundColor="tb" transparent="1" valign="center" />
+  <eLabel position="200,360" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Currently used software" foregroundColor="fresh" />
+    <eLabel position="200,455" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Selecting Image Using the 'Left_Right' keys " foregroundColor="fresh" />
+    <eLabel position="200,405" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Activation of the PIP function with the 'Top_ Bottom' keys" foregroundColor="fresh" />
+  <widget source="config" render="Label" position="75,182" size="1100,600" halign="center" font="Regular; 34" backgroundColor="black" foregroundColor="white" />
+  <widget source="options" render="Label" position="106,50" size="895,69" halign="center" font="Regular; 24" backgroundColor="black" foregroundColor="white" />
+  <widget name="description" position="106,122" size="895,69" font="Regular; 19" foregroundColor="white" halign="center" backgroundColor="black" valign="center" />
+  <ePixmap position="1445,538" size="320,190" zPosition="2" pixmap="DarknessFHD/picon_default.png" alphatest="blend" />
+</screen>
+
+
+
+
+
+
+
+<screen name="EsiPanel" position="0,0" size="1920,1080" title="Info Panel" backgroundColor="transparent" flags="wfNoBorder">
+    <ePixmap position="0,0" size="1920,1080" zPosition="-55" pixmap="DarknessFHD/menu_bg5.png" alphatest="off" transparent="0" />
+    <widget source="Title" render="Label" position="75,5" size="1015,40" font="Console; 30" backgroundColor="tb2" transparent="1" foregroundColor="gr2" />
+    <widget font="LCD; 32" render="Label" position="1124,0" size="80,40" source="session.MSNWeather" transparent="1" zPosition="2" halign="center" backgroundColor="tb2" foregroundColor="gr2">
+		<convert type="MSNWeather">temperature_current</convert>
+	</widget>
+    <widget render="MSNWeatherPixmap" alphatest="blend" position="1082,0" size="40,40" source="session.MSNWeather" transparent="1" zPosition="5">
+      <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/DarknessFHD/weathericon/,png</convert>
+    </widget>
+	  <widget source="global.CurrentTime" render="Label" position="1731,0" size="150,40" font="Console; 30" valign="center" halign="right" backgroundColor="tb2" transparent="1" foregroundColor="gr2">
+		<convert type="ClockToText">Format:%H:%M</convert>
+	  </widget>
+	  <widget source="global.CurrentTime" render="Label" position="1249,0" size="400,40" font="Regular; 25" valign="center" halign="left" backgroundColor="tb2" transparent="1" foregroundColor="gr2">
+		<convert type="ClockToText">Format:%a, %e. %B %Y</convert>
+	  </widget>
+      
+    <!--
+  <panel name="ch" />
+  -->
+  <panel name="pig" />
+    <!--    
+  <ePixmap name="" pixmap="DarknessFHD/e2/info.png" position="1516,603" size="518,300" transparent="0" alphatest="blend" />
+  -->  
+  <widget name="Mlist" position="75,75" size="1100,700" font="Regular;40" zPosition="1" scrollbarMode="showOnDemand" scrollbarSliderBorderColor="#009b9b9b" scrollbarSliderForegroundColor="#0072c4ff" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" transparent="1" itemHeight="70" />
+  <widget name="label1" position="64,1092" size="1697,129" font="Regular; 50" halign="left" backgroundColor="tb" transparent="1" foregroundColor="orange" />
+</screen>
+
+<screen name="CONFIG_SKIN" position="0,0" size="1920,1080" title="Info Panel" backgroundColor="transparent" flags="wfNoBorder">
+  <panel name="ch" />
+  <panel name="pig" />
+  <ePixmap name="" pixmap="DarknessFHD/e2/info.png" position="1516,603" size="518,300" transparent="0" alphatest="blend" />
+  <widget name="config" position="75,75" size="1100,700" font="Regular;40" zPosition="1" scrollbarMode="showOnDemand" scrollbarSliderBorderColor="#009b9b9b" scrollbarSliderForegroundColor="#0072c4ff" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" transparent="1" itemHeight="70" />
+  <widget name="labelExitsave" position="75,875" size="1100,60" font="Regular; 40" halign="left" backgroundColor="tb" transparent="1" foregroundColor="orange" />
+</screen>
+
+<screen name="INFO_SKIN" position="0,0" size="1920,1080" title="Info Panel" backgroundColor="transparent" flags="wfNoBorder">
+  <panel name="ch" />
+  <panel name="pig" />
+  <ePixmap name="" pixmap="DarknessFHD/e2/info.png" position="1516,603" size="518,300" transparent="0" alphatest="blend" />
+  <widget name="label1" position="75,875" size="1100,60" font="Regular; 40" halign="left" backgroundColor="tb" transparent="1" foregroundColor="orange" />
+  <widget name="label2" position="75,75" size="1100,700" font="Regular; 40" halign="left" backgroundColor="tb" transparent="1" foregroundColor="orange" />
+</screen>
+
+<screen name="INFO_SKIN2" position="0,0" size="1920,1080" title="Info Panel" backgroundColor="transparent" flags="wfNoBorder">
+  <panel name="ch" />
+  <panel name="pig" />
+  <ePixmap name="" pixmap="DarknessFHD/e2/info.png" position="1516,603" size="518,300" transparent="0" alphatest="blend" />
+  <widget name="label1" position="75,75" size="1100,700" font="Regular; 40" halign="left" backgroundColor="tb" transparent="1" foregroundColor="orange" />
+</screen>
+
+<screen name="SetPiconPath" position="0,0" size="1920,1080" title="PiconPathSet" backgroundColor="transparent" flags="wfNoBorder">
+  <panel name="ch" />
+  <panel name="pig" />
+  <widget source="global.CurrentTime" render="Label" position="1348,0" size="539,38" font="Replacement;34" valign="center" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Format:%a,%e. %B %Y | %H:%M</convert>
+  </widget>
+  <ePixmap pixmap="DarknessFHD/button_red_230.png" position="1434,847" size="230,4" alphatest="blend" />
+  <ePixmap pixmap="DarknessFHD/button_green_230.png" position="1677,847" size="230,4" alphatest="blend" />
+  <widget source="key_red" render="Label" position="1434,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="background" transparent="1" foregroundColor="white" />
+  <widget source="key_green" render="Label" position="1677,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="background" transparent="1" foregroundColor="white" />
+  <widget name="config" position="100,67" size="1012,708" itemHeight="42" selectionPixmap="DarknessFHD/frame/frame_42.png" scrollbarMode="showOnDemand" transparent="1" font="Regular;30" />
+</screen>
+
+<screen name="piconPath" position="0,0" size="1920,1080" title="Select path for Picons" backgroundColor="transparent" flags="wfNoBorder">
+  <panel name="ch" />
+  <panel name="pig" />
+  <widget source="global.CurrentTime" render="Label" position="1348,0" size="539,38" font="Replacement;34" valign="center" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Format:%a,%e. %B %Y | %H:%M</convert>
+  </widget>
+  <ePixmap pixmap="DarknessFHD/button_red_230.png" position="1434,847" size="230,4" alphatest="blend" />
+  <ePixmap pixmap="DarknessFHD/button_green_230.png" position="1677,847" size="230,4" alphatest="blend" />
+  <widget source="key_red" render="Label" position="1434,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="background" transparent="1" foregroundColor="white" />
+  <widget source="key_green" render="Label" position="1677,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="background" transparent="1" foregroundColor="white" />
+  <widget name="target" position="111,875" size="1080,64" font="Regular;30" backgroundColor="background3" transparent="1" />
+  <widget name="filelist" itemHeight="50" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" position="75,75" size="1100,700" zPosition="2" transparent="1" />
+</screen>
+<!-- FlashOnline Device Browser -->
+  <screen name="doFlashImage" position="0,0" size="1920,1080" title="doFlashImage" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="tb" name="imageList" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular;32" foregroundColor="white" itemHeight="45" position="75,75" size="1100,700" scrollbarMode="showOnDemand" valign="top" transparent="1" />
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+  </screen>
+  
+<screen name="FlashOnline" position="0,0" size="1920,1080" title="FlashOnline" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="info-online" position="75,75" zPosition="1" size="1100,369" font="Regular;32" foregroundColor="white" halign="left" valign="top" transparent="1" backgroundColor="tb" />
+    <widget name="info-local" position="76,444" zPosition="1" size="1100,368" font="Regular;32" foregroundColor="und6ff98" halign="left" valign="top" transparent="1" backgroundColor="tb" />
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+
+<widget name="description" position="78,850" size="895,69" font="Regular; 30" foregroundColor="white" halign="left" backgroundColor="black" valign="center" />
+<widget name="config" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="50" position="78,922" size="1100,106" zPosition="5" transparent="1" font="Console; 34" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessFHD/e1/scrollbar.png" textOffset="15,0" />
+  </screen>
+<!--  
+  <screen name="FlashOnline" position="0,0" size="1920,1080" title="FlashOnline" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="info-online" position="75,75" zPosition="1" size="1100,369" font="Regular;32" foregroundColor="white" halign="left" valign="top" transparent="1" backgroundColor="tb" />
+    <widget name="info-local" position="75,458" zPosition="1" size="1100,330" font="Regular;32" foregroundColor="und6ff98" halign="left" valign="top" transparent="1" backgroundColor="tb" />
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+  </screen>
+-->  
+<screen name="DeviceBrowser" position="0,0" size="1920,1080" title="Select Device" backgroundColor="transparent" flags="wfNoBorder">
+  <panel name="ch" />
+  <panel name="pig" />
+  <widget source="global.CurrentTime" render="Label" position="1348,0" size="539,38" font="Replacement;34" valign="center" halign="right" backgroundColor="background" transparent="1">
+    <convert type="ClockToText">Format:%a,%e. %B %Y | %H:%M</convert>
+  </widget>
+  <ePixmap pixmap="DarknessFHD/button_red_230.png" position="1434,847" size="230,4" alphatest="blend" />
+  <ePixmap pixmap="DarknessFHD/button_green_230.png" position="1677,847" size="230,4" alphatest="blend" />
+  <widget source="key_red" render="Label" position="1434,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="background" transparent="1" foregroundColor="white" />
+  <widget source="key_green" render="Label" position="1677,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="background" transparent="1" foregroundColor="white" />
+  <widget source="message" render="Label" position="56,852" size="1100,174" font="Regular;29" halign="center" valign="center" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
+  <widget name="filelist" itemHeight="50" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" position="75,75" size="1100,700" zPosition="2" transparent="1" />
+
+</screen>
+
 
 <!-- ImageBackup -->
   <screen name="ImageBackup" position="fill" zPosition="2" flags="wfNoBorder" title="Image Backup">
@@ -69,6 +239,227 @@
   </screen>
 
 <!-- lululla edit end -->
+
+  <screen name="SoftcamPanel" position="center,center" size="1200,902" title="SoftcamPanel" backgroundColor="transparent" flags="wfNoBorder">
+    <ePixmap position="0,-5" size="1200,902" zPosition="-1" pixmap="DarknessFHD/menu_bg6.png" />
+    <widget name="config" font="Regular;30" position="75,105" size="1050,150" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="background" zPosition="1" transparent="1" />
+    <widget name="actifcam" font="Regular;30" position="105,276" size="450,48" transparent="1" />
+    <widget name="actifcam2" font="Regular;30" position="600,276" size="450,48" transparent="1" />
+    <widget name="ecminfo" font="Regular;30" position="74,350" size="1050,450" transparent="1" />
+    <ePixmap pixmap="DarknessFHD/buttons/red.png" position="0,830" size="75,45" alphatest="on" />
+    <ePixmap pixmap="DarknessFHD/buttons/green.png" position="302,830" size="75,45" alphatest="on" />
+    <ePixmap pixmap="DarknessFHD/buttons/yellow.png" position="597,830" size="75,45" alphatest="on" />
+    <ePixmap pixmap="DarknessFHD/buttons/blue.png" position="896,830" size="75,45" alphatest="on" />
+    <widget name="key_red" position="72,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
+    <widget name="key_green" position="372,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
+    <widget name="key_yellow" position="668,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
+    <widget name="key_blue" position="968,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
+    <eLabel name="" position="236,15" size="750,60" transparent="1" zPosition="2" text="Softcam Panel" halign="center" font="Regular; 53" foregroundColor="cyan1" />
+  </screen>
+  <screen name="SoftcamSetup" position="center,center" size="1200,902" title="SoftcamSetup" backgroundColor="transparent" flags="wfNoBorder">
+    <ePixmap position="0,-5" size="1200,902" zPosition="-1" pixmap="DarknessFHD/menu_bg6.png" />
+    <widget name="config" position="126,96" size="930,225" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="info" position="126,342" size="930,450" font="Regular;27" transparent="1" />
+    <ePixmap pixmap="DarknessFHD/buttons/red.png" position="0,830" size="150,27" alphatest="on" />
+    <ePixmap pixmap="DarknessFHD/buttons/green.png" position="302,830" size="150,30" alphatest="on" />
+    <ePixmap pixmap="DarknessFHD/buttons/yellow.png" position="597,830" size="150,32" alphatest="on" />
+    <ePixmap pixmap="DarknessFHD/buttons/blue.png" position="896,830" size="150,30" alphatest="on" />
+    <widget name="key_red" position="72,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
+    <widget name="key_green" position="372,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
+    <widget name="key_yellow" position="668,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
+    <widget name="key_blue" position="968,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
+    <eLabel name="" position="236,15" size="750,60" transparent="1" zPosition="2" text="Softcam Panel" halign="center" font="Regular; 53" foregroundColor="cyan1" />
+  </screen>
+  <screen name="ScSelection" position="center,center" size="1200,902" title="SoftcamSetup" backgroundColor="transparent" flags="wfNoBorder">
+    <ePixmap position="0,-5" size="1200,902" zPosition="-1" pixmap="DarknessFHD/menu_bg6.png" />
+    <widget name="entries" position="126,96" size="930,225" scrollbarMode="showOnDemand" transparent="1" />
+    <widget name="info" position="126,342" size="930,450" font="Regular;27" transparent="1" />
+    <ePixmap pixmap="DarknessFHD/buttons/red.png" position="0,830" size="150,27" alphatest="on" />
+    <ePixmap pixmap="DarknessFHD/buttons/green.png" position="302,830" size="150,30" alphatest="on" />
+    <ePixmap pixmap="DarknessFHD/buttons/yellow.png" position="597,830" size="150,32" alphatest="on" />
+    <ePixmap pixmap="DarknessFHD/buttons/blue.png" position="896,830" size="150,30" alphatest="on" />
+    <widget name="key_red" position="72,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
+    <widget name="key_green" position="372,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
+    <widget name="key_yellow" position="668,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
+    <widget name="key_blue" position="968,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
+    <eLabel name="" position="236,15" size="750,60" transparent="1" zPosition="2" text="Softcam Panel" halign="center" font="Regular; 53" foregroundColor="cyan1" />
+  </screen>
+<screen name="SoftcamPanel" position="0,0" size="1920,1080" title="Softcam Panel" flags="wfNoBorder" backgroundColor="transparent">
+  <ePixmap position="0,0" size="1920,1080" zPosition="-1" pixmap="DarknessFHD/menu_bg7.png" />
+  <ePixmap pixmap="DarknessFHD/icons/softcam.png" zPosition="2" position="1253,425" size="375,375" alphatest="blend" transparent="1" />
+  <widget source="Title" render="Label" halign="left" position="60,59" size="804,155" font="Regular; 117" backgroundColor="background" transparent="1" />
+  <widget source="global.CurrentTime" render="Label" position="1673,156" size="182,44" font="Regular; 38" backgroundColor="transpBlack" transparent="1" foregroundColor="lightgrey" halign="center">
+    <convert type="ClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1665,90" size="195,68" font="Regular; 68" backgroundColor="transpBlack" transparent="1" foregroundColor="lightgrey" halign="center" valign="center">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <eLabel backgroundColor="grey" position="75,474" size="963,2" zPosition="1" foregroundColor="background" />
+  <eLabel backgroundColor="grey" position="75,539" size="963,2" zPosition="1" foregroundColor="background" />
+  <widget font="Regular;27" name="camcount" position="941,489" size="90,38" transparent="1" />
+  <widget name="config" position="75,314" size="963,150" transparent="1" font="Replacement; 33" backgroundColor="background" />
+  <ePixmap pixmap="DarknessFHD/buttons/red.png.png" position="74,239" size="45,45" alphatest="blend" />
+  <ePixmap pixmap="DarknessFHD/buttons/green.png" position="317,239" size="45,45" alphatest="blend" />
+  <ePixmap pixmap="DarknessFHD/buttons/yellow.png" position="560,239" size="45,45" alphatest="blend" />
+  <ePixmap pixmap="DarknessFHD/buttons/blue.png" position="807,239" size="45,45" alphatest="blend" />
+  <widget font="Replacement; 36" halign="center" name="key_red" position="123,237" size="180,53" transparent="1" valign="center" zPosition="2" backgroundColor="background" />
+  <widget font="Replacement; 36" halign="center" name="key_green" position="369,237" size="180,53" transparent="1" valign="center" zPosition="2" backgroundColor="background" />
+  <widget font="Replacement; 36" halign="center" name="key_yellow" position="615,236" size="180,53" transparent="1" valign="center" zPosition="2" backgroundColor="background" />
+  <widget font="Replacement; 36" halign="center" name="key_blue" position="858,236" size="180,53" transparent="1" valign="center" zPosition="2" backgroundColor="background" />
+  <widget font="Replacement; 33" name="actifcam" position="80,483" size="455,42" transparent="1" backgroundColor="background" />
+  <widget font="Regular; 33" name="actifcam2" position="555,483" size="369,48" transparent="1" backgroundColor="transpBlack" />
+  <widget font="Replacement; 33" name="ecminfo" position="75,546" size="963,462" transparent="1" backgroundColor="background" foregroundColor="grey" />
+
+
+</screen>
+
+
+  
+<!-- lululla mount manager -->  
+  <screen name="HddMount" position="0,0" size="1920,1080" title="HddMount" flags="wfNoBorder" backgroundColor="transparent">
+    <widget source="list" render="Listbox" position="75,185" size="1100,600" scrollbarMode="showOnDemand" font="Regular;24" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [
+				 MultiContentEntryText(pos = (135, 0), size = (900, 45), font=0, text = 0),
+				 MultiContentEntryText(pos = (165, 45), size = (900, 75), font=1, flags = RT_VALIGN_TOP, text = 1),
+				 MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (120, 120), png = 2),
+				],
+				"fonts": [gFont("Regular", 36),gFont("Regular", 30)],
+				"itemHeight": 127
+				}
+	  </convert>
+    </widget>
+    <widget backgroundColor="tb" name="lab1" zPosition="2" position="75,75" size="1100,100" font="Regular;33" halign="center" transparent="1" foregroundColor="white" />
+    <panel name="ch" />
+    <panel name="rgyb_png" />    
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+  </screen>
+  
+
+<screen name="DevicePanelConf" position="0,0" size="1920,1080" title="Choose where to mount your devices to:" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="pig" />
+    <panel name="rgyb_name" />
+    <panel name="rgyb_png" />    
+    <panel name="config" />    
+	<widget name="Linconn" position="149,863" size="580,20" font="Regular;18" halign="center" valign="center" backgroundColor="#9f1313" />
+	</screen>
+
+  
+  
+  
+  <screen name="QuickMenu" position="0,0" size="1920,1080" title="Quick Launch Menu" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="list" position="75,75" size="1100,700" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" scrollbarMode="showOnDemand" itemHeight="70" transparent="1" foregroundColor="lightgrey" backgroundColor="tb" zPosition="3" />
+    <widget name="sublist" position="1248,492" size="640,285" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="70" font="Regular; 25" scrollbarMode="showOnDemand" scrollbarSliderBorderColor="#009b9b9b" scrollbarSliderForegroundColor="#0072c4ff" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" transparent="1" foregroundColor="lightgrey" backgroundColor="tb2" zPosition="3" />
+    <panel name="ch" />
+    <panel name="pig" />
+    <panel name="rgyb_name" />
+    <widget name="description" position="75,852" size="1100,170" zPosition="1" font="Regular;33" foregroundColor="white" halign="center" backgroundColor="tb" transparent="1" />
+  </screen>
+  <screen name="QuickMenuDevices" position="0,0" size="1920,1080" title="Devices" flags="wfNoBorder" backgroundColor="transparent">
+    <widget source="devicelist" render="Listbox" position="75,75" size="1100,700" scrollbarMode="showOnDemand" scrollbarSliderBorderColor="#009b9b9b" scrollbarSliderForegroundColor="#0072c4ff" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" transparent="1" backgroundColor="tb" foregroundColor="white">
+      <convert type="TemplatedMultiContent">
+						{"template": [
+						 MultiContentEntryText(pos = (90, 0), size = (600, 30), font=0, text = 0),
+						 MultiContentEntryText(pos = (110, 30), size = (600, 50), font=1, flags = RT_VALIGN_TOP, text = 1),
+						 MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (80, 80), png = 2),
+						],
+						"fonts": [gFont("Regular",24),gFont("Regular",20)],
+						"itemHeight": 85
+						}
+					</convert>
+    </widget>
+    <widget name="lab1" zPosition="2" position="75,919" size="1100,40" font="Regular; 30" backgroundColor="tb" foregroundColor="und6ff98" halign="center" transparent="1" />
+    <panel name="ch" />
+    <panel name="pig" />
+    <ePixmap name="" pixmap="DarknessFHD/e2/hdd.png" position="1515,600" size="120,120" transparent="0" alphatest="blend" />
+  </screen>
+  <screen name="ScriptRunner" position="0,0" size="1920,1080" title="Job Manager" flags="wfNoBorder" backgroundColor="transparent">
+    <widget name="lab1" position="75,75" size="1100,40" font="Regular; 40" valign="center" halign="left" backgroundColor="tb" transparent="1" />
+    <widget name="list" position="75,125" size="1100,600" itemHeight="40" font="Regular; 30" scrollbarMode="showOnDemand" backgroundColor="tb" foregroundColor="white" transparent="1" />
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+  </screen>
+  <screen name="SoftcamPanel" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="rgyb_name" />
+    <panel name="pig" />
+    <widget backgroundColor="tb" name="config" font="Console; 30" itemHeight="40" position="75,75" size="1100,150" enableWrapAround="1" foregroundColor="white" transparent="1" />
+    <widget font="Regular;33" name="enigma2" position="1588,786" size="277,37" transparent="1" backgroundColor="tb" foregroundColor="b8" />
+    <widget font="Regular;30" name="actifcam" position="75,235" size="1100,40" transparent="1" itemHeight="40" backgroundColor="tb" foregroundColor="b8" />
+    <widget font="Regular;30" name="actifcam2" position="75,294" size="1100,40" transparent="1" itemHeight="40" backgroundColor="tb" foregroundColor="b8" halign="left" />
+    <widget font="Regular;30" name="ecminfo" position="75,357" size="1100,400" foregroundColor="une7e7e7" backgroundColor="tb" transparent="1" />
+    <ePixmap name="" pixmap="DarknessFHD/e2/cryptoff.png" position="100,890" size="100,100" transparent="1" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/e2/crypton.png" position="100,890" size="100,100" halign="center" zPosition="2" valign="center" transparent="1">
+      <convert type="DARKServiceInfoEX">IsCrypted</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+  </screen>
+  <screen name="ShowSoftcamPackages" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+    <widget source="list" render="Listbox" position="75,75" size="1100,700" foregroundColor="lightgrey" backgroundColor="tb" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [
+						MultiContentEntryPixmapAlphaTest(pos = (27, 7), size = (72, 72), png = 4), # index 4 is the status pixmap
+						MultiContentEntryText(pos = (135, 7), size = (975, 42), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+						MultiContentEntryText(pos = (150, 52), size = (975, 30), font=1, flags = RT_HALIGN_LEFT, text = 2, color=0x8A8787, color_sel=0x8A8787), # index 2 is the description
+						MultiContentEntryPixmapAlphaTest(pos = (7, 87), size = (0, 0), png = 5), # index 4 is the div pixmap
+					],
+				"fonts": [gFont("Regular", 33),gFont("Regular", 24)],
+				"itemHeight": 90
+				}
+	  </convert>
+    </widget>
+    <ePixmap name="" pixmap="DarknessFHD/e2/key.png" position="1515,600" size="100,100" transparent="0" alphatest="blend" zPosition="2" />
+  </screen>
+  <screen name="SoftwarePanel" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="tb" source="list" render="Listbox" position="75,75" size="1100,700" scrollbarMode="showOnDemand" itemHeight="80" alphatest="blend" transparent="1">
+      <convert type="TemplatedMultiContent">
+					{"template": [
+							MultiContentEntryText(pos = (9, 3), size = (810, 42), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
+							MultiContentEntryText(pos = (9, 42), size = (810, 30), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
+							MultiContentEntryPixmapAlphaTest(pos = (907, 3), size = (72, 72), png = 4), # index 4 is the status pixmap
+							MultiContentEntryPixmapAlphaTest(pos = (7, 75), size = (915, 3), png = 5), # index 4 is the div pixmap
+						],
+					"fonts": [gFont("Regular", 32),gFont("Regular", 22)],
+					"itemHeight": 80
+					}
+			  </convert>
+    </widget>
+    <widget name="packagetext" position="75,861" size="518,50" zPosition="1" font="Regular; 40" halign="left" transparent="1" backgroundColor="tb" foregroundColor="g3" />
+    <widget name="packagenr" position="726,856" size="450,150" zPosition="1" font="Regular; 100" halign="center" transparent="1" backgroundColor="tb" foregroundColor="green" />
+    <widget name="a_off" pixmap="icons/aoff.png" position="1525,499" zPosition="1" size="100,300" alphatest="blend" />
+    <widget name="a_red" pixmap="icons/ared.png" position="1525,499" zPosition="1" size="100,300" alphatest="blend" />
+    <widget name="a_yellow" pixmap="icons/ayellow.png" position="1525,499" zPosition="1" size="100,300" alphatest="blend" />
+    <widget name="a_green" pixmap="icons/agreen.png" position="1525,499" zPosition="1" size="100,300" alphatest="blend" />
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+  </screen>
+  
+  <screen name="Swap" title="Swap" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+    <widget backgroundColor="tb" name="autostart_off" position="103,479" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="35,25" alphatest="on" />
+    <widget backgroundColor="tb" name="autostart_on" position="105,476" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="35,25" alphatest="on" />
+    <widget backgroundColor="tb" name="lab1" position="154,464" size="540,45" font="Regular;30" valign="center" transparent="1" foregroundColor="white" />
+    <widget backgroundColor="tb" name="lab3" position="105,285" size="225,45" font="Regular;30" valign="center" transparent="1" foregroundColor="white" />
+    <widget backgroundColor="tb" name="lab2" position="105,195" size="225,45" font="Regular;30" valign="center" transparent="1" foregroundColor="white" />
+    <widget backgroundColor="tb" name="lab4" position="105,375" size="225,45" font="Regular;30" valign="center" transparent="1" foregroundColor="white" />
+    <widget name="labplace" position="367,195" size="480,45" font="Regular;30" valign="center" backgroundColor="tb" foregroundColor="white" />
+    <widget name="labsize" position="367,285" size="330,45" font="Regular;30" valign="center" backgroundColor="tb" foregroundColor="white" />
+    <widget name="inactive" position="365,375" size="300,45" font="Regular;30" valign="center" halign="center" backgroundColor="red2" />
+    <widget name="active" position="365,375" size="300,45" font="Regular;30" valign="center" halign="center" backgroundColor="green2" />
+    <panel name="ch" />
+
+    <panel name="rgyb_source" />
+
+    <panel name="rgyb_png" />    
+    <panel name="rgyb_name" />  
+    <panel name="pig" />
+  </screen>
   
   <!-- Alternative SoftCam Manager -->
   <screen name="AltCamManager" position="0,0" size="1920,1080" title="Alternative SoftCam Manager" flags="wfNoBorder" backgroundColor="transparent">

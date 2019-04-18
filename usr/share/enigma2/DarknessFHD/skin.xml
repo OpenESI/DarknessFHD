@@ -253,193 +253,210 @@
   </screen>
   <!--infobar-->
   <screen name="InfoBar" title="InfoBar" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" transparent="0">
-    <ePixmap position="0,840" size="1920,200" zPosition="-1" pixmap="DarknessFHD/e1/infobar.png" alphatest="off" transparent="1" />
-    <panel name="tuner_info" />
-    <ePixmap name="" pixmap="DarknessFHD/e1/ch_back.png" position="475,867" size="800,25" zPosition="3" transparent="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="DARKEmptyEpg" halign="left" position="475,844" size="800,48" zPosition="1" font="Console; 40" transparent="1" backgroundColor="tb" foregroundColor="white">
-      <convert type="ServiceName">Name</convert>
-    </widget>
-    <widget foregroundColor="lightgrey" backgroundColor="tb" font="Regular; 30" zPosition="2" halign="left" position="495,893" render="Label" size="800,38" source="session.Event_Now" transparent="1">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Picon" position="126,875" zPosition="4" size="220,132" transparent="1" alphatest="blend">
-      <convert type="ServiceName">Reference</convert>
-    </widget>
-    <widget source="session.Event_Next" foregroundColor="lightgrey" backgroundColor="tb" font="Regular; 30" halign="left" position="515,947" render="Label" size="800,38" transparent="1" zPosition="2">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <eLabel name="" text="(" position="1320,945" size="10,38" font="Console; 35" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
-    <eLabel name="" text=")" position="1465,945" size="10,38" font="Console; 35" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
-    <widget source="session.Event_Next" render="Label" position="1332,947" size="130,38" backgroundColor="tb" transparent="1" zPosition="5" foregroundColor="lightgrey2" font="Regular; 30" halign="center">
-      <convert type="EventTime">Duration</convert>
-      <convert type="ClockToText">InMinutes</convert>
-    </widget>
-    <eLabel name="" position="474, 937" size="1000,2" backgroundColor="gr" />
-    <widget source="session.Event_Now" render="Progress" position="474,930" size="1000,15" backgroundColor="tb" pixmap="DarknessFHD/e1/prgrs.png" zPosition="1" transparent="1">
-      <convert type="EventTime">Progress</convert>
-    </widget>
-    <widget pointer="DarknessFHD/e1/pgauge.png:1000,2" position="484,930" render="PositionGauge" size="1000,15" source="session.Event_Now" alphatest="blend" backgroundColor="tb" transparent="1" zPosition="3">
-      <convert type="DARKEventPosition">Gauge</convert>
-    </widget>
-    <eLabel name="" text="(" position="1320,889" size="10,38" font="Console; 35" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
-    <eLabel name="" text=")" position="1465,889" size="10,38" font="Console; 35" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
-    <widget source="session.Event_Now" backgroundColor="tb" font="Regular; 30" halign="center" zPosition="3" position="1333,891" render="Label" size="130,38" transparent="1">
-      <convert type="EventTime">Remaining</convert>
-      <convert type="RemainingToText">InMinutes</convert>
-    </widget>
-    <widget source="session.FrontendStatus" render="Label" position="1545,896" size="90,25" foregroundColor="lightgrey" backgroundColor="tb" transparent="0" zPosition="2" halign="center" font="Regular; 25">
-      <convert type="FrontendInfo">SNR</convert>
-    </widget>
-    <widget source="session.FrontendStatus" render="Label" foregroundColor="lightgrey" backgroundColor="tb" transparent="0" zPosition="2" position="1628,896" size="90,25" halign="center" font="Regular; 25">
-      <convert type="FrontendInfo">AGC</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="1705,896" size="93,25" foregroundColor="lightgrey" backgroundColor="tb" transparent="0" zPosition="2" halign="center" font="Regular; 25">
-      <convert type="DARKCpuUsage">Total</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" zPosition="0" position="1554,896" size="300,25" halign="right" valign="center" font="Regular; 25" transparent="1" foregroundColor="lightgrey" backgroundColor="tb">
-      <convert type="DARKDiskSpaceInfo">MemFree,Short</convert>
-    </widget>
-    <ePixmap name="" pixmap="icons/ico_rec_off.png" position="1551,949" zPosition="1" size="69,30" transparent="0" alphatest="blend" />
-    <widget source="session.RecordState" render="Pixmap" pixmap="icons/ico_rec_on.png" position="1551,949" zPosition="3" size="69,30">
-      <convert type="ConditionalShowHide">Blink</convert>
-    </widget>
-    <!--...-->
-    <ePixmap name="" pixmap="DarknessFHD/e4/dolby_back.png" position="475,1004" size="69,30" transparent="1" alphatest="blend" />
-    <ePixmap name="" pixmap="DarknessFHD/e4/hbb_back.png" position="554,1004" size="69,30" transparent="1" alphatest="blend" />
-    <ePixmap name="" pixmap="DarknessFHD/e4/txt_back.png" position="712,1004" size="69,30" transparent="1" alphatest="blend" />
-    <ePixmap name="" pixmap="DarknessFHD/e4/crypt_back.png" position="949,1004" size="69,30" transparent="1" alphatest="blend" />
-    <ePixmap name="" pixmap="DarknessFHD/e4/sub_back.png" position="633,1004" size="69,30" transparent="1" alphatest="blend" />
-    <widget source="session.CurrentService" position="791,1004" size="69,30" render="Pixmap" pixmap="DarknessFHD/e4/sd.png" zPosition="3" alphatest="blend">
-      <convert type="DARKServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">0,719</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" position="791,1004" size="69,30" render="Pixmap" pixmap="DarknessFHD/e4/hd.png" zPosition="3" alphatest="blend">
-      <convert type="DARKServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">700,1079</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" position="791,1004" size="69,30" render="Pixmap" pixmap="DarknessFHD/e4/fhd.png" zPosition="3" alphatest="blend">
-      <convert type="DARKServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">721,1080</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" position="791,1004" size="69,30" render="Pixmap" pixmap="DarknessFHD/e4/uhd.png" zPosition="3" alphatest="blend">
-      <convert type="DARKServiceInfo">VideoHeight</convert>
-      <convert type="ValueRange">1081,5000</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/e4/dolby.png" position="475,1004" size="69,30" zPosition="2" alphatest="blend">
-      <convert type="DARKServiceInfo">IsMultichannel</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/e4/txt.png" position="712,1004" size="69,30" zPosition="2" alphatest="blend">
-      <convert type="DARKServiceInfo">HasTelext</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/e4/crypt.png" position="949,1004" size="69,30" zPosition="5" alphatest="blend">
-      <convert type="DARKServiceInfo">IsCrypted</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" position="554,1004" size="69,30" zPosition="10" pixmap="DarknessFHD/e4/hbb.png" alphatest="blend" transparent="1">
-      <convert type="DARKServiceInfo">HasHBBTV</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/e4/sub.png" position="633,1004" zPosition="3" size="69,30" alphatest="blend">
-      <convert type="DARKServiceInfo">SubservicesAvailable</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/e4/43.png" position="870,1004" size="69,30" zPosition="3" alphatest="blend" transparent="1">
-      <convert type="DARKServiceInfo">IsSDAndNotWidescreen</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/e4/169.png" position="870,1004" size="69,30" zPosition="3" alphatest="blend">
-      <convert type="DARKServiceInfo">IsWidescreen</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <!--...-->
-    <widget source="session.CurrentService" render="Label" position="1162,999" size="150,40" font="Regular; 30" halign="left" valign="center" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" zPosition="2">
-      <convert type="ServiceOrbitalPosition" />
-    </widget>
-    <widget source="session.CurrentService" render="Label" font="Regular; 30" position="1334,999" size="130,40" backgroundColor="tb" transparent="1" halign="center">
-      <convert type="DARKServiceInfoEX">ttype</convert>
-    </widget>
-    <widget font="LCD; 35" render="Label" position="1799,939" size="80,37" source="session.MSNWeather" transparent="1" zPosition="2" halign="left" foregroundColor="b8" backgroundColor="tb">
-      <convert type="MSNWeather">temperature_current</convert>
-    </widget>
-    <widget render="MSNWeatherPixmap" alphatest="blend" position="1743,938" size="50,50" source="session.MSNWeather" transparent="1" zPosition="2">
-      <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/DarknessFHD/weathericon/,png</convert>
-    </widget>
-    <ePixmap name="" pixmap="DarknessFHD/e2/upgrade_back.png" position="44,926" size="40,40" zPosition="1" transparent="0" alphatest="blend" />
-    <widget render="Pixmap" source="session.CurrentService" pixmap="DarknessFHD/e2/upgrade.png" position="44,926" size="40,40" alphatest="blend" transparent="1" zPosition="5">
-      <convert type="ConfigEntryTest">config.usage.update_available,True,CheckSourceBoolean</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="FixedLabel" text="FTA" font="Regular; 30" position="1030,999" size="100,40" halign="center" backgroundColor="tb" foregroundColor="una2fa84" zPosition="1" valign="center" transparent="1">
-      <convert type="DARKServiceInfoEX">IsFta</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="FixedLabel" text="NET" font="Regular; 30" position="1030,999" size="100,40" halign="center" backgroundColor="tb" foregroundColor="p5" zPosition="2" valign="center" transparent="1">
-      <convert type="DARKCaidInfo2">Net</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="FixedLabel" text="CRD" font="Regular; 30" position="1030,999" size="100,40" halign="center" backgroundColor="tb" foregroundColor="uncccafb" zPosition="3" valign="center" transparent="1">
-      <convert type="DARKCaidInfo2">Crd</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="FixedLabel" text="EMU" font="Regular; 30" position="1030,999" size="100,40" halign="center" backgroundColor="tb" foregroundColor="p8" zPosition="4" valign="center" transparent="1">
-      <convert type="DARKCaidInfo2">Emu</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap name="" pixmap="DarknessFHD/e1/clk_back.png" position="1333,866" size="130,25" zPosition="3" transparent="1" alphatest="blend" />
-    <widget source="global.CurrentTime" render="Label" position="1333,840" size="130,50" font="LCD; 40" halign="center" foregroundColor="b8" backgroundColor="tb" transparent="1" valign="center" zPosition="2">
-      <convert type="ClockToText">Format:%H:%M</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="51,848" size="400,30" font="Console; 24" halign="center" backgroundColor="tb" transparent="1" zPosition="5" valign="center">
-      <convert type="ServiceName">Provider</convert>
-    </widget>
-    <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/icons/ico_stream.png" position="1490,1001" size="40,40" alphatest="blend" zPosition="2" transparent="1">
-      <convert type="ServiceInfo">IsStream</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="DarknessFHD/icons/scan-sat.png" position="1490,997" size="40,40" zPosition="2" alphatest="blend">
-      <convert type="FrontendInfo">TYPE</convert>
-      <convert type="ValueRange">0,0</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="DarknessFHD/icons/ico_dvb-t.png" position="1490,1001" size="40,50" zPosition="2" alphatest="blend">
-      <convert type="FrontendInfo">TYPE</convert>
-      <convert type="ValueRange">2,2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="DarknessFHD/icons/ico_dvb-c.png" position="1490,1001" size="40,40" zPosition="2" alphatest="blend">
-      <convert type="FrontendInfo">TYPE</convert>
-      <convert type="ValueRange">1,1</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="DarknessFHD/e4/tuner_s.png" position="395,1004" size="69,30" zPosition="2" alphatest="blend">
-      <convert type="FrontendInfo">TYPE</convert>
-      <convert type="ValueRange">0,0</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="DarknessFHD/e4/tuner_t.png" position="395,1004" size="69,30" zPosition="2" alphatest="blend">
-      <convert type="FrontendInfo">TYPE</convert>
-      <convert type="ValueRange">2,2</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.FrontendInfo" render="Pixmap" pixmap="DarknessFHD/e4/tuner_c.png" pposition="395,1004" size="69,30" zPosition="2" alphatest="blend" position="395,1004">
-      <convert type="FrontendInfo">TYPE</convert>
-      <convert type="ValueRange">1,1</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" render="Label" position="1552,999" zPosition="4" size="320,40" font="Regular; 30" halign="center" transparent="1" backgroundColor="tb">
-      <convert type="DARKExtraInfo">ResolutionString</convert>
-    </widget>
-    <widget source="session.FrontendStatus" render="FixedLabel" text="B E R !" font="Console; 30" zPosition="11" position="1614,943" size="130,40" halign="center" alphatest="blend" backgroundColor="transparent" valign="center" transparent="1" foregroundColor="red">
-      <convert type="FrontendInfo">BER</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-  </screen>
+  <ePixmap position="0,840" size="1920,200" zPosition="-1" pixmap="DarknessFHD/e1/infobar.png" alphatest="off" transparent="1" />
+  <panel name="tuner_info" />
+  <ePixmap name="" pixmap="DarknessFHD/e1/ch_back.png" position="475,867" size="800,25" zPosition="3" transparent="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="DARKEmptyEpg" halign="left" position="475,844" size="800,48" zPosition="1" font="Console; 40" transparent="1" backgroundColor="tb" foregroundColor="white">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget foregroundColor="lightgrey" backgroundColor="tb" font="Regular; 30" zPosition="2" halign="left" position="495,893" render="Label" size="768,38" source="session.Event_Now" transparent="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Picon" position="126,875" zPosition="4" size="220,132" transparent="1" alphatest="blend">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="session.Event_Next" foregroundColor="lightgrey" backgroundColor="tb" font="Regular; 30" halign="left" position="515,947" render="Label" size="749,38" transparent="1" zPosition="2">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <eLabel name="" text="(" position="1385,945" size="10,38" font="Console; 35" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
+  <eLabel name="" text=")" position="1530,945" size="10,38" font="Console; 35" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
+  <widget source="session.Event_Next" render="Label" position="1397,947" size="130,38" backgroundColor="tb" transparent="1" zPosition="5" foregroundColor="lightgrey2" font="Regular; 30" halign="center">
+    <convert type="EventTime">Duration</convert>
+    <convert type="ClockToText">InMinutes</convert>
+  </widget>
+  <eLabel name="" position="474, 937" size="1000,2" backgroundColor="gr" />
+  <widget source="session.Event_Now" render="Progress" position="474,930" size="1000,15" backgroundColor="tb" pixmap="DarknessFHD/e1/prgrs.png" zPosition="1" transparent="1">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget pointer="DarknessFHD/e1/pgauge.png:1000,2" position="484,930" render="PositionGauge" size="1000,15" source="session.Event_Now" alphatest="blend" backgroundColor="tb" transparent="1" zPosition="3">
+    <convert type="DARKEventPosition">Gauge</convert>
+  </widget>
+  <eLabel name="" text="(" position="1390,889" size="10,38" font="Console; 35" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
+  <eLabel name="" text=")" position="1525,889" size="10,38" font="Console; 35" foregroundColor="gr2" backgroundColor="tb" zPosition="9" halign="center" transparent="1" />
+  <widget source="session.Event_Now" backgroundColor="tb" font="Regular; 30" halign="center" zPosition="3" position="1398,891" render="Label" size="130,38" transparent="1">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="1545,896" size="90,25" foregroundColor="lightgrey" backgroundColor="tb" transparent="0" zPosition="2" halign="center" font="Regular; 25">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" foregroundColor="lightgrey" backgroundColor="tb" transparent="0" zPosition="2" position="1628,896" size="90,25" halign="center" font="Regular; 25">
+    <convert type="FrontendInfo">AGC</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="1705,896" size="93,25" foregroundColor="lightgrey" backgroundColor="tb" transparent="0" zPosition="2" halign="center" font="Regular; 25">
+    <convert type="DARKCpuUsage">Total</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" zPosition="0" position="1554,896" size="300,25" halign="right" valign="center" font="Regular; 25" transparent="1" foregroundColor="lightgrey" backgroundColor="tb">
+    <convert type="DARKDiskSpaceInfo">MemFree,Short</convert>
+  </widget>
+  <ePixmap name="" pixmap="icons/ico_rec_off.png" position="1551,949" zPosition="1" size="69,30" transparent="0" alphatest="blend" />
+  <widget source="session.RecordState" render="Pixmap" pixmap="icons/ico_rec_on.png" position="1551,949" zPosition="3" size="69,30">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <!--...-->
+  <ePixmap name="" pixmap="DarknessFHD/e4/dolby_back.png" position="475,1004" size="69,30" transparent="1" alphatest="blend" />
+  <ePixmap name="" pixmap="DarknessFHD/e4/hbb_back.png" position="554,1004" size="69,30" transparent="1" alphatest="blend" />
+  <ePixmap name="" pixmap="DarknessFHD/e4/txt_back.png" position="712,1004" size="69,30" transparent="1" alphatest="blend" />
+  <ePixmap name="" pixmap="DarknessFHD/e4/crypt_back.png" position="949,1004" size="69,30" transparent="1" alphatest="blend" />
+  <ePixmap name="" pixmap="DarknessFHD/e4/sub_back.png" position="633,1004" size="69,30" transparent="1" alphatest="blend" />
+  <widget source="session.CurrentService" position="791,1004" size="69,30" render="Pixmap" pixmap="DarknessFHD/e4/sd.png" zPosition="3" alphatest="blend">
+    <convert type="DARKServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">0,719</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" position="791,1004" size="69,30" render="Pixmap" pixmap="DarknessFHD/e4/hd.png" zPosition="3" alphatest="blend">
+    <convert type="DARKServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">700,1079</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" position="791,1004" size="69,30" render="Pixmap" pixmap="DarknessFHD/e4/fhd.png" zPosition="3" alphatest="blend">
+    <convert type="DARKServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">721,1080</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" position="791,1004" size="69,30" render="Pixmap" pixmap="DarknessFHD/e4/uhd.png" zPosition="3" alphatest="blend">
+    <convert type="DARKServiceInfo">VideoHeight</convert>
+    <convert type="ValueRange">1081,5000</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/e4/dolby.png" position="475,1004" size="69,30" zPosition="2" alphatest="blend">
+    <convert type="DARKServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/e4/txt.png" position="712,1004" size="69,30" zPosition="2" alphatest="blend">
+    <convert type="DARKServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/e4/crypt.png" position="949,1004" size="69,30" zPosition="5" alphatest="blend">
+    <convert type="DARKServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" position="554,1004" size="69,30" zPosition="10" pixmap="DarknessFHD/e4/hbb.png" alphatest="blend" transparent="1">
+    <convert type="DARKServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/e4/sub.png" position="633,1004" zPosition="3" size="69,30" alphatest="blend">
+    <convert type="DARKServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/e4/43.png" position="870,1004" size="69,30" zPosition="3" alphatest="blend" transparent="1">
+    <convert type="DARKServiceInfo">IsSDAndNotWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/e4/169.png" position="870,1004" size="69,30" zPosition="3" alphatest="blend">
+    <convert type="DARKServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!--...-->
+  <widget source="session.CurrentService" render="Label" position="1162,999" size="150,40" font="Regular; 30" halign="left" valign="center" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" zPosition="2">
+    <convert type="ServiceOrbitalPosition" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" font="Regular; 30" position="1334,999" size="130,40" backgroundColor="tb" transparent="1" halign="center">
+    <convert type="DARKServiceInfoEX">ttype</convert>
+  </widget>
+  <widget font="LCD; 35" render="Label" position="1799,939" size="80,37" source="session.MSNWeather" transparent="1" zPosition="2" halign="left" foregroundColor="b8" backgroundColor="tb">
+    <convert type="MSNWeather">temperature_current</convert>
+  </widget>
+  <widget render="MSNWeatherPixmap" alphatest="blend" position="1743,938" size="50,50" source="session.MSNWeather" transparent="1" zPosition="2">
+    <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/DarknessFHD/weathericon/,png</convert>
+  </widget>
+  <ePixmap name="" pixmap="DarknessFHD/e2/upgrade_back.png" position="44,926" size="40,40" zPosition="1" transparent="0" alphatest="blend" />
+  <widget render="Pixmap" source="session.CurrentService" pixmap="DarknessFHD/e2/upgrade.png" position="44,926" size="40,40" alphatest="blend" transparent="1" zPosition="5">
+    <convert type="ConfigEntryTest">config.usage.update_available,True,CheckSourceBoolean</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" text="FTA" font="Regular; 30" position="1030,999" size="100,40" halign="center" backgroundColor="tb" foregroundColor="una2fa84" zPosition="1" valign="center" transparent="1">
+    <convert type="DARKServiceInfoEX">IsFta</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" text="NET" font="Regular; 30" position="1030,999" size="100,40" halign="center" backgroundColor="tb" foregroundColor="p5" zPosition="2" valign="center" transparent="1">
+    <convert type="DARKCaidInfo2">Net</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" text="CRD" font="Regular; 30" position="1030,999" size="100,40" halign="center" backgroundColor="tb" foregroundColor="uncccafb" zPosition="3" valign="center" transparent="1">
+    <convert type="DARKCaidInfo2">Crd</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" text="EMU" font="Regular; 30" position="1030,999" size="100,40" halign="center" backgroundColor="tb" foregroundColor="p8" zPosition="4" valign="center" transparent="1">
+    <convert type="DARKCaidInfo2">Emu</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap name="" pixmap="DarknessFHD/e1/clk_back.png" position="1333,866" size="130,25" zPosition="3" transparent="1" alphatest="blend" />
+  <widget source="global.CurrentTime" render="Label" position="1333,840" size="130,50" font="LCD; 40" halign="center" foregroundColor="b8" backgroundColor="tb" transparent="1" valign="center" zPosition="2">
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="51,848" size="400,30" font="Console; 24" halign="center" backgroundColor="tb" transparent="1" zPosition="5" valign="center">
+    <convert type="ServiceName">Provider</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/icons/ico_stream.png" position="1490,1001" size="40,40" alphatest="blend" zPosition="2" transparent="1">
+    <convert type="ServiceInfo">IsStream</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="DarknessFHD/icons/scan-sat.png" position="1490,997" size="40,40" zPosition="2" alphatest="blend">
+    <convert type="FrontendInfo">TYPE</convert>
+    <convert type="ValueRange">0,0</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="DarknessFHD/icons/ico_dvb-t.png" position="1490,1001" size="40,50" zPosition="2" alphatest="blend">
+    <convert type="FrontendInfo">TYPE</convert>
+    <convert type="ValueRange">2,2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="DarknessFHD/icons/ico_dvb-c.png" position="1490,1001" size="40,40" zPosition="2" alphatest="blend">
+    <convert type="FrontendInfo">TYPE</convert>
+    <convert type="ValueRange">1,1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="DarknessFHD/e4/tuner_s.png" position="395,1004" size="69,30" zPosition="2" alphatest="blend">
+    <convert type="FrontendInfo">TYPE</convert>
+    <convert type="ValueRange">0,0</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="DarknessFHD/e4/tuner_t.png" position="395,1004" size="69,30" zPosition="2" alphatest="blend">
+    <convert type="FrontendInfo">TYPE</convert>
+    <convert type="ValueRange">2,2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="DarknessFHD/e4/tuner_c.png" pposition="395,1004" size="69,30" zPosition="2" alphatest="blend" position="395,1004">
+    <convert type="FrontendInfo">TYPE</convert>
+    <convert type="ValueRange">1,1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="1552,999" zPosition="4" size="320,40" font="Regular; 30" halign="center" transparent="1" backgroundColor="tb">
+    <convert type="DARKExtraInfo">ResolutionString</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="FixedLabel" text="B E R !" font="Console; 30" zPosition="11" position="1614,943" size="130,40" halign="center" alphatest="blend" backgroundColor="transparent" valign="center" transparent="1" foregroundColor="red">
+    <convert type="FrontendInfo">BER</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+
+
+<!-- edit lululla -->
+
+<widget source="session.Event_Now" render="Label" position="367,893" size="102,40" borderWidth="1" backgroundColor="black" transparent="1" zPosition="2" foregroundColor="b8" font="Regular; 29" halign="left" valign="center">
+  <convert type="EventTime">StartTime</convert>
+  <convert type="ClockToText">Format:%H:%M</convert>
+</widget>
+
+<widget source="session.Event_Next" render="Label" position="368,950" size="102,40" borderWidth="1" backgroundColor="black" transparent="1" zPosition="2" foregroundColor="b8" font="Regular; 28" halign="left" valign="center">
+  <convert type="EventTime">StartTime</convert>
+  <convert type="ClockToText">Default;Proportional</convert>
+</widget>
+<!-- edit lululla end -->
+</screen>
+
+
+
   <screen name="SecondInfoBar" position="0,0" size="1920,1080" title="Programm Info" flags="wfNoBorder" backgroundColor="tb" transparent="0">
     <panel name="ch" />
     <panel name="pig" />
@@ -626,6 +643,17 @@
     <ePixmap name="" pixmap="DarknessFHD/e2/qqq.png" position="1525,593" size="120,120" transparent="0" alphatest="blend" />
     <widget name="menu" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" position="75,75" size="1100,700" transparent="1" itemHeight="50" render="Listbox" />
   </screen>
+  
+<screen name="OSD3DSetupScreen" position="0,0" size="1920,1080" title="OSD 3D setup" backgroundColor="transparent" flags="wfNoBorder">
+    <ePixmap alphatest="blend" pixmap="DarknessFHD/buttons/key_red.png" position="1825,855" size="35,35" />
+    <ePixmap alphatest="blend" pixmap="DarknessFHD/buttons/key_green.png" position="1825,900" size="35,35" />
+    <panel name="ch" />
+    <panel name="config" />
+    <panel name="pig" />
+    <widget name="cancel" position="1515,850" size="300,40" valign="bottom" noWrap="1" zPosition="5" font="Regular;26" halign="center" foregroundColor="white" backgroundColor="tb" transparent="1" />
+    <widget name="save" position="1515,896" size="300,40" valign="bottom" noWrap="1" zPosition="5" font="Regular; 26" halign="center" foregroundColor="white" backgroundColor="tb" transparent="1" />
+  </screen>
+  
   <!-- MENUS -->
   <screen name="Menu" position="0,0" size="1920,1080" flags="wfNoBorder">
     <panel name="mn" />
@@ -1166,16 +1194,16 @@
     </widget>
   </screen>
   <!-- SETUP -->
-
-<screen name="Volume" position="40,840" size="1840,200" title="Volume" backgroundColor="transparent" zPosition="6" flags="wfNoBorder" transparent="0">
-  <widget source="global.CurrentTime" render="DARKVolume" zPosition="5" position="98,38" size="200,200" alphatest="blend" transparent="1" />
-  <widget render="VVolumeText" source="global.CurrentTime" position="0,5" size="80,53" font="LCD;43" backgroundColor="tb" foregroundColor="gr" halign="center" valign="center" zPosition="20" transparent="1" />
-  <ePixmap name="" pixmap="DarknessFHD/volume/volb.png" alphatest="on" zPosition="1" position="0,0" size="1920,200" transparent="1" />
+<!-- Volume -->
+<screen name="Volume" position="40,130" zPosition="1" size="28,360" title="ESI Volume" flags="wfNoBorder" backgroundColor="transparent">
+    <ePixmap pixmap="DarknessFHD/volume.png" position="0,0" size="28,360" transparent="1" />
+    <widget name="Volume" pixmap="DarknessFHD/vol.png" position="5,18" zPosition="1" orientation="orBottomToTop" size="18,309" transparent="1" />
+  </screen>
+<!--  Mute -->
+  <screen name="Mute" position="40,100" zPosition="10" size="45,60" title="ESI Mute" backgroundColor="transparent" flags="wfNoBorder">
+  <ePixmap position="0,0" size="45,60" pixmap="DarknessFHD/mute.png" transparent="1" />
 </screen>
 
-  <screen name="Mute" flags="wfNoBorder" position="40,840" size="1840,200" title="Mute" backgroundColor="transparent" transparent="0" zPosition="10">
-    <ePixmap name="" pixmap="DarknessFHD/volume/mute.png" position="0,0" size="1840,200" zPosition="2" transparent="1" alphatest="blend" />
-  </screen>
   <screen name="Setup" position="0,0" size="1920,1080" title="Setup" backgroundColor="transparent" flags="wfNoBorder">
     <panel name="rgyb_source" />
     <panel name="ch" />
@@ -1726,121 +1754,7 @@ newwidth = wsize[0]
 self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
 		</applet>
 </screen>
-<!-- mod openesi -->
-  <screen name="SoftcamPanel" position="center,center" size="1200,902" title="SoftcamPanel" backgroundColor="transparent" flags="wfNoBorder">
-    <ePixmap position="0,-5" size="1200,902" zPosition="-1" pixmap="DarknessFHD/menu_bg6.png" />
-    <widget name="config" font="Regular;30" position="75,105" size="1050,150" enableWrapAround="1" scrollbarMode="showOnDemand" backgroundColor="background" zPosition="1" transparent="1" />
-    <widget name="actifcam" font="Regular;30" position="105,276" size="450,48" transparent="1" />
-    <widget name="actifcam2" font="Regular;30" position="600,276" size="450,48" transparent="1" />
-    <widget name="ecminfo" font="Regular;30" position="74,350" size="1050,450" transparent="1" />
-    <ePixmap pixmap="DarknessFHD/buttons/red.png" position="0,830" size="75,45" alphatest="on" />
-    <ePixmap pixmap="DarknessFHD/buttons/green.png" position="302,830" size="75,45" alphatest="on" />
-    <ePixmap pixmap="DarknessFHD/buttons/yellow.png" position="597,830" size="75,45" alphatest="on" />
-    <ePixmap pixmap="DarknessFHD/buttons/blue.png" position="896,830" size="75,45" alphatest="on" />
-    <widget name="key_red" position="72,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
-    <widget name="key_green" position="372,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
-    <widget name="key_yellow" position="668,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
-    <widget name="key_blue" position="968,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
-    <eLabel name="" position="236,15" size="750,60" transparent="1" zPosition="2" text="Softcam Panel" halign="center" font="Regular; 53" foregroundColor="cyan1" />
-  </screen>
-  <screen name="SoftcamSetup" position="center,center" size="1200,902" title="SoftcamSetup" backgroundColor="transparent" flags="wfNoBorder">
-    <ePixmap position="0,-5" size="1200,902" zPosition="-1" pixmap="DarknessFHD/menu_bg6.png" />
-    <widget name="config" position="126,96" size="930,225" scrollbarMode="showOnDemand" transparent="1" />
-    <widget name="info" position="126,342" size="930,450" font="Regular;27" transparent="1" />
-    <ePixmap pixmap="DarknessFHD/buttons/red.png" position="0,830" size="150,27" alphatest="on" />
-    <ePixmap pixmap="DarknessFHD/buttons/green.png" position="302,830" size="150,30" alphatest="on" />
-    <ePixmap pixmap="DarknessFHD/buttons/yellow.png" position="597,830" size="150,32" alphatest="on" />
-    <ePixmap pixmap="DarknessFHD/buttons/blue.png" position="896,830" size="150,30" alphatest="on" />
-    <widget name="key_red" position="72,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
-    <widget name="key_green" position="372,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
-    <widget name="key_yellow" position="668,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
-    <widget name="key_blue" position="968,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
-    <eLabel name="" position="236,15" size="750,60" transparent="1" zPosition="2" text="Softcam Panel" halign="center" font="Regular; 53" foregroundColor="cyan1" />
-  </screen>
-  <screen name="ScSelection" position="center,center" size="1200,902" title="SoftcamSetup" backgroundColor="transparent" flags="wfNoBorder">
-    <ePixmap position="0,-5" size="1200,902" zPosition="-1" pixmap="DarknessFHD/menu_bg6.png" />
-    <widget name="entries" position="126,96" size="930,225" scrollbarMode="showOnDemand" transparent="1" />
-    <widget name="info" position="126,342" size="930,450" font="Regular;27" transparent="1" />
-    <ePixmap pixmap="DarknessFHD/buttons/red.png" position="0,830" size="150,27" alphatest="on" />
-    <ePixmap pixmap="DarknessFHD/buttons/green.png" position="302,830" size="150,30" alphatest="on" />
-    <ePixmap pixmap="DarknessFHD/buttons/yellow.png" position="597,830" size="150,32" alphatest="on" />
-    <ePixmap pixmap="DarknessFHD/buttons/blue.png" position="896,830" size="150,30" alphatest="on" />
-    <widget name="key_red" position="72,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
-    <widget name="key_green" position="372,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
-    <widget name="key_yellow" position="668,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
-    <widget name="key_blue" position="968,825" zPosition="1" size="225,45" font="Regular;36" halign="left" backgroundColor="background" transparent="1" />
-    <eLabel name="" position="236,15" size="750,60" transparent="1" zPosition="2" text="Softcam Panel" halign="center" font="Regular; 53" foregroundColor="cyan1" />
-  </screen>
-<screen name="SoftcamPanel" position="0,0" size="1920,1080" title="Softcam Panel" flags="wfNoBorder" backgroundColor="transparent">
-  <ePixmap position="0,0" size="1920,1080" zPosition="-1" pixmap="DarknessFHD/menu_bg7.png" />
-  <ePixmap pixmap="DarknessFHD/icons/softcam.png" zPosition="2" position="1253,425" size="375,375" alphatest="blend" transparent="1" />
-  <widget source="Title" render="Label" halign="left" position="60,59" size="804,155" font="Regular; 117" backgroundColor="background1" transparent="1" />
-  <widget source="global.CurrentTime" render="Label" position="1673,156" size="182,44" font="Regular; 38" backgroundColor="transpBlack" transparent="1" foregroundColor="lightgrey" halign="center">
-    <convert type="ClockToText">Format:%d.%m.%Y</convert>
-  </widget>
-  <widget source="global.CurrentTime" render="Label" position="1665,90" size="195,68" font="Regular; 68" backgroundColor="transpBlack" transparent="1" foregroundColor="lightgrey" halign="center" valign="center">
-    <convert type="ClockToText">Default</convert>
-  </widget>
-  <eLabel backgroundColor="grey" position="75,474" size="963,2" zPosition="1" foregroundColor="background1" />
-  <eLabel backgroundColor="grey" position="75,539" size="963,2" zPosition="1" foregroundColor="background1" />
-  <widget font="Regular;27" name="camcount" position="941,489" size="90,38" transparent="1" />
-  <widget name="config" position="75,314" size="963,150" transparent="1" font="Replacement; 33" backgroundColor="background1" />
-  <ePixmap pixmap="DarknessFHD/buttons/red.png.png" position="74,239" size="45,45" alphatest="blend" />
-  <ePixmap pixmap="DarknessFHD/buttons/green.png" position="317,239" size="45,45" alphatest="blend" />
-  <ePixmap pixmap="DarknessFHD/buttons/yellow.png" position="560,239" size="45,45" alphatest="blend" />
-  <ePixmap pixmap="DarknessFHD/buttons/blue.png" position="807,239" size="45,45" alphatest="blend" />
-  <widget font="Replacement; 36" halign="center" name="key_red" position="123,237" size="180,53" transparent="1" valign="center" zPosition="2" backgroundColor="background1" />
-  <widget font="Replacement; 36" halign="center" name="key_green" position="369,237" size="180,53" transparent="1" valign="center" zPosition="2" backgroundColor="background1" />
-  <widget font="Replacement; 36" halign="center" name="key_yellow" position="615,236" size="180,53" transparent="1" valign="center" zPosition="2" backgroundColor="background1" />
-  <widget font="Replacement; 36" halign="center" name="key_blue" position="858,236" size="180,53" transparent="1" valign="center" zPosition="2" backgroundColor="background1" />
-  <widget font="Replacement; 33" name="actifcam" position="80,483" size="455,42" transparent="1" backgroundColor="background1" />
-  <widget font="Regular; 33" name="actifcam2" position="555,483" size="369,48" transparent="1" backgroundColor="transpBlack" />
-  <widget font="Replacement; 33" name="ecminfo" position="75,546" size="963,462" transparent="1" backgroundColor="background1" foregroundColor="grey" />
-</screen>
-  <screen name="EsiPanel" position="0,0" size="1920,1080" title="EsiPanel" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap position="0,0" size="1920,1080" zPosition="-1" pixmap="DarknessFHD/menu_bg5.png" />
-    
-    <ePixmap position="1131,276" size="725,666" zPosition="2" pixmap="DarknessFHD/esilogoBIG.png" alphatest="blend" transparent="1" />
-    <widget source="Title" render="Label" halign="left" position="70,3" size="804,165" font="Regular; 90" backgroundColor="background1" transparent="1" />
-    <widget source="global.CurrentTime" render="Label" position="1478,35" size="182,44" font="Regular; 38" backgroundColor="transpBlack" transparent="1" foregroundColor="lightgrey" halign="center">
-      <convert type="ClockToText">Format:%d.%m.%Y</convert>
-    </widget>
-    <widget source="global.CurrentTime" render="Label" position="1665,30" size="195,68" font="Regular; 53" backgroundColor="transpBlack" transparent="1" foregroundColor="lightgrey" halign="center" valign="center">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget name="Mlist" position="72,280" size="975,634" zPosition="5" scrollbarMode="showNever" transparent="1" />
-    <widget name="label1" position="300,1000" size="962,45" font="Regular; 50" transparent="1" foregroundColor="lightgrey" halign="center" backgroundColor="black" />
-  </screen>
-  <!-- mod lululla -->
-<screen name="SetPiconPath" position="0,0" size="1920,1080" title="PiconPathSet" backgroundColor="transparent" flags="wfNoBorder">
-  <panel name="ch" />
-  <panel name="pig" />
-  <widget source="global.CurrentTime" render="Label" position="1348,0" size="539,38" font="Replacement;34" valign="center" halign="right" backgroundColor="bpPodloga" transparent="1">
-    <convert type="ClockToText">Format:%a,%e. %B %Y | %H:%M</convert>
-  </widget>
-  <ePixmap pixmap="DarknessFHD/button_red_230.png" position="1434,847" size="230,4" alphatest="blend" />
-  <ePixmap pixmap="DarknessFHD/button_green_230.png" position="1677,847" size="230,4" alphatest="blend" />
-  <widget source="key_red" render="Label" position="1434,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="bpPodloga" transparent="1" foregroundColor="white" />
-  <widget source="key_green" render="Label" position="1677,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="bpPodloga" transparent="1" foregroundColor="white" />
-  <widget name="config" position="100,67" size="1012,708" itemHeight="42" selectionPixmap="DarknessFHD/frame/frame_42.png" scrollbarMode="showOnDemand" transparent="1" font="Regular;30" />
-</screen>
 
-<screen name="piconPath" position="0,0" size="1920,1080" title="Select path for Picons" backgroundColor="transparent" flags="wfNoBorder">
-  <panel name="ch" />
-  <panel name="pig" />
-  <widget source="global.CurrentTime" render="Label" position="1348,0" size="539,38" font="Replacement;34" valign="center" halign="right" backgroundColor="bpPodloga" transparent="1">
-    <convert type="ClockToText">Format:%a,%e. %B %Y | %H:%M</convert>
-  </widget>
-  <ePixmap pixmap="DarknessFHD/button_red_230.png" position="1434,847" size="230,4" alphatest="blend" />
-  <ePixmap pixmap="DarknessFHD/button_green_230.png" position="1677,847" size="230,4" alphatest="blend" />
-  <widget source="key_red" render="Label" position="1434,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="bpPodloga" transparent="1" foregroundColor="white" />
-  <widget source="key_green" render="Label" position="1677,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="bpPodloga" transparent="1" foregroundColor="white" />
-  <widget name="target" position="111,875" size="1080,64" font="Regular;30" backgroundColor="background3" transparent="1" />
-  <widget name="filelist" itemHeight="50" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" position="75,75" size="1100,700" zPosition="2" transparent="1" />
-<!--
-<widget name="filelist" position="35,320" size="1012,252" zPosition="2" itemHeight="36" font="Regular;26" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" selectionPixmap="DarknessFHD/frame/frame_36.png" selectionDisabled="1" />
--->
-</screen>
   <screen name="NumberZap" position="center,center" size="500,100" title="QuickZap" flags="wfNoBorder" backgroundColor="transparent">
     <eLabel name="a" position="5,5" size="500,100" backgroundColor="tb" zPosition="-10" />
     <widget name="channel" position="23,53" size="462,40" font="Console;30" halign="center" valign="center" backgroundColor="tb" foregroundColor="white" />
@@ -2064,19 +1978,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="pig" />
     <widget name="checkList" selectionPixmap="DarknessFHD/e1/sel100.png" position="90,78" size="1100,700" transparent="1" scrollbarMode="showOnDemand" />
   </screen>
-  <screen name="doFlashImage" position="0,0" size="1920,1080" title="doFlashImage" flags="wfNoBorder" backgroundColor="transparent">
-    <widget backgroundColor="tb" name="imageList" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular;32" foregroundColor="white" itemHeight="45" position="75,75" size="1100,700" scrollbarMode="showOnDemand" valign="top" transparent="1" />
-    <panel name="ch" />
-    <panel name="rgyb_source" />
-    <panel name="pig" />
-  </screen>
-  <screen name="FlashOnline" position="0,0" size="1920,1080" title="FlashOnline" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="info-online" position="75,75" zPosition="1" size="1100,369" font="Regular;32" foregroundColor="white" halign="left" valign="top" transparent="1" backgroundColor="tb" />
-    <widget name="info-local" position="75,458" zPosition="1" size="1100,330" font="Regular;32" foregroundColor="und6ff98" halign="left" valign="top" transparent="1" backgroundColor="tb" />
-    <panel name="ch" />
-    <panel name="rgyb_source" />
-    <panel name="pig" />
-  </screen>
+
   <screen name="SoftwareManagerInfo" position="center,center" size="1920,1080" title="SoftwareManager information" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="list" render="Listbox" position="75,75" selectionPixmap="DarknessFHD/e1/sel100.png" size="1100,600" scrollbarMode="showOnDemand" selectionDisabled="0">
       <convert type="TemplatedMultiContent">
@@ -2196,7 +2098,12 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="labrun" position="921,729" size="250,36" font="Regular;30" foregroundColor="white" valign="center" halign="center" backgroundColor="green2" zPosition="2" />
     <widget name="lab2" position="688,729" size="225,36" font="Regular;30" foregroundColor="white" valign="center" transparent="1" />
     <panel name="ch" />
+    
     <panel name="rgyb_source" />
+
+    
+    <panel name="rgyb_png" />    
+    <panel name="rgyb_name" />  
     <panel name="pig" />
   </screen>
   <screen flags="wfNoBorder" name="CronManagerFile" position="0,0" size="1920,1080" title="Select file to execute" backgroundColor="transparent">
@@ -2889,14 +2796,49 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ch" />
     <panel name="pig" />
   </screen>
+  
+<!-- lululla edit -->
+<!--
+  
   <screen name="Dish" position="50,50" size="150,270" zPosition="-1" backgroundColor="transparent" flags="wfNoBorder">
     <widget name="Dishpixmap" position="0,25" size="150,150" zPosition="-1" pixmap="DarknessFHD/icons/dish.png" transparent="1" alphatest="blend" />
   </screen>
+ 
+  
   <screen name="Dishpip" position="50,50" size="150,270" title="DishPiP" zPosition="1" backgroundColor="transparent" flags="wfNoBorder">
     <widget source="Dishpixmap" render="Pixmap" pixmap="DarknessFHD/icons/dish.png" zPosition="-1" position="12,15" size="130,160" alphatest="on">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
   </screen>
+-->   
+  
+  <screen name="Dish" position="50,50" size="200,300" zPosition="-1" backgroundColor="transparent" flags="wfNoBorder">
+    <widget name="Dishpixmap" position="0,25" size="150,150" zPosition="-1" pixmap="DarknessFHD/icons/dish.png" transparent="1" alphatest="blend" />
+    <widget name="turnTime" position="67,7" size="120,30" zPosition="1" font="Regular;26" halign="right" borderWidth="1" transparent="1" />
+    <widget name="From" position="7,246" size="67,27" zPosition="1" font="Regular;24" halign="left" borderWidth="1" transparent="1" />
+    <widget name="posFrom" position="85,245" size="105,32" zPosition="1" font="Regular;28" halign="left" borderWidth="1" transparent="1" />
+    <widget name="Goto" position="7,276" size="67,27" zPosition="1" font="Regular;24" halign="left" borderWidth="1" transparent="1" />
+    <widget name="posGoto" position="85,275" size="105,32" zPosition="1" font="Regular;28" halign="left" borderWidth="1" transparent="1" />
+    <widget name="tunerName" position="5,216" size="150,20" zPosition="1" font="Regular;18" halign="left" borderWidth="1" transparent="1" />
+    <widget name="turnSpeed" position="112,147" size="75,24" zPosition="1" font="Regular;22" halign="right" borderWidth="1" transparent="1" />
+  </screen>
+  
+  <screen name="Dishpip" position="50,50" size="150,270" title="DishPiP" zPosition="1" backgroundColor="transparent" flags="wfNoBorder">
+    <widget source="Dishpixmap" render="Pixmap" pixmap="DarknessFHD/icons/dish.png" zPosition="-1" position="12,15" size="130,160" alphatest="on">
+      <convert type="ConditionalShowHide">Blink</convert>
+    </widget>
+
+    <eLabel text="PiP" position="27,40" size="40,25" font="Regular;18" foregroundColor="#909090" backgroundColor="#909090" transparent="1" zPosition="1" />
+    <widget name="turnTime" position="45,5" size="80,22" zPosition="1" font="Regular;20" halign="right" borderWidth="1" transparent="1" />
+    <widget name="From" position="5,164" size="45,20" zPosition="1" font="Regular;18" halign="left" borderWidth="1" transparent="1" />
+    <widget name="posFrom" position="55,160" size="70,25" zPosition="1" font="Regular;22" halign="right" borderWidth="1" transparent="1" />
+    <widget name="Goto" position="5,184" size="45,20" zPosition="1" font="Regular;18" halign="left" borderWidth="1" transparent="1" />
+    <widget name="posGoto" position="55,180" size="70,25" zPosition="1" font="Regular;22" halign="right" borderWidth="1" transparent="1" />
+    <widget name="tunerName" position="2,144" size="100,15" zPosition="1" font="Regular;12" halign="left" borderWidth="1" transparent="1" />
+    <widget name="turnSpeed" position="75,98" size="50,16" zPosition="1" font="Regular;14" halign="right" borderWidth="1" transparent="1" />
+  </screen>
+<!-- lululla edit -->  
+  
   <screen name="ChapterZap" position="center,center" size="400,120" title="Chapter">
     <eLabel name="a" position="10,14" size="220,100" zPosition="-10" />
     <eLabel name="b" position="232,18" size="160,90" zPosition="-10" />
@@ -3686,38 +3628,8 @@ self.instance.resize(eSize(*wsize))
   </screen>
   <!-- Esipanel -->
   
-<!-- lululla mount manager -->  
-  <screen name="HddMount" position="0,0" size="1920,1080" title="HddMount" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="list" render="Listbox" position="75,185" size="1100,600" scrollbarMode="showOnDemand" font="Regular;24" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
-				 MultiContentEntryText(pos = (135, 0), size = (900, 45), font=0, text = 0),
-				 MultiContentEntryText(pos = (165, 45), size = (900, 75), font=1, flags = RT_VALIGN_TOP, text = 1),
-				 MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (120, 120), png = 2),
-				],
-				"fonts": [gFont("Regular", 36),gFont("Regular", 30)],
-				"itemHeight": 127
-				}
-	  </convert>
-    </widget>
-    <widget backgroundColor="tb" name="lab1" zPosition="2" position="75,75" size="1100,100" font="Regular;33" halign="center" transparent="1" foregroundColor="white" />
-    <panel name="ch" />
-    <panel name="rgyb_source" />
-    <panel name="pig" />
-  </screen>
-  
 
-<screen name="DevicePanelConf" position="0,0" size="1920,1080" title="Choose where to mount your devices to:" flags="wfNoBorder" backgroundColor="transparent">
-    <panel name="ch" />
-    <panel name="pig" />
-    <panel name="rgyb_name" />
-    <panel name="config" />    
-	<widget name="Linconn" position="149,863" size="580,20" font="Regular;18" halign="center" valign="center" backgroundColor="#9f1313" />
-	</screen>
-  
-<!-- lululla  mount manager end --> 
-  
-  
+<!--   
   <screen name="Esipanel" position="0,0" size="1920,1080" title="Info Panel" backgroundColor="transparent" flags="wfNoBorder">
     <panel name="ch" />
     <panel name="pig" />
@@ -3725,112 +3637,8 @@ self.instance.resize(eSize(*wsize))
     <widget name="Mlist" position="75,75" size="1100,700" font="Regular;40" zPosition="1" scrollbarMode="showOnDemand" scrollbarSliderBorderColor="#009b9b9b" scrollbarSliderForegroundColor="#0072c4ff" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" transparent="1" itemHeight="70" />
     <widget name="label1" position="75,875" size="1100,60" font="Regular; 40" halign="left" backgroundColor="tb" transparent="1" foregroundColor="orange" />
   </screen>
-  <screen name="QuickMenu" position="0,0" size="1920,1080" title="Quick Launch Menu" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="list" position="75,75" size="1100,700" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" scrollbarMode="showOnDemand" itemHeight="70" transparent="1" foregroundColor="lightgrey" backgroundColor="tb" zPosition="3" />
-    <widget name="sublist" position="1248,492" size="640,285" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="70" font="Regular; 25" scrollbarMode="showOnDemand" scrollbarSliderBorderColor="#009b9b9b" scrollbarSliderForegroundColor="#0072c4ff" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" transparent="1" foregroundColor="lightgrey" backgroundColor="tb2" zPosition="3" />
-    <panel name="ch" />
-    <panel name="pig" />
-    <panel name="rgyb_name" />
-    <widget name="description" position="75,852" size="1100,170" zPosition="1" font="Regular;33" foregroundColor="white" halign="center" backgroundColor="tb" transparent="1" />
-  </screen>
-  <screen name="QuickMenuDevices" position="0,0" size="1920,1080" title="Devices" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="devicelist" render="Listbox" position="75,75" size="1100,700" scrollbarMode="showOnDemand" scrollbarSliderBorderColor="#009b9b9b" scrollbarSliderForegroundColor="#0072c4ff" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" transparent="1" backgroundColor="tb" foregroundColor="white">
-      <convert type="TemplatedMultiContent">
-						{"template": [
-						 MultiContentEntryText(pos = (90, 0), size = (600, 30), font=0, text = 0),
-						 MultiContentEntryText(pos = (110, 30), size = (600, 50), font=1, flags = RT_VALIGN_TOP, text = 1),
-						 MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (80, 80), png = 2),
-						],
-						"fonts": [gFont("Regular",24),gFont("Regular",20)],
-						"itemHeight": 85
-						}
-					</convert>
-    </widget>
-    <widget name="lab1" zPosition="2" position="75,919" size="1100,40" font="Regular; 30" backgroundColor="tb" foregroundColor="und6ff98" halign="center" transparent="1" />
-    <panel name="ch" />
-    <panel name="pig" />
-    <ePixmap name="" pixmap="DarknessFHD/e2/hdd.png" position="1515,600" size="120,120" transparent="0" alphatest="blend" />
-  </screen>
-  <screen name="ScriptRunner" position="0,0" size="1920,1080" title="Job Manager" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="lab1" position="75,75" size="1100,40" font="Regular; 40" valign="center" halign="left" backgroundColor="tb" transparent="1" />
-    <widget name="list" position="75,125" size="1100,600" itemHeight="40" font="Regular; 30" scrollbarMode="showOnDemand" backgroundColor="tb" foregroundColor="white" transparent="1" />
-    <panel name="ch" />
-    <panel name="rgyb_source" />
-    <panel name="pig" />
-  </screen>
-  <screen name="SoftcamPanel" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
-    <panel name="ch" />
-    <panel name="rgyb_name" />
-    <panel name="pig" />
-    <widget backgroundColor="tb" name="config" font="Console; 30" itemHeight="40" position="75,75" size="1100,150" enableWrapAround="1" foregroundColor="white" transparent="1" />
-    <widget font="Regular;33" name="enigma2" position="1588,786" size="277,37" transparent="1" backgroundColor="tb" foregroundColor="b8" />
-    <widget font="Regular;30" name="actifcam" position="75,235" size="1100,40" transparent="1" itemHeight="40" backgroundColor="tb" foregroundColor="b8" />
-    <widget font="Regular;30" name="actifcam2" position="75,294" size="1100,40" transparent="1" itemHeight="40" backgroundColor="tb" foregroundColor="b8" halign="left" />
-    <widget font="Regular;30" name="ecminfo" position="75,357" size="1100,400" foregroundColor="une7e7e7" backgroundColor="tb" transparent="1" />
-    <ePixmap name="" pixmap="DarknessFHD/e2/cryptoff.png" position="100,890" size="100,100" transparent="1" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Pixmap" pixmap="DarknessFHD/e2/crypton.png" position="100,890" size="100,100" halign="center" zPosition="2" valign="center" transparent="1">
-      <convert type="DARKServiceInfoEX">IsCrypted</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-  </screen>
-  <screen name="ShowSoftcamPackages" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
-    <panel name="ch" />
-    <panel name="rgyb_source" />
-    <panel name="pig" />
-    <widget source="list" render="Listbox" position="75,75" size="1100,700" foregroundColor="lightgrey" backgroundColor="tb" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="TemplatedMultiContent">
-				{"template": [
-						MultiContentEntryPixmapAlphaTest(pos = (27, 7), size = (72, 72), png = 4), # index 4 is the status pixmap
-						MultiContentEntryText(pos = (135, 7), size = (975, 42), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-						MultiContentEntryText(pos = (150, 52), size = (975, 30), font=1, flags = RT_HALIGN_LEFT, text = 2, color=0x8A8787, color_sel=0x8A8787), # index 2 is the description
-						MultiContentEntryPixmapAlphaTest(pos = (7, 87), size = (0, 0), png = 5), # index 4 is the div pixmap
-					],
-				"fonts": [gFont("Regular", 33),gFont("Regular", 24)],
-				"itemHeight": 90
-				}
-	  </convert>
-    </widget>
-    <ePixmap name="" pixmap="DarknessFHD/e2/key.png" position="1515,600" size="100,100" transparent="0" alphatest="blend" zPosition="2" />
-  </screen>
-  <screen name="SoftwarePanel" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
-    <widget backgroundColor="tb" source="list" render="Listbox" position="75,75" size="1100,700" scrollbarMode="showOnDemand" itemHeight="80" alphatest="blend" transparent="1">
-      <convert type="TemplatedMultiContent">
-					{"template": [
-							MultiContentEntryText(pos = (9, 3), size = (810, 42), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is the name
-							MultiContentEntryText(pos = (9, 42), size = (810, 30), font=1, flags = RT_HALIGN_LEFT, text = 2), # index 2 is the description
-							MultiContentEntryPixmapAlphaTest(pos = (907, 3), size = (72, 72), png = 4), # index 4 is the status pixmap
-							MultiContentEntryPixmapAlphaTest(pos = (7, 75), size = (915, 3), png = 5), # index 4 is the div pixmap
-						],
-					"fonts": [gFont("Regular", 32),gFont("Regular", 22)],
-					"itemHeight": 80
-					}
-			  </convert>
-    </widget>
-    <widget name="packagetext" position="75,861" size="518,50" zPosition="1" font="Regular; 40" halign="left" transparent="1" backgroundColor="tb" foregroundColor="g3" />
-    <widget name="packagenr" position="726,856" size="450,150" zPosition="1" font="Regular; 100" halign="center" transparent="1" backgroundColor="tb" foregroundColor="green" />
-    <widget name="a_off" pixmap="icons/aoff.png" position="1525,499" zPosition="1" size="100,300" alphatest="blend" />
-    <widget name="a_red" pixmap="icons/ared.png" position="1525,499" zPosition="1" size="100,300" alphatest="blend" />
-    <widget name="a_yellow" pixmap="icons/ayellow.png" position="1525,499" zPosition="1" size="100,300" alphatest="blend" />
-    <widget name="a_green" pixmap="icons/agreen.png" position="1525,499" zPosition="1" size="100,300" alphatest="blend" />
-    <panel name="ch" />
-    <panel name="rgyb_source" />
-    <panel name="pig" />
-  </screen>
-  <screen name="Swap" title="Swap" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
-    <widget backgroundColor="tb" name="autostart_off" position="103,479" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="35,25" alphatest="on" />
-    <widget backgroundColor="tb" name="autostart_on" position="105,476" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="35,25" alphatest="on" />
-    <widget backgroundColor="tb" name="lab1" position="154,464" size="540,45" font="Regular;30" valign="center" transparent="1" foregroundColor="white" />
-    <widget backgroundColor="tb" name="lab3" position="105,285" size="225,45" font="Regular;30" valign="center" transparent="1" foregroundColor="white" />
-    <widget backgroundColor="tb" name="lab2" position="105,195" size="225,45" font="Regular;30" valign="center" transparent="1" foregroundColor="white" />
-    <widget backgroundColor="tb" name="lab4" position="105,375" size="225,45" font="Regular;30" valign="center" transparent="1" foregroundColor="white" />
-    <widget name="labplace" position="367,195" size="480,45" font="Regular;30" valign="center" backgroundColor="tb" foregroundColor="white" />
-    <widget name="labsize" position="367,285" size="330,45" font="Regular;30" valign="center" backgroundColor="tb" foregroundColor="white" />
-    <widget name="inactive" position="365,375" size="300,45" font="Regular;30" valign="center" halign="center" backgroundColor="red2" />
-    <widget name="active" position="365,375" size="300,45" font="Regular;30" valign="center" halign="center" backgroundColor="green2" />
-    <panel name="ch" />
-    <panel name="rgyb_source" />
-    <panel name="pig" />
-  </screen>
+ -->  
+
   <!-- MediaPlayer -->
   <screen name="DirectoryBrowser" backgroundColor="transparent" flags="wfNoBorder" position="0,0" size="1920,1080" title="Directory Browser">
     <panel name="ch" />
@@ -4040,7 +3848,7 @@ self.instance.resize(eSize(*wsize))
     <panel name="pig" />
     <widget backgroundColor="tb" name="config" font="Regular;32" foregroundColor="white" itemHeight="45" position="75,75" size="1100,700" zPosition="1" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" />
     <widget source="introduction" render="Label" position="75,920" size="1100,42" zPosition="10" font="Regular;33" foregroundColor="unffc435" halign="center" valign="center" backgroundColor="tb" transparent="1" />
-    <widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="1728,899" zPosition="1" size="100,100" transparent="1" alphatest="on" />
+    <widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="1246,476" zPosition="1" size="614,328" transparent="1" alphatest="on" />
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoMountManager" position="0,0" size="1920,1080" title="MountManager">
     <widget position="75,75" render="Listbox" size="1100,700" enableWrapAround="1" scrollbarMode="showOnDemand" source="config" transparent="1">
@@ -4057,7 +3865,11 @@ self.instance.resize(eSize(*wsize))
     </widget>
     <widget source="introduction" render="Label" position="75,920" size="1100,42" zPosition="10" font="Regular;33" foregroundColor="unffc435" halign="center" valign="center" backgroundColor="tb" transparent="1" />
     <panel name="ch" />
+
     <panel name="rgyb_source" />
+
+    <panel name="rgyb_png" />    
+    <panel name="rgyb_name" />    
     <panel name="pig" />
   </screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="AutoMountView" position="0,0" size="1920,1080" title="MountView">
