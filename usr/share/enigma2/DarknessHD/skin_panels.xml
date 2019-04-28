@@ -45,6 +45,7 @@
     <widget name="yellow" render="Label" position="1010,629" size="200,26" valign="top" halign="right" zPosition="1" font="Regular; 20" transparent="1" foregroundColor="lightgrey" backgroundColor="tb" />
     <widget name="blue" render="Label" position="1010,660" size="200,26" valign="top" halign="right" zPosition="1" font="Regular; 20" transparent="1" foregroundColor="lightgrey" backgroundColor="tb" />
   </screen>
+  
   <screen name="mn" flags="wfNoBorder">
     <widget source="title" render="Label" position="50,594" size="924,80" font="Console; 60" transparent="1" zPosition="2" foregroundColor="gr2" backgroundColor="tb" halign="left" />
     <widget source="menu" render="Listbox" selectionPixmap="DarknessHD/e1/sel100.png" position="50,43" size="733,466" foregroundColor="lightgrey" backgroundColor="tb" scrollbarMode="showOnDemand" zPosition="0" itemHeight="46" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessHD/e1/scrollbar.png" transparent="1">
@@ -65,7 +66,8 @@
     <panel name="pig" />
     <panel name="ch" />
     <panel name="rgyb_menu" />
-  </screen>
+  </screen>  
+  
   <screen name="foot">
     <widget name="footnote" position="50,568" size="733,113" zPosition="1" font="Regular; 66" halign="right" transparent="1" valign="top" foregroundColor="g3" backgroundColor="tb" />
     <widget name="description" position="838,323" size="400,200" font="Regular;18" halign="center" valign="top" transparent="1" zPosition="1" foregroundColor="b6" backgroundColor="tb" />

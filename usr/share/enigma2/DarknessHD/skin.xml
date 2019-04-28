@@ -654,7 +654,7 @@
     <widget name="save" position="1010,597" size="200,26" valign="bottom" noWrap="1" zPosition="5" font="Regular; 17" halign="center" foregroundColor="white" backgroundColor="tb" transparent="1" />
   </screen>
   
-  <!-- MENUS -->
+  <!-- lulullax -->
   <screen name="Menu" position="0,0" size="1280,720" flags="wfNoBorder">
     <panel name="mn" />
     <panel name="pig" />
@@ -2662,13 +2662,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <!--  -->
   <screen name="AutoDiseqc" title="AutoDiseqc" position="center,center" size="800,333" flags="wfNoBorder" backgroundColor="tb">
-    <widget source="Title" render="Label" position="86,13" size="466,33" font="Console2; 26" halign="center" valign="center" foregroundColor="g3" backgroundColor="tb" borderColor="gr" borderWidth="1" transparent="1" zPosition="1" />
+    <widget source="Title" render="Label" position="51,13" size="606,33" font="Console2; 26" halign="center" valign="center" foregroundColor="g3" backgroundColor="tb" borderColor="gr" borderWidth="1" transparent="1" zPosition="1" />
     <eLabel position="6,108" size="733,1" backgroundColor="gr" />
-    <widget source="statusbar" render="Label" position="50,50" zPosition="10" size="733,40" halign="center" valign="center" font="Regular; 22" transparent="1" />
-    <widget source="tunerstatusbar" render="Label" position="6,110" zPosition="10" size="733,26" halign="center" valign="center" font="Regular; 22" transparent="1" />
+    <widget source="statusbar" render="Label" position="13,50" zPosition="10" size="770,54" halign="center" valign="center" font="Regular; 20" transparent="1" />
+    <widget source="tunerstatusbar" render="Label" position="6,110" zPosition="10" size="733,26" halign="center" valign="center" font="Regular; 20" transparent="1" />
     <eLabel position="6,138" size="733,1" backgroundColor="gr" />
-    <widget name="config" position="6,140" size="733,140" itemHeight="33" font="Regular; 22" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColor="white" backgroundColor="tb" transparent="1" />
-    <ePixmap pixmap="DarknessHD/buttons/key_exit.png" position="620,296" size="68,23" alphatest="on" />
+    <widget name="config" position="6,140" size="733,140" itemHeight="33" font="Regular; 20" scrollbarMode="showOnDemand" enableWrapAround="1" foregroundColor="white" backgroundColor="tb" transparent="1" />
+    
     <ePixmap pixmap="DarknessHD/buttons/key_ok.png" position="710,296" size="68,23" zPosition="10" transparent="1" alphatest="blend" />
     <ePixmap pixmap="DarknessHD/buttons/key_red.png" position="20,294" size="23,23" alphatest="blend" />
     <ePixmap pixmap="DarknessHD/buttons/key_green.png" position="232,294" size="23,23" alphatest="blend" />
