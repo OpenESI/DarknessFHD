@@ -10,9 +10,13 @@
   <panel name="rgyb_source" />
   <panel name="pig" />
   <widget source="Title" render="Label" position="75,900" size="1100,100" zPosition="-1" halign="center" font="Regular; 50" backgroundColor="tb" transparent="1" valign="center" />
-  <eLabel position="200,360" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Currently used software" foregroundColor="fresh" />
-    <eLabel position="200,455" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Selecting Image Using the 'Left_Right' keys " foregroundColor="fresh" />
-    <eLabel position="200,405" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Activation of the PIP function with the 'Top_ Bottom' keys" foregroundColor="fresh" />
+  <eLabel position="200,360" size="790,60" font="Regular; 40" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Currently used software" foregroundColor="white" />
+    <eLabel position="200,455" size="790,60" font="Regular; 40" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Selecting Image Using the 'Left_Right' keys " foregroundColor="white" />
+    <eLabel position="200,405" size="790,60" font="Regular; 40" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Activation of the PIP function with the 'Top_ Bottom' keys" foregroundColor="white" />
+  
+  <eLabel name="b" position="25,1147" size="20,80" backgroundColor="white" zPosition="-4" />
+  <eLabel name="a" position="138,1134" size="23,92" backgroundColor="black" zPosition="-3" />
+
   <widget source="config" render="Label" position="75,182" size="1100,600" halign="center" font="Regular; 34" backgroundColor="black" foregroundColor="white" />
   <widget source="options" render="Label" position="106,50" size="895,69" halign="center" font="Regular; 24" backgroundColor="black" foregroundColor="white" />
   <widget name="description" position="106,122" size="895,69" font="Regular; 19" foregroundColor="white" halign="center" backgroundColor="black" valign="center" />
@@ -24,9 +28,13 @@
   <panel name="rgyb_source" />
   <panel name="pig" />
   <widget source="Title" render="Label" position="75,900" size="1100,100" zPosition="-1" halign="center" font="Regular; 50" backgroundColor="tb" transparent="1" valign="center" />
-  <eLabel position="200,360" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Currently used software" foregroundColor="fresh" />
-    <eLabel position="200,455" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Selecting Image Using the 'Left_Right' keys " foregroundColor="fresh" />
-    <eLabel position="200,405" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Activation of the PIP function with the 'Top_ Bottom' keys" foregroundColor="fresh" />
+  <eLabel position="200,360" size="790,60" font="Regular; 40" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Currently used software" foregroundColor="white" />
+    <eLabel position="200,455" size="790,60" font="Regular; 40" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Selecting Image Using the 'Left_Right' keys " foregroundColor="white" />
+    <eLabel position="200,405" size="790,60" font="Regular; 40" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Activation of the PIP function with the 'Top_ Bottom' keys" foregroundColor="white" />
+
+  <eLabel name="b" position="25,1147" size="20,80" backgroundColor="white" zPosition="-4" />
+  <eLabel name="a" position="138,1134" size="23,92" backgroundColor="black" zPosition="-3" />
+
 
   <widget source="config" render="Label" position="75,182" size="1100,600" halign="center" font="Regular; 34" backgroundColor="black" foregroundColor="white" />
   <widget source="options" render="Label" position="106,50" size="895,69" halign="center" font="Regular; 24" backgroundColor="black" foregroundColor="white" />
@@ -39,9 +47,12 @@
   <panel name="rgyb_source" />
   <panel name="pig" />
   <widget source="Title" render="Label" position="75,900" size="1100,100" zPosition="-1" halign="center" font="Regular; 50" backgroundColor="tb" transparent="1" valign="center" />
-  <eLabel position="200,360" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Currently used software" foregroundColor="fresh" />
-    <eLabel position="200,455" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Selecting Image Using the 'Left_Right' keys " foregroundColor="fresh" />
-    <eLabel position="200,405" size="790,60" font="Regular; 40" halign="center" backgroundColor="podloga" transparent="1" zPosition="3" text="Activation of the PIP function with the 'Top_ Bottom' keys" foregroundColor="fresh" />
+  <eLabel position="200,360" size="790,60" font="Regular; 40" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Currently used software" foregroundColor="white" />
+    <eLabel position="200,455" size="790,60" font="Regular; 40" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Selecting Image Using the 'Left_Right' keys " foregroundColor="white" />
+    <eLabel position="200,405" size="790,60" font="Regular; 40" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Activation of the PIP function with the 'Top_ Bottom' keys" foregroundColor="white" />
+  <eLabel name="b" position="25,1147" size="20,80" backgroundColor="white" zPosition="-4" />
+  <eLabel name="a" position="138,1134" size="23,92" backgroundColor="black" zPosition="-3" />
+
   <widget source="config" render="Label" position="75,182" size="1100,600" halign="center" font="Regular; 34" backgroundColor="black" foregroundColor="white" />
   <widget source="options" render="Label" position="106,50" size="895,69" halign="center" font="Regular; 24" backgroundColor="black" foregroundColor="white" />
   <widget name="description" position="106,122" size="895,69" font="Regular; 19" foregroundColor="white" halign="center" backgroundColor="black" valign="center" />
@@ -110,11 +121,17 @@
   <widget source="global.CurrentTime" render="Label" position="1348,0" size="539,38" font="Replacement;34" valign="center" halign="right" backgroundColor="background" transparent="1">
     <convert type="ClockToText">Format:%a,%e. %B %Y | %H:%M</convert>
   </widget>
+  
+  <panel name="rgyb_source" />  
+  
+  <widget name="config" position="100,67" size="1012,708" itemHeight="42" selectionPixmap="DarknessFHD/frame/frame_42.png" scrollbarMode="showOnDemand" transparent="1" font="Regular;30" />
+  
+<!--   
   <ePixmap pixmap="DarknessFHD/button_red_230.png" position="1434,847" size="230,4" alphatest="blend" />
   <ePixmap pixmap="DarknessFHD/button_green_230.png" position="1677,847" size="230,4" alphatest="blend" />
   <widget source="key_red" render="Label" position="1434,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="background" transparent="1" foregroundColor="white" />
   <widget source="key_green" render="Label" position="1677,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="background" transparent="1" foregroundColor="white" />
-  <widget name="config" position="100,67" size="1012,708" itemHeight="42" selectionPixmap="DarknessFHD/frame/frame_42.png" scrollbarMode="showOnDemand" transparent="1" font="Regular;30" />
+ -->
 </screen>
 
 <screen name="piconPath" position="0,0" size="1920,1080" title="Select path for Picons" backgroundColor="transparent" flags="wfNoBorder">
@@ -123,28 +140,40 @@
   <widget source="global.CurrentTime" render="Label" position="1348,0" size="539,38" font="Replacement;34" valign="center" halign="right" backgroundColor="background" transparent="1">
     <convert type="ClockToText">Format:%a,%e. %B %Y | %H:%M</convert>
   </widget>
+  
+  <panel name="rgyb_source" />    
+<!--     
   <ePixmap pixmap="DarknessFHD/button_red_230.png" position="1434,847" size="230,4" alphatest="blend" />
   <ePixmap pixmap="DarknessFHD/button_green_230.png" position="1677,847" size="230,4" alphatest="blend" />
   <widget source="key_red" render="Label" position="1434,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="background" transparent="1" foregroundColor="white" />
   <widget source="key_green" render="Label" position="1677,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="background" transparent="1" foregroundColor="white" />
+ -->  
+  
   <widget name="target" position="111,875" size="1080,64" font="Regular;30" backgroundColor="background3" transparent="1" />
   <widget name="filelist" itemHeight="50" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" position="75,75" size="1100,700" zPosition="2" transparent="1" />
 </screen>
+
+
 <!-- FlashOnline Device Browser -->
   <screen name="doFlashImage" position="0,0" size="1920,1080" title="doFlashImage" flags="wfNoBorder" backgroundColor="transparent">
-    <widget backgroundColor="tb" name="imageList" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular;32" foregroundColor="white" itemHeight="45" position="75,75" size="1100,700" scrollbarMode="showOnDemand" valign="top" transparent="1" />
+    <widget backgroundColor="tb" name="imageList" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular;32" foregroundColor="white" itemHeight="45" position="75,75" size="1100,700" scrollbarMode="showOnDemand" transparent="1" />
     <panel name="ch" />
-    <panel name="rgyb_source" />
-    <panel name="pig" />
+    <!--     <panel name="rgyb_source" /> -->
+    <panel name="pig" />    
+   <panel name="rgyb_name" />    
+    
+
   </screen>
   
 <screen name="FlashOnline" position="0,0" size="1920,1080" title="FlashOnline" flags="wfNoBorder" backgroundColor="transparent">
-    <widget name="info-online" position="75,75" zPosition="1" size="1100,369" font="Regular;32" foregroundColor="white" halign="left" valign="top" transparent="1" backgroundColor="tb" />
-    <widget name="info-local" position="76,444" zPosition="1" size="1100,368" font="Regular;32" foregroundColor="und6ff98" halign="left" valign="top" transparent="1" backgroundColor="tb" />
+    <widget name="info-online" position="75,75" zPosition="1" size="1100,369" font="Regular;32" foregroundColor="white" halign="left" transparent="1" backgroundColor="tb" />
+    <widget name="info-local" position="76,444" zPosition="1" size="1100,368" font="Regular;32" foregroundColor="und6ff98" halign="left" transparent="1" backgroundColor="tb" />
     <panel name="ch" />
-    <panel name="rgyb_source" />
+    <!-- <panel name="rgyb_source" /> -->
     <panel name="pig" />
 
+   <panel name="rgyb_name" />
+    
 <widget name="description" position="78,850" size="895,69" font="Regular; 30" foregroundColor="white" halign="left" backgroundColor="black" valign="center" />
 <widget name="config" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="50" position="78,922" size="1100,106" zPosition="5" transparent="1" font="Console; 34" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessFHD/e1/scrollbar.png" textOffset="15,0" />
   </screen>
@@ -163,13 +192,19 @@
   <widget source="global.CurrentTime" render="Label" position="1348,0" size="539,38" font="Replacement;34" valign="center" halign="right" backgroundColor="background" transparent="1">
     <convert type="ClockToText">Format:%a,%e. %B %Y | %H:%M</convert>
   </widget>
-  <ePixmap pixmap="DarknessFHD/button_red_230.png" position="1434,847" size="230,4" alphatest="blend" />
-  <ePixmap pixmap="DarknessFHD/button_green_230.png" position="1677,847" size="230,4" alphatest="blend" />
-  <widget source="key_red" render="Label" position="1434,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="background" transparent="1" foregroundColor="white" />
-  <widget source="key_green" render="Label" position="1677,808" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="background" transparent="1" foregroundColor="white" />
+  <!--
+  <ePixmap pixmap="DarknessFHD/button_red_230.png" position="1244,1147" size="230,4" alphatest="blend" />
+  <ePixmap pixmap="DarknessFHD/button_green_230.png" position="1562,1147" size="230,4" alphatest="blend" />
+  <widget source="key_red" render="Label" position="1246,1155" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="background" transparent="1" foregroundColor="white" />
+  <widget source="key_green" render="Label" position="1565,1151" size="230,38" zPosition="1" font="Replacement;30" halign="center" backgroundColor="background" transparent="1" foregroundColor="white" />
+  -->
   <widget source="message" render="Label" position="56,852" size="1100,174" font="Regular;29" halign="center" valign="center" foregroundColor="lightgrey" backgroundColor="tb" transparent="1" />
   <widget name="filelist" itemHeight="50" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular; 30" position="75,75" size="1100,700" zPosition="2" transparent="1" />
 
+
+    <!--   <panel name="rgyb_source" /> -->
+   <panel name="rgyb_name" />  
+  
 </screen>
 
 
