@@ -1,4 +1,7 @@
 <skin>
+
+  <!--  edited by Lululla for OpenEsi -->
+  
   <!--ePANELS-->
   <screen name="ch">
     <ePixmap position="0,0" size="1280,720" zPosition="-55" pixmap="DarknessHD/e1/ch.png" alphatest="off" transparent="0" />
@@ -96,9 +99,12 @@
       <convert type="EventName">FullDescription</convert>
     </widget>
   </screen>
+  
   <screen name="config">
-    <widget name="config" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessHD/e1/sel100.png" itemHeight="33" position="50,50" size="733,466" zPosition="5" transparent="1" font="Console; 22" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessHD/e1/scrollbar.png" textOffset="10,0" />
-  </screen>
+    <widget name="config" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessHD/e1/sel100.png" itemHeight="33" position="50,50" size="733,466" zPosition="5" transparent="1" font="Console; 17" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessHD/e1/scrollbar.png" textOffset="10,0" />
+  </screen>  
+
+  
   <screen name="list">
     <widget name="list" foregroundColor="lightgrey" backgroundColor="tb" itemHeight="53" position="50,50" font="Console; 21" size="733,480" transparent="1" zPosition="2"  scrollbarMode="showOnDemand" scrollbarSliderBorderColor="sb" scrollbarSliderForegroundColor="ss" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarBackgroundPicture="DarknessHD/e1/scrollbar.png" fieldMargins="16" nonplayableMargins="16" enableWrapAround="1" textOffset="10,0" />
   </screen>
