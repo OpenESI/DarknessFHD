@@ -3,6 +3,8 @@
   <!-- this skin is a freeware. everyone can modify and use it in other images. -->
   <!-- but do not remove or change this lines in !!! -->
   <!--  https://github.com/digiteng/  -->
+  <!--  edited by Lululla for OpenEsi -->
+  
   <output id="0">
     <resolution bpp="32" xres="1280" yres="720" />
   </output>
@@ -1212,6 +1214,17 @@
     <widget name="description" position="50,568" size="733,113" font="Regular;18" halign="center" valign="top" transparent="1" zPosition="1" foregroundColor="lightgrey" backgroundColor="tb" />
     <ePixmap name="" pixmap="DarknessHD/e2/stp.png" position="1010,400" size="80,80" transparent="0" alphatest="blend" />
   </screen>
+<!-- 
+ <screen name="Setup" position="0,0" size="1280,720" title="Setup" backgroundColor="transparent" flags="wfNoBorder">
+<panel name="rgyb_source" />
+<panel name="ch" />
+<panel name="pig" />
+<widget name="config" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessHD/e1/sel100.png" itemHeight="33" position="50,50" size="733,466" zPosition="5" transparent="1" font="Console; 18" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessHD/e1/scrollbar.png" textOffset="10,0" />
+<widget name="description" position="50,568" size="733,113" font="Regular;18" halign="center" valign="top" transparent="1" zPosition="1" foregroundColor="lightgrey" backgroundColor="tb" />
+<ePixmap name="" pixmap="DarknessHD/e2/stp.png" position="1010,400" size="80,80" transparent="0" alphatest="blend" />
+</screen> 
+-->   
+  
   <screen name="PluginBrowser" position="0,0" size="1280,720" title="Plugin browser" backgroundColor="transparent" flags="wfNoBorder">
     <panel name="rgyb_name" />
     <panel name="ch" />
@@ -2114,36 +2127,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="rgyb_source" />
     <panel name="pig" />
   </screen>
-  <screen name="CronManager" position="0,0" size="1280,720" title="Cron Manager" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="list" render="Listbox" position="50,50" size="733,426" scrollbarMode="showOnDemand" backgroundColor="tb" foregroundColor="white" transparent="1">
-      <convert type="TemplatedMultiContent">
-			{"template": [
-					MultiContentEntryText(pos = (3, 1), size = (463, 18), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
-				],
-			"fonts": [gFont("Regular", 13)],
-			"itemHeight": 20
-			}
-		</convert>
-    </widget>
-    <widget name="lab1" position="488,500" size="100,26" font="Regular; 20" valign="center" halign="right" backgroundColor="tb" foregroundColor="white" transparent="1" />
-    <widget name="labdisabled" position="596,500" size="166,26" font="Regular; 20" valign="center" halign="center" backgroundColor="red2" foregroundColor="white" zPosition="1" transparent="0" />
-    <widget name="labactive" position="596,500" size="166,26" font="Regular; 20" valign="center" halign="center" backgroundColor="green2" foregroundColor="white" zPosition="2" transparent="0" />
-    <widget name="lab2" position="50,500" size="100,26" font="Regular; 20" valign="center" halign="right" backgroundColor="tb" foregroundColor="white" transparent="1" />
-    <widget name="labstop" position="156,500" size="166,26" font="Regular; 20" valign="center" halign="center" backgroundColor="red2" foregroundColor="white" zPosition="1" transparent="0" />
-    <widget name="labrun" position="156,500" size="166,26" font="Regular; 20" valign="center" halign="center" backgroundColor="green2" foregroundColor="white" zPosition="2" transparent="0" />
-    <widget name="key" position="919,379" size="276,100" font="Regular;13" foregroundColor="white" halign="center" backgroundColor="tb2" valign="center" transparent="1" />
-    <panel name="ch" />
-    <panel name="rgyb_source" />
-    <panel name="pig" />
-  </screen>
-  <screen name="SetupCronConf" position="0,0" size="1280,720" title="Cron Manager" flags="wfNoBorder" backgroundColor="transparent">
-    <widget source="Title" render="Label" position="48,48" size="350,33" noWrap="1" valign="bottom" font="Regular;22" foregroundColor="white" backgroundColor="tb" transparent="1" />
-    <widget name="config" position="50,170" size="733,340" itemHeight="20" font="Regular; 13" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="tb" foregroundColor="white" transparent="1" />
-    <widget name="HelpWindow" position="519,42" size="268,85" zPosition="1" transparent="1" alphatest="blend" />
-    <panel name="ch" />
-    <panel name="rgyb_source" />
-    <panel name="pig" />
-  </screen>
+
   <screen name="ButtonSetup" position="0,0" size="1280,720" flags="wfNoBorder">
     <panel name="ch" />
     <panel name="rgyb_source" />
