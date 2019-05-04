@@ -100,8 +100,14 @@
     </widget>
   </screen>
   
+<!-- edit lululla -->
+<!--  
   <screen name="config">
-    <widget name="config" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="50" position="75,75" size="1100,700" zPosition="5" transparent="1" font="Console; 26" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessFHD/e1/scrollbar.png" textOffset="15,0" />
+    <widget name="config" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="50" position="75,75" size="1100,700" zPosition="5" transparent="1" font="Console; 34" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessFHD/e1/scrollbar.png" textOffset="15,0" />
+  </screen>
+-->    
+  <screen name="config">
+    <widget name="config" foregroundColor="lightgrey" backgroundColor="tb" selectionPixmap="DarknessFHD/e1/sel100.png" itemHeight="50" position="75,75" size="1100,700" zPosition="5" transparent="1" font="Console; 28" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="4" scrollbarSliderForegroundColor="b8" scrollbarBackgroundPicture="DarknessFHD/e1/scrollbar.png" textOffset="15,0" />
   </screen>  
 
   
