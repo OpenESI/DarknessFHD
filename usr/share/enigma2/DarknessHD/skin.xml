@@ -667,7 +667,7 @@
       <convert type="MenuEntryCompare">info_screen</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="menu" render="Pixmap" pixmap="DarknessHD/e2/3dlogo.png" alphatest="on" transparent="1" position="870,400" size="350,73" zPosition="3">
+  <widget source="menu" render="Pixmap" pixmap="DarknessHD/e2/3dlogo.png" alphatest="on" transparent="1" position="870,400" size="350,73" zPosition="3">
       <convert type="MenuEntryCompare">EsiPanel</convert>
       <convert type="ConditionalShowHide" />
     </widget>
@@ -2081,6 +2081,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="rgyb_source" />
     <panel name="pig" />
   </screen>
+  <!--   
   <screen name="CronTimers" position="0,0" size="1280,720" title="CronManager" flags="wfNoBorder" backgroundColor="transparent">
     <widget backgroundColor="tb" source="list" font="Regular;20" render="Listbox" position="50,50" size="733,416" scrollbarMode="showOnDemand" transparent="1" itemHeight="26">
       <convert type="StringList" />
@@ -2095,6 +2096,24 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="rgyb_name" />
     <panel name="pig" />
   </screen>
+  -->
+  <!-- Timer Screens -->
+  <screen name="CronTimers" position="0,0" size="1280,720" title="Cron Manager">
+    <widget name="lab1" zPosition="0" position="180,583" size="166,24" font="Regular;20" valign="center" transparent="0" />
+    <widget name="labdisabled" position="360,583" size="200,24" font="Regular;20" valign="center" halign="center" backgroundColor="red2" zPosition="1" />
+    <widget name="labactive" position="360,583" size="200,24" font="Regular;20" valign="center" halign="center" backgroundColor="green2" zPosition="2" />
+    <widget name="lab2" position="180,650" size="166,24" font="Regular;20" valign="center" transparent="1" />
+    <widget name="labstop" position="360,650" size="200,24" font="Regular;20" valign="center" halign="center" backgroundColor="red2" zPosition="1" />
+    <widget name="labrun" position="360,650" size="200,24" font="Regular;20" valign="center" halign="center" backgroundColor="green2" zPosition="2" />
+    <widget source="list" render="Listbox" position="50,50" size="733,466" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="StringList" />
+    </widget>
+    <panel name="ch" />
+    <panel name="rgyb_name" />
+    <panel name="pig" />
+    <ePixmap position="66,600" size="66,66" zPosition="2" pixmap="DarknessHD/e2/clk.png" transparent="1" alphatest="blend" />
+  </screen>
+  
   <screen flags="wfNoBorder" name="CronManagerFile" position="0,0" size="1280,720" title="Select file to execute" backgroundColor="transparent">
     <widget backgroundColor="tb" font="Regular;24" foregroundColor="white" name="executable" position="50,50" size="733,30" transparent="1" />
     <widget backgroundColor="tb" name="filelist" font="Regular;21" foregroundColor="white" itemHeight="30" position="50,86" size="733,433" enableWrapAround="1" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
@@ -2519,22 +2538,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="rgyb_source" />
     <panel name="pig" />
   </screen>
-  <!-- Timer Screens -->
-  <screen name="CronTimers" position="0,0" size="1280,720" title="Cron Manager">
-    <widget name="lab1" zPosition="0" position="180,583" size="166,24" font="Regular;20" valign="center" transparent="0" />
-    <widget name="labdisabled" position="360,583" size="200,24" font="Regular;20" valign="center" halign="center" backgroundColor="red2" zPosition="1" />
-    <widget name="labactive" position="360,583" size="200,24" font="Regular;20" valign="center" halign="center" backgroundColor="green2" zPosition="2" />
-    <widget name="lab2" position="180,650" size="166,24" font="Regular;20" valign="center" transparent="1" />
-    <widget name="labstop" position="360,650" size="200,24" font="Regular;20" valign="center" halign="center" backgroundColor="red2" zPosition="1" />
-    <widget name="labrun" position="360,650" size="200,24" font="Regular;20" valign="center" halign="center" backgroundColor="green2" zPosition="2" />
-    <widget source="list" render="Listbox" position="50,50" size="733,466" scrollbarMode="showOnDemand" transparent="1">
-      <convert type="StringList" />
-    </widget>
-    <panel name="ch" />
-    <panel name="rgyb_name" />
-    <panel name="pig" />
-    <ePixmap position="66,600" size="66,66" zPosition="2" pixmap="DarknessHD/e2/clk.png" transparent="1" alphatest="blend" />
-  </screen>
+
   <screen name="TimeshiftState" position="306,13" zPosition="2" size="680,26" backgroundColor="tb" flags="wfNoBorder">
     <widget name="state" position="0,0" size="100,16" font="Regular;14" halign="center" backgroundColor="tb" transparent="1" />
     <widget source="session.CurrentService" render="Label" position="0,0" size="100,16" font="Regular;14" transparent="1">
@@ -3778,9 +3782,9 @@ self.instance.resize(eSize(*wsize))
   <screen name="CableScanStatus" title="Cable Scan" position="center,center" size="1280,720" flags="wfNoBorder" backgroundColor="tb">
     <panel name="ch" />
     <panel name="pig" />
-    <ePixmap position="63,63" size="733,19" zPosition="0" pixmap="DuskyFHD/e1/prgrs_back.png" alphatest="blend" transparent="1" />
+    <ePixmap position="63,63" size="733,19" zPosition="0" pixmap="DarknessFHD/e1/prgrs_back.png" alphatest="blend" transparent="1" />
     <widget name="scan_state" position="50,92" zPosition="2" size="766,513" font="Regular; 24" transparent="1" />
-    <widget name="scan_progress" position="63,63" size="733,19" pixmap="DuskyFHD/e1/prgrss.png" transparent="1" alphatest="blend" />
+    <widget name="scan_progress" position="63,63" size="733,19" pixmap="DarknessFHD/e1/prgrss.png" transparent="1" alphatest="blend" />
     <widget name="frontend" pixmap="DarknessHD/icons/scan-c.png" position="1006,407" size="66,66" transparent="1" alphatest="on" />
   </screen>
   <!-- MPHelp -->
