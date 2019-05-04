@@ -667,7 +667,7 @@
       <convert type="MenuEntryCompare">info_screen</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="menu" render="Pixmap" pixmap="DarknessFHD/e2/3dlogo.png" alphatest="on" transparent="1" position="1515,600" size="120,120" zPosition="3">
+    <widget source="menu" render="Pixmap" pixmap="DarknessFHD/e2/3dlogo.png" alphatest="on" transparent="1" position="1350,600" size="450,94" zPosition="3">
       <convert type="MenuEntryCompare">EsiPanel</convert>
       <convert type="ConditionalShowHide" />
     </widget>
