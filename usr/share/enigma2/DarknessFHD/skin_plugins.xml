@@ -10,7 +10,7 @@
 					MultiContentEntryText(pos = (5, 2), size = (695, 28), font=0, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0), # index 0 is the name
 				],
 			"fonts": [gFont("Regular", 30)],
-			"itemHeight": 42
+			"itemHeight": 48
 			}
 		</convert>
     </widget>
@@ -27,7 +27,7 @@
   </screen>
   <screen name="SetupCronConf" position="0,0" size="1920,1080" title="Cron Manager" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="Title" render="Label" position="72,72" size="525,50" noWrap="1" valign="bottom" font="Regular;34" foregroundColor="white" backgroundColor="tb" transparent="1" />
-    <widget name="config" position="75,255" size="1100,510" itemHeight="42" font="Regular; 30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="tb" foregroundColor="white" transparent="1" />
+    <widget name="config" position="75,255" size="1100,510" itemHeight="48" font="Regular; 30" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="tb" foregroundColor="white" transparent="1" />
     <widget name="HelpWindow" position="779,64" size="402,128" zPosition="1" transparent="1" alphatest="blend" />
     <panel name="ch" />
     <panel name="rgyb_source" />
@@ -131,7 +131,7 @@
       <convert type="ClockToText">Format:%a,%e. %B %Y | %H:%M</convert>
     </widget>
     <panel name="rgyb_source" />
-    <widget name="config" position="100,67" size="1012,708" itemHeight="42" selectionPixmap="DarknessFHD/frame/frame_42.png" scrollbarMode="showOnDemand" transparent="1" font="Regular;30" />
+    <widget name="config" position="100,67" size="1012,708" itemHeight="48" selectionPixmap="DarknessFHD/frame/frame_42.png" scrollbarMode="showOnDemand" transparent="1" font="Regular;30" />
     <!--   
   <ePixmap pixmap="DarknessFHD/button_red_230.png" position="1434,847" size="230,4" alphatest="blend" />
   <ePixmap pixmap="DarknessFHD/button_green_230.png" position="1677,847" size="230,4" alphatest="blend" />
@@ -157,7 +157,7 @@
   </screen>
   <!-- FlashOnline Device Browser -->
   <screen name="doFlashImage" position="0,0" size="1920,1080" title="doFlashImage" flags="wfNoBorder" backgroundColor="transparent">
-    <widget backgroundColor="tb" name="imageList" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular;32" foregroundColor="white" itemHeight="45" position="75,75" size="1100,700" scrollbarMode="showOnDemand" transparent="1" />
+    <widget backgroundColor="tb" name="imageList" selectionPixmap="DarknessFHD/e1/sel100.png" font="Regular;32" foregroundColor="white" itemHeight="48" position="75,75" size="1100,700" scrollbarMode="showOnDemand" transparent="1" />
     <panel name="ch" />
     <!--     <panel name="rgyb_source" /> -->
     <panel name="pig" />
