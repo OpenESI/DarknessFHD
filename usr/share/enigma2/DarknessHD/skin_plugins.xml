@@ -34,21 +34,6 @@
     <panel name="pig" />
   </screen>
   <!-- MultiBoot -->
-  <screen name="MultiBootStartupADV" position="0,0" size="1280,720" title="MultiBoot STARTUP Selector" flags="wfNoBorder" backgroundColor="transparent">
-    <panel name="ch" />
-    <panel name="rgyb_source" />
-    <panel name="pig" />
-    <widget source="Title" render="Label" position="50,600" size="733,66" zPosition="-1" halign="center" font="Regular; 33" backgroundColor="tb" transparent="1" valign="center" />
-    <eLabel position="133,240" size="526,40" font="Regular; 26" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Currently used software" foregroundColor="white" />
-    <eLabel position="133,303" size="526,40" font="Regular; 26" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Selecting Image Using the 'Left_Right' keys " foregroundColor="white" />
-    <eLabel position="133,270" size="526,40" font="Regular; 26" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Activation of the PIP function with the 'Top_ Bottom' keys" foregroundColor="white" />
-    <eLabel name="b" position="16,764" size="13,53" backgroundColor="white" zPosition="-4" />
-    <eLabel name="a" position="92,756" size="15,61" backgroundColor="black" zPosition="-3" />
-    <widget source="config" render="Label" position="50,121" size="733,400" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="white" />
-    <widget source="options" render="Label" position="70,33" size="596,46" halign="center" font="Regular; 16" backgroundColor="black" foregroundColor="white" />
-    <widget name="description" position="70,81" size="596,46" font="Regular; 12" foregroundColor="white" halign="center" backgroundColor="black" valign="center" />
-    <ePixmap position="963,358" size="213,126" zPosition="2" pixmap="DarknessHD/picon_default.png" alphatest="blend" />
-  </screen>
   <screen name="MultiBootStartupOPT" position="0,0" size="1280,720" title="MultiBoot STARTUP Selector" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="ch" />
     <panel name="rgyb_source" />
@@ -1056,6 +1041,45 @@
     <widget name="headertext" position="50,60" zPosition="1" size="733,26" font="Regular; 20" transparent="1" foregroundColor="unfcc000" backgroundColor="tb" />
     <widget name="list" position="50,100" zPosition="2" size="733,420" scrollbarMode="showOnDemand" scrollbarSliderBorderWidth="0" scrollbarSliderBorderColor="tb" scrollbarWidth="10" scrollbarSliderForegroundColor="ss" scrollbarBackgroundPicture="DarknessHD/e1/scrollbar.png" transparent="1" backgroundColor="tb" />
   </screen>
-
+<!-- UIPositionSetup -->
+  <screen name="UIPositionSetup" position="0,0" size="1280,720" backgroundColor="background" flags="wfNoBorder" title="Position Setup">
+    <eLabel text="Position Setup" render="Label" position="839,-9" size="400,75" valign="bottom" font="Regular;51" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <ePixmap pixmap="DarknessHD/skin_default/testscreen.png" position="0,-2" zPosition="-10" size="1280,720" />
+    <eLabel backgroundColor="black" font="Regular; 40" halign="center" position="466,68" size="980,93" text="Die roten Winkel genau in den Ecken des TV-Bildschirms positionieren" valign="center" foregroundColor="red" />
+    <eLabel backgroundColor="black" font="Regular; 32" halign="center" position="680,278" size="561,65" text="Danach die Grüne Taste drücken" valign="center" foregroundColor="green" />
+    <widget name="config" position="679,343" zPosition="1" size="561,315" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <widget source="status" render="Label" position="680,666" zPosition="1" size="561,129" font="Regular;30" halign="center" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <ePixmap pixmap="DarknessHD/buttons/key_red.png" position="475,1027" size="35,35" alphatest="blend" />
+    <ePixmap pixmap="DarknessHD/buttons/key_green.png" position="806,1027" size="35,35" alphatest="blend" />
+    <ePixmap pixmap="DarknessHD/buttons/key_yellow.png" position="1142,1027" size="35,35" alphatest="blend" />
+    <widget source="key_red" render="Label" position="519,1025" size="255,40" noWrap="1" zPosition="1" valign="center" font="Regular;30" halign="left" backgroundColor="background" foregroundColor="white" transparent="1" />
+    <widget source="key_green" render="Label" position="853,1025" size="255,40" noWrap="1" zPosition="1" valign="center" font="Regular;30" halign="left" backgroundColor="background" foregroundColor="white" transparent="1" />
+    <widget source="key_yellow" render="Label" position="1189,1025" size="255,40" noWrap="1" zPosition="1" valign="center" font="Regular;30" halign="left" backgroundColor="background" foregroundColor="white" transparent="1" />
+    <eLabel name="black" position="680,424" size="560,319" backgroundColor="black" zPosition="-1" />
+    <eLabel name="black" position="795,-11" size="461,75" backgroundColor="black" zPosition="-1" />
+    <eLabel name="black" position="465,1010" size="989,66" backgroundColor="black" zPosition="-1" />
+    <eLabel backgroundColor="blue" position="681,661" size="560,2" zPosition="2" />
+    <eLabel backgroundColor="blue" position="680,341" size="560,2" zPosition="2" />
+  </screen>
+  <!-- UserInterface Positioner 2 -->
+  <screen name="UserInterfacePositioner2" size="1280,720" backgroundColor="background" title="OSD Adjustment" flags="wfNoBorder">
+    <eLabel text="Position Setup" render="Label" position="839,-9" size="400,75" valign="bottom" font="Regular;51" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <ePixmap pixmap="DarknessHD/skin_default/testscreen.png" position="0,-2" zPosition="-10" size="1280,720" />
+    <eLabel backgroundColor="black" font="Regular; 40" halign="center" position="466,68" size="980,93" text="Die roten Winkel genau in den Ecken des TV-Bildschirms positionieren" valign="center" foregroundColor="red" />
+    <eLabel backgroundColor="black" font="Regular; 32" halign="center" position="680,278" size="561,65" text="Danach die Grüne Taste drücken" valign="center" foregroundColor="green" />
+    <widget name="config" position="679,343" zPosition="1" size="561,315" itemHeight="45" font="Regular;30" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+    <widget source="status" render="Label" position="680,666" zPosition="1" size="561,129" font="Regular;30" halign="center" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <ePixmap pixmap="DarknessHD/buttons/key_red.png" position="475,1027" size="35,35" alphatest="blend" />
+    <ePixmap pixmap="DarknessHD/buttons/key_green.png" position="806,1027" size="35,35" alphatest="blend" />
+    <ePixmap pixmap="DarknessHD/buttons/key_yellow.png" position="1142,1027" size="35,35" alphatest="blend" />
+    <widget source="key_red" render="Label" position="519,1025" size="255,40" noWrap="1" zPosition="1" valign="center" font="Regular;30" halign="left" backgroundColor="background" foregroundColor="white" transparent="1" />
+    <widget source="key_green" render="Label" position="853,1025" size="255,40" noWrap="1" zPosition="1" valign="center" font="Regular;30" halign="left" backgroundColor="background" foregroundColor="white" transparent="1" />
+    <widget source="key_yellow" render="Label" position="1189,1025" size="255,40" noWrap="1" zPosition="1" valign="center" font="Regular;30" halign="left" backgroundColor="background" foregroundColor="white" transparent="1" />
+    <eLabel name="black" position="680,424" size="560,319" backgroundColor="black" zPosition="-1" />
+    <eLabel name="black" position="795,-11" size="461,75" backgroundColor="black" zPosition="-1" />
+    <eLabel name="black" position="465,1010" size="989,66" backgroundColor="black" zPosition="-1" />
+    <eLabel backgroundColor="blue" position="681,661" size="560,2" zPosition="2" />
+    <eLabel backgroundColor="blue" position="680,341" size="560,2" zPosition="2" />
+  </screen>
 
 </skin>
