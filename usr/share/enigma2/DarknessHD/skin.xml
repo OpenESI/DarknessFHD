@@ -4125,4 +4125,62 @@ self.instance.resize(eSize(*wsize))
     <panel name="ch" />
     <panel name="pig" />
   </screen>
+<screen name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection" backgroundColor="tb" flags="wfNoBorder">
+  <panel name="ch" />
+  <panel name="rgyb_name" />
+  <panel name="pig" />
+  <panel name="t_menu" />
+  <panel name="t_info" />
+  <panel name="t_epg" />
+  <panel name="t_LR" />
+  <panel name="t_UD" />
+  <widget name="list" position="50,50" size="733,466" scrollbarMode="showOnDemand" transparent="1" zPosition="1" itemHeight="40" serviceItemHeight="26" serviceNumberFont="Regular;20" serviceNameFont="Regular;21" serviceInfoFont="Console2;18" colorServiceRecording="red" foregroundColorServiceNotAvail="gr" foregroundColor="fc" foregroundColorSelected="fcs" colorServiceDescription="cepbs" colorServiceDescriptionSelected="yellow" colorEventProgressbar="cep" colorEventProgressbarSelected="ceps" progressBarWidth="53" progressbarHeight="6" colorEventProgressbarBorder="cepb" colorEventProgressbarBorderSelected="cepbs" progressbarBorderWidth="1" progressPercentWidth="90" scrollbarSliderBorderColor="#009b9b9b" scrollbarSliderForegroundColor="#0072c4ff" scrollbarSliderBorderWidth="0" scrollbarWidth="4" scrollbarSliderPicture="DarknessFHD/e1/scrollbar.png" fieldMargins="10" nonplayableMargins="10" itemsDistances="5" />
+  <widget source="ServiceEvent" render="Label" position="50,694" size="433,26" font="Regular; 20" backgroundColor="tb2" transparent="1" halign="left" noWrap="1" valign="center" text="19.2E  DVB-S2  10627 27500 3/4 8PSK" zPosition="3" foregroundColor="gr2">
+    <convert type="ServiceName2">%O  %s  %F %p %Y %f %M %b</convert>
+  </widget>
+
+  <widget source="ServiceEvent" render="DARKEmptyEpg" position="860,363" size="400,26" transparent="1" foregroundColor="b8" noWrap="1" backgroundColor="tb2" font="Regular;21" halign="left">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="ServiceEvent" render="DARKScrollLabel" backgroundColor="tb" position="50,571" size="733,113" transparent="1" font="Regular;20" halign="block" foregroundColor="lightgrey">
+    <convert type="EventName">FullDescription</convert>
+  </widget>
+
+  <widget source="ServiceEvent" render="Label" position="833,333" size="60,18" transparent="1" foregroundColor="lightgrey" zPosition="8" font="Regular;18" halign="left" backgroundColor="tb2">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <eLabel name="" position="903,342" size="283,1" backgroundColor="gr" />
+  <widget source="ServiceEvent" pointer="DarknessFHD/e1/chgauge.png:425,0" position="903,340" size="283,6" render="PositionGauge" transparent="1" zPosition="8">
+    <convert type="DARKEventPosition">Gauge</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Progress" alphatest="blend" position="903,340" size="276,6" pixmap="DarknessFHD//e1/chprgrs.png" transparent="1" backgroundColor="gr" zPosition="8">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="1200,332" size="60,18" transparent="1" foregroundColor="lightgrey" zPosition="8" font="Regular;18" halign="right" backgroundColor="tb2">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+<!--
+  <widget source="ServiceEvent" halign="left" render="Label" position="842,455" size="401,26" font="Regular; 20" foregroundColor="p7" transparent="1" zPosition="5" backgroundColor="tb2">
+    <convert type="EventName">Genre</convert>
+  </widget>
+  <widget source="ServiceEvent" halign="left" render="Label" position="842,484" size="398,26" font="Regular; 20" foregroundColor="p8" transparent="1" zPosition="5" backgroundColor="tb2">
+    <convert type="EventName">SmallRating</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="842,428" size="393,26" font="Regular; 20" zPosition="5" transparent="1" valign="center" halign="left" noWrap="1" foregroundColor="p6" backgroundColor="tb2">
+    <convert type="ServiceName2">Provider</convert>
+  </widget>
+  <widget source="ServiceEvent" render="NextEpgInfo" position="882,394" size="373,26" transparent="1" foregroundColor="lightgrey2" backgroundColor="tb2" noWrap="1" font="Regular;20" />
+  <eLabel name="" text="&gt;" foregroundColor="b8" position="840,366" size="13,16" halign="center" transparent="1" backgroundColor="tb2" font="Regular; 16" />
+  <eLabel name="" text="&gt;&gt;" foregroundColor="b8" position="844,396" size="33,16" halign="center" transparent="1" backgroundColor="tb2" font="Regular; 16" />
+  <widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=500,always=0" position="842,512" size="422,26" font="Regular; 20" foregroundColor="yellow" zPosition="5" noWrap="1" transparent="1" backgroundColor="tb2">
+    <convert type="DARKPrimeTime">PrimeTime,noDuration</convert>
+  </widget>
+-->
+<widget source="ServiceEvent" render="Label" position="855,405" zPosition="1" size="407,120" font="Regular; 20" backgroundColor="black" transparent="1" valign="top" halign="left" foregroundColor="yellow">
+  <convert type="EventName2">NextEventList</convert>
+</widget>
+
+</screen>
 </skin>
