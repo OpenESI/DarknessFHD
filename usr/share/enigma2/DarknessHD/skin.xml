@@ -4125,4 +4125,69 @@ self.instance.resize(eSize(*wsize))
     <panel name="ch" />
     <panel name="pig" />
   </screen>
+<!-- tvSettings -->  
+<screen name="MainSetting" position="0,0" size="1280,720" title="tvSettings" flags="wfNoBorder" backgroundColor="transparent">  
+	<widget name="title" position="30,730" size="1066,33" font="Regular;24" foregroundColor="white" backgroundColor="tb" transparent="1" zPosition="3" />
+	<widget name="info" position="57,42" size="720,33" font="Regular;24" foregroundColor="white" halign="left" valign="center" transparent="1" zPosition="8" />
+	<widget name="text" position="52,80" size="720,442" itemHeight="33" scrollbarMode="showOnDemand" foregroundColor="white" foregroundColorSelected="b8"  transparent="1" zPosition="1" />
+	<panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+</screen>
+<screen name="SettingVhan" position="0,0" size="1280,720" title="tvSettings" flags="wfNoBorder" backgroundColor="transparent">  
+	<widget name="title" position="30,730" size="1066,33" font="Regular;24" foregroundColor="white" backgroundColor="tb" transparent="1" zPosition="3" />
+	<widget name="info" position="57,42" size="720,33" font="Regular;24" foregroundColor="white" halign="left" valign="center" transparent="1" zPosition="8" />
+	<widget name="text" position="52,80" size="720,442" itemHeight="33" scrollbarMode="showOnDemand" foregroundColor="white" foregroundColorSelected="b8"  transparent="1" zPosition="1" />
+	<panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+</screen>
+<screen name="SettingMilenka61" position="0,0" size="1280,720" title="tvSettings" flags="wfNoBorder" backgroundColor="transparent">  
+	<widget name="title" position="30,730" size="1066,33" font="Regular;24" foregroundColor="white" backgroundColor="tb" transparent="1" zPosition="3" />
+	<widget name="info" position="57,42" size="720,33" font="Regular;24" foregroundColor="white" halign="left" valign="center" transparent="1" zPosition="8" />
+	<widget name="text" position="52,80" size="720,442" itemHeight="33" scrollbarMode="showOnDemand" foregroundColor="white" foregroundColorSelected="b8"  transparent="1" zPosition="1" />
+	<panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+</screen>
+<screen name="SettingManutek" position="0,0" size="1280,720" title="tvSettings" flags="wfNoBorder" backgroundColor="transparent">  
+	<widget name="title" position="30,730" size="1066,33" font="Regular;24" foregroundColor="white" backgroundColor="tb" transparent="1" zPosition="3" />
+	<widget name="info" position="57,42" size="720,33" font="Regular;24" foregroundColor="white" halign="left" valign="center" transparent="1" zPosition="8" />
+	<widget name="text" position="52,80" size="720,442" itemHeight="33" scrollbarMode="showOnDemand" foregroundColor="white" foregroundColorSelected="b8"  transparent="1" zPosition="1" />
+	<panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+</screen>
+<screen name="SettingMorpheus" position="0,0" size="1280,720" title="tvSettings" flags="wfNoBorder" backgroundColor="transparent">  
+	<widget name="title" position="30,730" size="1066,33" font="Regular;24" foregroundColor="white" backgroundColor="tb" transparent="1" zPosition="3" />
+	<widget name="info" position="57,42" size="720,33" font="Regular;24" foregroundColor="white" halign="left" valign="center" transparent="1" zPosition="8" />
+	<widget name="text" position="52,80" size="720,442" itemHeight="33" scrollbarMode="showOnDemand" foregroundColor="white" foregroundColorSelected="b8"  transparent="1" zPosition="1" />
+	<panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+</screen>
+<screen name="SettingCiefp" position="0,0" size="1280,720" title="tvSettings" flags="wfNoBorder" backgroundColor="transparent">  
+	<widget name="title" position="30,730" size="1066,33" font="Regular;24" foregroundColor="white" backgroundColor="tb" transparent="1" zPosition="3" />
+	<widget name="info" position="57,42" size="720,33" font="Regular;24" foregroundColor="white" halign="left" valign="center" transparent="1" zPosition="8" />
+	<widget name="text" position="52,80" size="720,442" itemHeight="33" scrollbarMode="showOnDemand" foregroundColor="white" foregroundColorSelected="b8"  transparent="1" zPosition="1" />
+	<panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+</screen>
+<screen name="SettingMalimali" position="0,0" size="1280,720" title="tvSettings" flags="wfNoBorder" backgroundColor="transparent">  
+	<widget name="title" position="30,730" size="1066,33" font="Regular;24" foregroundColor="white" backgroundColor="tb" transparent="1" zPosition="3" />
+	<widget name="info" position="57,42" size="720,33" font="Regular;24" foregroundColor="white" halign="left" valign="center" transparent="1" zPosition="8" />
+	<widget name="text" position="52,80" size="720,442" itemHeight="33" scrollbarMode="showOnDemand" foregroundColor="white" foregroundColorSelected="b8"  transparent="1" zPosition="1" />
+	<panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+</screen>
+<screen name="SettingPredrag" position="0,0" size="1280,720" title="tvSettings" flags="wfNoBorder" backgroundColor="transparent">  
+	<widget name="title" position="30,730" size="1066,33" font="Regular;24" foregroundColor="white" backgroundColor="tb" transparent="1" zPosition="3" />
+	<widget name="info" position="57,42" size="720,33" font="Regular;24" foregroundColor="white" halign="left" valign="center" transparent="1" zPosition="8" />
+	<widget name="text" position="52,80" size="720,442" itemHeight="33" scrollbarMode="showOnDemand" foregroundColor="white" foregroundColorSelected="b8"  transparent="1" zPosition="1" />
+	<panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+</screen>
 </skin>
