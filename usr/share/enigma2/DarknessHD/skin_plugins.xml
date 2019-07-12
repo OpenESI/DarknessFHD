@@ -2,7 +2,7 @@
   <!-- PLUGINS -->
   
   <!-- lululla edit start -->
-  <!-- mod openesi -->
+  <!-- mod openesi 29.06.2019-->
   <screen name="CronManager" position="0,0" size="1280,720" title="Cron Manager" flags="wfNoBorder" backgroundColor="transparent">
     <widget source="list" render="Listbox" position="50,50" size="733,426" scrollbarMode="showOnDemand" backgroundColor="tb" foregroundColor="white" transparent="1">
       <convert type="TemplatedMultiContent">
@@ -12,7 +12,7 @@
 			"fonts": [gFont("Regular", 20)],
 			"itemHeight": 28
 			}
-		</convert>
+	  </convert>
     </widget>
     <widget name="lab1" position="488,500" size="100,26" font="Regular; 20" valign="center" halign="right" backgroundColor="tb" foregroundColor="white" transparent="1" />
     <widget name="labdisabled" position="596,500" size="166,26" font="Regular; 20" valign="center" halign="center" backgroundColor="red2" foregroundColor="white" zPosition="1" transparent="0" />
@@ -33,7 +33,36 @@
     <panel name="rgyb_source" />
     <panel name="pig" />
   </screen>
+  
+  
   <!-- MultiBoot -->
+
+<screen name="MultiBootWizard" position="0,0" size="1280,720" title="MultiBoot Image Manager" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+    <eLabel name="a" position="92,756" size="15,61" backgroundColor="black" zPosition="-3" />	
+    <eLabel name="b" position="16,764" size="13,53" backgroundColor="white" zPosition="-4" />
+    <widget source="Title" render="Label" position="50,600" size="733,66" zPosition="-1" halign="center" font="Regular; 33" backgroundColor="tb" transparent="1" valign="center" />
+    <widget name="config" position="50,138" size="733,383" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="#00e5b243" zPosition="3" />
+    <widget source="description" render="Label" position="70,91" size="596,46" font="Regular; 22" halign="center" backgroundColor="black" foregroundColor="white" valign="center" zPosition="2" />
+    <widget source="options" render="Label" position="70,40" size="596,46" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="white" zPosition="2" />
+    <ePixmap position="963,358" size="213,126" zPosition="2" pixmap="DarknessHD/picon_default.png" alphatest="blend" />
+  </screen>
+  
+<screen name="MultiBootSelector" position="0,0" size="1280,720" title="MultiBoot STARTUP Selector" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="ch" />
+    <panel name="rgyb_source" />
+    <panel name="pig" />
+    <eLabel name="a" position="92,756" size="15,61" backgroundColor="black" zPosition="-3" />	
+    <eLabel name="b" position="16,764" size="13,53" backgroundColor="white" zPosition="-4" />
+    <widget source="Title" render="Label" position="50,600" size="733,66" zPosition="-1" halign="center" font="Regular; 33" backgroundColor="tb" transparent="1" valign="center" />
+    <widget name="config" position="50,138" size="733,383" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="white" zPosition="3" />
+    <widget source="description" render="Label" position="70,91" size="596,46" font="Regular; 22" halign="center" backgroundColor="black" foregroundColor="#00e5b243" valign="center" zPosition="2" />
+    <widget source="options" render="Label" position="70,40" size="596,46" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="white" zPosition="2" />
+    <ePixmap position="963,358" size="213,126" zPosition="2" pixmap="DarknessHD/picon_default.png" alphatest="blend" />
+  </screen>
+ 
   <screen name="MultiBootStartupOPT" position="0,0" size="1280,720" title="MultiBoot STARTUP Selector" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="ch" />
     <panel name="rgyb_source" />
@@ -44,9 +73,9 @@
     <eLabel position="133,270" size="526,40" font="Regular; 26" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Activation of the PIP function with the 'Top_ Bottom' keys" foregroundColor="white" />
     <eLabel name="b" position="16,764" size="13,53" backgroundColor="white" zPosition="-4" />
     <eLabel name="a" position="92,756" size="15,61" backgroundColor="black" zPosition="-3" />
-    <widget source="config" render="Label" position="50,121" size="733,400" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="white" />
-    <widget source="options" render="Label" position="70,33" size="596,46" halign="center" font="Regular; 16" backgroundColor="black" foregroundColor="white" />
-    <widget name="description" position="70,81" size="596,46" font="Regular; 12" foregroundColor="white" halign="center" backgroundColor="black" valign="center" />
+    <widget source="config" render="Label" position="50,138" size="733,383" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="#00e5b243" />
+    <widget source="options" render="Label" position="70,40" size="596,46" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="white" />
+    <widget name="description" position="70,91" size="596,46" font="Regular; 22" foregroundColor="white" halign="center" backgroundColor="black" valign="center" />
     <ePixmap position="963,358" size="213,126" zPosition="2" pixmap="DarknessHD/picon_default.png" alphatest="blend" />
   </screen>
   <screen name="MultiBootStartup" position="0,0" size="1280,720" title="MultiBoot STARTUP Selector" flags="wfNoBorder" backgroundColor="transparent">
@@ -59,9 +88,9 @@
     <eLabel position="133,270" size="526,40" font="Regular; 26" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Activation of the PIP function with the 'Top_ Bottom' keys" foregroundColor="white" />
     <eLabel name="b" position="16,764" size="13,53" backgroundColor="white" zPosition="-4" />
     <eLabel name="a" position="92,756" size="15,61" backgroundColor="black" zPosition="-3" />
-    <widget source="config" render="Label" position="50,121" size="733,400" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="white" />
-    <widget source="options" render="Label" position="70,33" size="596,46" halign="center" font="Regular; 16" backgroundColor="black" foregroundColor="white" />
-    <widget name="description" position="70,81" size="596,46" font="Regular; 12" foregroundColor="white" halign="center" backgroundColor="black" valign="center" />
+    <widget source="config" render="Label" position="50,138" size="733,383" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="#00e5b243" />
+    <widget source="options" render="Label" position="70,40" size="596,46" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="white" />
+    <widget name="description" position="70,91" size="596,46" font="Regular; 22" foregroundColor="white" halign="center" backgroundColor="black" valign="center" />
     <ePixmap position="963,358" size="213,126" zPosition="2" pixmap="DarknessHD/picon_default.png" alphatest="blend" />
   </screen>
 <screen name="MultiBootStartupADV" position="0,0" size="1280,720" title="MultiBoot STARTUP Selector" flags="wfNoBorder" backgroundColor="transparent">
@@ -74,9 +103,9 @@
     <eLabel position="133,270" size="526,40" font="Regular; 26" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Activation of the PIP function with the 'Top_ Bottom' keys" foregroundColor="white" />
     <eLabel name="b" position="16,764" size="13,53" backgroundColor="white" zPosition="-4" />
     <eLabel name="a" position="92,756" size="15,61" backgroundColor="black" zPosition="-3" />
-    <widget source="config" render="Label" position="50,121" size="733,400" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="white" />
-    <widget source="options" render="Label" position="70,33" size="596,46" halign="center" font="Regular; 16" backgroundColor="black" foregroundColor="white" />
-    <widget name="description" position="70,81" size="596,46" font="Regular; 12" foregroundColor="white" halign="center" backgroundColor="black" valign="center" />
+    <widget source="config" render="Label" position="50,138" size="733,383" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="#00e5b243" />
+    <widget source="options" render="Label" position="70,40" size="596,46" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="white" />
+    <widget name="description" position="70,91" size="596,46" font="Regular; 22" foregroundColor="white" halign="center" backgroundColor="black" valign="center" />
     <ePixmap position="963,358" size="213,126" zPosition="2" pixmap="DarknessHD/picon_default.png" alphatest="blend" />
   </screen>
   <screen name="MultiBootStartupDS" position="0,0" size="1280,720" title="MultiBoot STARTUP Selector" flags="wfNoBorder" backgroundColor="transparent">
@@ -89,9 +118,9 @@
     <eLabel position="133,270" size="526,40" font="Regular; 26" halign="center" backgroundColor="black" transparent="1" zPosition="3" text="Activation of the PIP function with the 'Top_ Bottom' keys" foregroundColor="white" />
     <eLabel name="b" position="16,764" size="13,53" backgroundColor="white" zPosition="-4" />
     <eLabel name="a" position="92,756" size="15,61" backgroundColor="black" zPosition="-3" />
-    <widget source="config" render="Label" position="50,121" size="733,400" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="white" />
-    <widget source="options" render="Label" position="70,33" size="596,46" halign="center" font="Regular; 16" backgroundColor="black" foregroundColor="white" />
-    <widget name="description" position="70,81" size="596,46" font="Regular; 12" foregroundColor="white" halign="center" backgroundColor="black" valign="center" />
+    <widget source="config" render="Label" position="50,138" size="733,383" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="#00e5b243" />
+    <widget source="options" render="Label" position="70,40" size="596,46" halign="center" font="Regular; 22" backgroundColor="black" foregroundColor="white" />
+    <widget name="description" position="70,91" size="596,46" font="Regular; 22" foregroundColor="white" halign="center" backgroundColor="black" valign="center" />
     <ePixmap position="963,358" size="213,126" zPosition="2" pixmap="DarknessHD/picon_default.png" alphatest="blend" />
   </screen>
   <screen name="EsiPanel" position="0,0" size="1280,720" title="Info Panel" backgroundColor="transparent" flags="wfNoBorder">
